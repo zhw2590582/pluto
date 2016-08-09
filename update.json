@@ -1,0 +1,32 @@
+{
+  "Name": "pluto",
+  "Version": "1.0.0",
+  "Author": "老赵",
+  "Url": "http://zhw-island.com",
+  "Switch":"on",
+  "Notice": "描述",
+  "Script": {
+    "1": "<script type='text/javascript'>",
+    "1": "$(function () {",
+    "1": " ",
+    "1": "});",
+    "1": "</script>"
+  },
+  "Blacklist": {
+    "1": "test1",
+    "2": "test2",
+    "3": "test3"
+  },
+  "Update": {
+    "1.0.0": {
+      "1": "test1",
+      "2": "test2",
+      "3": "test3"
+    },
+    "1.0.1": {
+      "1": "test1",
+      "2": "test2",
+      "3": "test3"
+    }
+  }
+}
