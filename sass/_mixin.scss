@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* queries */
+@mixin transition ($n) {
+    -webkit-transition:all $n;
+    -moz-transition:all $n;
+    -o-transition:all $n;
+    transition:all $n;
+}
+// 黑色透明度
+@mixin bg-b ($n) {
+    background: rgba(0, 0, 0, $n);
+}
+// 白色透明度
+@mixin bg-w ($n) {
+    background: rgba(255, 255, 255, $n);
+}

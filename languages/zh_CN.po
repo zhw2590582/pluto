@@ -1,0 +1,216 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: fixed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-06 09:11+0800\n"
+"PO-Revision-Date: 2015-06-24 14:49+0800\n"
+"Last-Translator: 1 <a@163.com>\n"
+"Language-Team: weidea.net\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.9\n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:12
+msgid "404 - Page Not Found"
+msgstr "404 - 页面没找到"
+
+#: ../404.php:17
+msgid ""
+"Sorry, but the page you are looking for has moved or no longer exists. "
+"Please use the search or the archives below to try and locate the page you "
+"were looking for."
+msgstr "对不起，你要查看的页面已经不存在。请使用下面的搜索或存档查找相关页面。"
+
+#: ../404.php:24 ../custom-archive.php:41
+msgid "Archive By Day"
+msgstr "按天存档"
+
+#: ../404.php:31 ../custom-archive.php:48
+msgid "Archive By Month"
+msgstr "按月存档"
+
+#: ../404.php:38 ../custom-archive.php:55
+msgid "Archive By Year"
+msgstr "按年存档"
+
+#: ../404.php:47 ../custom-archive.php:64
+msgid "Latest Posts"
+msgstr "最新文章"
+
+#: ../404.php:54 ../custom-archive.php:71
+msgid "Contributors"
+msgstr "合作者"
+
+#: ../404.php:63 ../custom-archive.php:80
+msgid "Pages"
+msgstr "页面"
+
+#: ../404.php:70 ../custom-archive.php:87
+msgid "Categories"
+msgstr "分类"
+
+#: ../comments.php:20
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "本文受密码保护，输入密码以查看评论"
+
+#: ../comments.php:28
+msgid "Leave A Comment"
+msgstr "发表评论"
+
+#: ../comments.php:28 ../format-gallery.php:39 ../format-standard.php:51
+msgid "1 Comment"
+msgstr "1 评论"
+
+#: ../comments.php:28 ../format-gallery.php:39 ../format-standard.php:51
+msgid "% Comments"
+msgstr "% 评论"
+
+#: ../comments.php:38
+msgid "&larr; Older Comments"
+msgstr "旧评论"
+
+#: ../comments.php:39
+msgid "Newer Comments &rarr;"
+msgstr "新评论"
+
+#: ../custom-archive.php:36 ../format-gallery.php:19 ../format-gallery.php:22
+#: ../format-standard.php:31 ../format-standard.php:34 ../format-status.php:15
+msgid "Read More"
+msgstr "阅读更多"
+
+#: ../customizer.php:24
+msgid "Fixed Options"
+msgstr "Fixed 选项"
+
+#: ../customizer.php:33
+msgid "Logo Upload"
+msgstr "标志上传"
+
+#: ../customizer.php:47
+msgid "Retina Logo"
+msgstr "Retina 标志"
+
+#: ../customizer.php:51 ../customizer.php:80
+msgid "Enabled"
+msgstr "启用"
+
+#: ../customizer.php:52 ../customizer.php:81
+msgid "Disabled"
+msgstr "禁用"
+
+#: ../customizer.php:62
+msgid "Link Color"
+msgstr "链接颜色"
+
+#: ../customizer.php:76
+msgid "Infinite Scrolling"
+msgstr "无限滚动"
+
+#: ../customizer.php:91
+msgid "Custom CSS"
+msgstr "自定义CSS"
+
+#: ../format-gallery.php:34 ../format-standard.php:46
+msgid "Author"
+msgstr "作者"
+
+#: ../format-gallery.php:35 ../format-standard.php:47
+msgid "Category"
+msgstr "分类"
+
+#: ../format-gallery.php:37 ../format-standard.php:49
+msgid "Tag"
+msgstr "标签"
+
+#: ../format-gallery.php:39 ../format-standard.php:51
+msgid "Comments"
+msgstr "评论"
+
+#: ../format-gallery.php:39 ../format-standard.php:51
+msgid "No Comments"
+msgstr "没有评论"
+
+#: ../format-quote.php:5
+#, php-format
+msgid "Permalink to %s"
+msgstr "固定链接到 %s"
+
+#: ../functions.php:56
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: ../functions.php:57
+msgid "Custom Menu"
+msgstr "自定义菜单"
+
+#: ../functions.php:157
+msgid "Sidebar"
+msgstr "侧边栏"
+
+#: ../functions.php:158
+msgid "Widgets in this area will be shown in the sidebar."
+msgstr "这个区域的小工具将显示在侧边栏"
+
+#: ../functions.php:164
+msgid "Drawer"
+msgstr "抽屉"
+
+#: ../functions.php:165
+msgid "Widgets in this area will be shown in the drawer."
+msgstr "这个区域的小工具将显示在抽屉"
+
+#: ../functions.php:182
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
+
+#: ../functions.php:184
+#, php-format
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
+#: ../functions.php:184
+msgid "(Edit)"
+msgstr "(编辑)"
+
+#: ../functions.php:198
+msgid "Your comment is awaiting moderation."
+msgstr "你的评论等待审核"
+
+#: ../functions.php:230
+#, php-format
+msgid "<a href=\"%1$s\">Hide Notice</a>"
+msgstr "<a href=\"%1$s\">隐藏提示</a>"
+
+#: ../index.php:8
+#, php-format
+msgid "Search Results for: %s"
+msgstr "搜索结果： %s"
+
+#: ../index.php:12
+msgid "Archive:"
+msgstr "存档："
+
+#: ../index.php:47
+msgid "<i class=\"icon-arrow-left\"></i> Newer Posts"
+msgstr "<i class=\"icon-arrow-left\"></i> 最新文章"
+
+#: ../index.php:48
+msgid "Older Posts <i class=\"icon-arrow-right\"></i>"
+msgstr "最旧文章 <i class=\"icon-arrow-right\"></i>"
+
+#: ../searchform.php:3
+msgid "Search..."
+msgstr "搜索..."
+
+#: ../includes/updates/EDD_SL_Theme_Updater.php:54
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr "更新这个主题将丢失自定义选项。 'Cancel' 以停止, 'OK' 则更新."
