@@ -27,35 +27,32 @@ $banner_test = cs_get_option( 'i_banner_text' );
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
 	<?php if (is_mobile()) { ?>
-		<!-- 微信缩略图 -->
 		<div style="display:none;"><?php the_post_thumbnail( 'medium' ); ?></div>
 	<?php }?>
+
   <?php if ($notice && !is_mobile()) { ?>
-		<!-- 公告条 -->
     <div class="notice hide m_hide">
         <div class="notice-inner"><?php echo $notice_main; ?></div>
         <a href="javascript:void(0)" class="clo-notice"><i class="fa fa-times"></i></a>
     </div>
   <?php }?>
-  <header id="header" class="rel">
-	    <div class="container flex h100 clearfix">
+
+  <header id="header">
+	    <div class="container">
 					<div id="topMenu" class="flex_item shadow clearfix">
-						<!-- 顶部菜单 -->
 						<nav class="header-menu header-item menu fl">
 								<?php wp_nav_menu(array('theme_location' => 'header', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list clearfix')); ?>
 						</nav>
-						<!-- 工具条 -->
 						<ul class="header-tool header-item fr">
 								<?php if ($search == true && !is_mobile()) { ?>
-										<!-- 搜索 -->
 										<li class="search m_hide">
 												<form method="get" id="searchform" action="<?php echo home_url(); ?>/">
 												<input type="text" class="search-form-input text" name="s" onfocus="if (this.value == '查找...') {this.value = '';}" onblur="if (this.value == '') {this.value = '查找...';}" value="查找...">                        </form>
 										</li>
 								<?php }?>
 								<?php if ($login == true && !is_mobile()) { ?>
-									<!-- 登陆 -->
 										<li class="navbar-login menu-item-has-children m_hide">
 												<?php $current_user = wp_get_current_user(); ?>
 												<?php if ( is_user_logged_in() ) { ?>
@@ -84,7 +81,6 @@ $banner_test = cs_get_option( 'i_banner_text' );
 								<?php } ?>
 						</ul>
 				</div>
-				<!-- Logo -->
 				<div id="topLogo" class="flex flex_vc flex-hc">
 						<div class="logo circle flex flex_vc flex-hc">
 								<?php if ( $symbol == 'i_text' ) { ?>
