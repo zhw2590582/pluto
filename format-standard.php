@@ -14,7 +14,7 @@ $dlview = cs_get_option( 'i_download_view' );
 $feature_num = cs_get_option( 'i_feature_num' );
 ?>
 
-<header class="post-title">
+<header class="post-title wb">
   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
     <?php the_title(); ?>
   </a>
@@ -69,7 +69,7 @@ $feature_num = cs_get_option( 'i_feature_num' );
 
   <div class="post-right col">
 
-    <div class="post-content clearfix">
+    <div class="post-content wb clearfix">
       <?php if(is_search() || is_archive()) { ?>
         <div class="excerpt-more">
             <?php the_excerpt(__( 'Read More','island')); ?>

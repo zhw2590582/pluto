@@ -45,7 +45,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 		<div class="footer-inner">
 			<div class="container">
 	      <?php if ($footer_text && !is_mobile()) {?>
-          <div class="footer-text clearfix">
+          <div class="footer-text wb clearfix">
               <?php echo $edit ?>
           </div>
 	      <?php }?>
@@ -164,7 +164,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 	<?php }	 ?>
 
 	<?php if ( is_single() && !is_mobile() && $download) {?>
-        <div class="cd-user-modal download-modal m_hide">
+        <div class="cd-user-modal download-modal hide">
             <div class="cd-user-modal-container">
                 <div class="modal-head">
                     <div class="modal-title"><i class="fa fa-download"></i>资源下载</div>
