@@ -54,13 +54,13 @@ body{
 }
 
 .mianmenu{
+  background: #13a6ac url('images/skin/mainMenu.png') repeat-x;
   a{
     color: #fff;
     &:hover{
       color: #fff;
     }
   }
-  background: #13a6ac url('images/skin/mainMenu.png') repeat-x;
   &::before{
     background: url('images/skin/mainMenu-l.png') no-repeat center center;
   }
@@ -77,4 +77,13 @@ body{
 .app_slider{
   background: #938975;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.post-date{
+  color: #908b6b;
+  text-shadow: 0px 1px 1px #fff;
+  background: url('images/skin/post-time.png') no-repeat center center;
+  &::before{
+    background: url('images/skin/post-time-over.png') no-repeat center center;
+  }
 }

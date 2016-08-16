@@ -177,6 +177,42 @@ $slider-h:324px;//slider
 .posts {
   margin: 10px;
   article{
-    
+    position: relative;
+  }
+}
+
+.post-date{
+  position: absolute;
+  width: 67px;
+  height: 78px;
+  left: -95px;
+  text-align: center;
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+  }
+  span{
+    display: block;
+  }
+  .date-month{
+    height: 25px;
+    line-height: 27px;
+    font-size: 15px;
+  }
+  .date-day{
+    height: 25px;
+    line-height: 26px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .date-year{
+    height: 25px;
+    line-height: 22px;
+    font-size: 13px;
   }
 }
