@@ -9,70 +9,6 @@ Version: 1.0.2
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-#header { position: relative; height: 195px; }
-
-.topbar { height: 45px; padding: 10px 0; }
-.topbar .skin a { display: inline-block; float: left; width: 22px; height: 22px; margin-right: 10px; border-radius: 3px; }
-.topbar .search .search-form-input { border: none; height: 22px; padding: 0 10px; width: 160px; border-radius: 10px; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); }
-.topbar .login { margin-left: 10px; }
-.topbar .login a { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 3px; }
-
-.topmenu { position: absolute; z-index: 1; bottom: 0; left: 0; right: 0; height: 59px; }
-.topmenu .menu-list { position: relative; z-index: 3; padding: 25px 0 0 0; }
-.topmenu .menu-list li { display: inline-block; width: 95px; text-align: center; float: left; }
-.topmenu .menu-list li:nth-child(4) { margin-left: 230px; }
-.topmenu .menu-list li a { font-size: 13px; text-shadow: 0px 1px 1px #000; }
-.topmenu .menu-list .sub-menu { display: none; }
-
-.logo { position: absolute; z-index: 2; left: 50%; margin-left: -115px; top: 60px; text-align: center; }
-.logo a { display: inline-block; width: 230px; height: 230px; }
-
-#content { margin-top: 150px; }
-#content .container { border-radius: 5px; padding: 8px; }
-#content .content-inner { border-radius: 3px; }
-
-.mianmenu { position: relative; height: 46px; margin: 15px -1px 0 -1px; }
-.mianmenu .menu-wrapper { position: relative; }
-.mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after { position: absolute; content: ''; top: 20px; width: 6px; height: 7px; }
-.mianmenu .menu-wrapper::before { left: 10px; }
-.mianmenu .menu-wrapper::after { right: 10px; }
-.mianmenu .menu-list { padding: 15px 5px 0; }
-.mianmenu .menu-list li { display: inline-block; float: left; width: 12.5%; text-align: center; }
-.mianmenu .menu-list li a { display: inline-block; font-size: 13px; text-shadow: 0px 1px 1px #000; }
-.mianmenu .menu-list .sub-menu { display: none; }
-.mianmenu::before, .mianmenu::after { position: absolute; content: ''; top: 15px; width: 46px; height: 45px; }
-.mianmenu::before { left: -46px; }
-.mianmenu::after { right: -46px; }
-
-.app_slider { margin: 10px; border-radius: 3px; padding: 5px; }
-.app_slider .slider_inner { min-height: 286px; border-radius: 3px; overflow: hidden; }
-
-.posts { margin: 10px; }
-.posts article { position: relative; padding-bottom: 15px; margin-bottom: 15px; }
-.posts article::after { position: absolute; bottom: 0; left: 0; right: 0; content: ''; height: 2px; }
-
-.post-date { position: absolute; width: 67px; height: 78px; left: -95px; text-align: center; }
-.post-date::before { position: absolute; top: 0; left: 0; right: 0; content: ''; width: 100%; height: 100%; }
-.post-date span { display: block; }
-.post-date .date-month { height: 25px; line-height: 27px; font-size: 15px; }
-.post-date .date-day { height: 25px; line-height: 26px; font-size: 30px; font-weight: bold; }
-.post-date .date-year { height: 25px; line-height: 22px; font-size: 13px; }
-
-.post-title { min-height: 30px; margin-bottom: 10px; }
-.post-title a { font-size: 22px; }
-
-.post-wrap .post-inner { margin-bottom: 15px; }
-.post-wrap .post-inner .post-left { position: relative; width: 150px; height: 150px; }
-.post-wrap .post-inner .post-right .post-content { font-size: 14px; }
-
-.index-post .post-right { padding-left: 10px; }
-.index-post .post-content { max-height: 150px; overflow: hidden; }
-
-.post-featured { height: 150px; border-radius: 3px; padding: 5px; }
-.post-featured a { border-radius: 3px; overflow: hidden; display: inline-block; width: 100%; height: 100%; }
-
-.post-sticky { position: absolute; top: 2px; left: 2px; width: 75px; height: 75px; }
-
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 html { font-family: sans-serif; line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -333,8 +269,6 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
 
 .colbox .col { display: table-cell; float: none; height: 100%; vertical-align: top; }
 
-.container { width: 800px; margin: 0 auto; }
-
 .ajax_gif { background: url("images/default/ajax.gif") center center no-repeat; }
 
 .alignleft { display: inline; float: left; margin-right: 1.625em; }
@@ -354,6 +288,77 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
 .shadow { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
 
 .ofh { overflow: hidden; width: 100%; text-overflow: ellipsis; white-space: nowrap; }
+
+.container { width: 800px; margin: 0 auto; }
+
+#header { position: relative; height: 195px; }
+
+.topbar { height: 45px; padding: 10px 0; }
+.topbar .skin a { display: inline-block; float: left; width: 22px; height: 22px; margin-right: 10px; border-radius: 3px; }
+.topbar .search .search-form-input { border: none; height: 22px; padding: 0 10px; width: 160px; border-radius: 10px; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); }
+.topbar .login { margin-left: 10px; }
+.topbar .login a { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 3px; }
+
+.topmenu { position: absolute; z-index: 1; bottom: 0; left: 0; right: 0; height: 59px; }
+.topmenu .menu-list { position: relative; z-index: 3; padding: 25px 0 0 0; }
+.topmenu .menu-list li { display: inline-block; width: 95px; text-align: center; float: left; }
+.topmenu .menu-list li:nth-child(4) { margin-left: 230px; }
+.topmenu .menu-list li a { font-size: 13px; text-shadow: 0px 1px 1px #000; }
+.topmenu .menu-list .sub-menu { display: none; }
+
+.logo { position: absolute; z-index: 2; left: 50%; margin-left: -115px; top: 60px; text-align: center; }
+.logo a { display: inline-block; width: 230px; height: 230px; }
+
+#content { position: relative; z-index: 2; margin-top: 150px; }
+#content .container { border-radius: 5px; padding: 8px; }
+#content .content-inner { border-radius: 3px; }
+
+.mianmenu { position: relative; height: 46px; margin: 15px -1px 0 -1px; }
+.mianmenu .menu-wrapper { position: relative; }
+.mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after { position: absolute; content: ''; top: 20px; width: 6px; height: 7px; }
+.mianmenu .menu-wrapper::before { left: 10px; }
+.mianmenu .menu-wrapper::after { right: 10px; }
+.mianmenu .menu-list { padding: 15px 5px 0; }
+.mianmenu .menu-list li { display: inline-block; float: left; width: 12.5%; text-align: center; }
+.mianmenu .menu-list li a { display: inline-block; font-size: 13px; text-shadow: 0px 1px 1px #000; }
+.mianmenu .menu-list .sub-menu { display: none; }
+.mianmenu::before, .mianmenu::after { position: absolute; content: ''; top: 15px; width: 46px; height: 45px; }
+.mianmenu::before { left: -46px; }
+.mianmenu::after { right: -46px; }
+
+.app_slider { margin: 10px; border-radius: 3px; padding: 5px; }
+.app_slider .slider_inner { min-height: 286px; border-radius: 3px; overflow: hidden; }
+
+.posts { margin: 10px; }
+.posts article { position: relative; padding-bottom: 15px; margin-bottom: 15px; }
+.posts article::after { position: absolute; bottom: 0; left: 0; right: 0; content: ''; height: 2px; }
+
+.post-date { position: absolute; width: 67px; height: 78px; left: -95px; text-align: center; }
+.post-date::before { position: absolute; top: 0; left: 0; right: 0; content: ''; width: 100%; height: 100%; }
+.post-date span { display: block; }
+.post-date .date-month { height: 25px; line-height: 27px; font-size: 15px; }
+.post-date .date-day { height: 25px; line-height: 26px; font-size: 30px; font-weight: bold; }
+.post-date .date-year { height: 25px; line-height: 22px; font-size: 13px; }
+
+.post-title { min-height: 30px; margin-bottom: 10px; }
+.post-title a { font-size: 22px; }
+
+.post-wrap .post-inner { margin-bottom: 15px; }
+.post-wrap .post-inner .post-left { position: relative; width: 150px; height: 150px; }
+.post-wrap .post-inner .post-right .post-content { font-size: 14px; }
+
+.index-post .post-right { padding-left: 10px; }
+.index-post .post-content { max-height: 150px; overflow: hidden; }
+
+.post-featured { height: 150px; border-radius: 3px; padding: 5px; }
+.post-featured a { border-radius: 3px; overflow: hidden; display: inline-block; width: 100%; height: 100%; }
+
+.post-sticky { position: absolute; top: 2px; left: 2px; width: 75px; height: 75px; }
+
+#footer { height: 290px; position: relative; z-index: 1; margin-top: -30px; }
+#footer::before { position: absolute; top: -8px; left: 0; right: 0; content: ''; height: 8px; }
+#footer .footer-inner { padding-top: 50px; max-height: 210px; overflow: hidden; }
+#footer .footer-end { position: absolute; width: 100%; text-align: center; bottom: 0; font-size: 14px; height: 51px; line-height: 51px; }
 
 /* queries */
 /* skin */
@@ -395,6 +400,10 @@ body { background: #6e655a url("images/skin/body.png") fixed; }
 .post-title a:hover { color: #fff; }
 
 article::after { border-top: 1px dashed #837c72; border-bottom: 1px dashed #dfdbd0; }
+
+#footer { background: #7a6e5f url("images/skin/footer.png"); }
+#footer::before { background: url("images/skin/footer-before.png") repeat-x; }
+#footer .footer-end { background: url("images/skin/footer-end.png") repeat-x; }
 
 /* plugins */
 /* nivoSlider */
@@ -485,5 +494,3 @@ article::after { border-top: 1px dashed #837c72; border-bottom: 1px dashed #dfdb
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-loaded { height: 5px; border-radius: 0; background: #A7A7A7; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-current { height: 5px; border-radius: 0; background: #3caac8; }
 .audio-wrapper .mejs-container .mejs-controls .mejs-time, .audio-wrapper .mejs-container .mejs-controls .mejs-mute, .audio-wrapper .mejs-container .mejs-controls .mejs-time-float { display: none !important; }
-
-/*# sourceMappingURL=style.css.map */

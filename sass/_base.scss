@@ -4,6 +4,12 @@ $container-w:800px;//宽度
 $logo-w:230px;//logo
 $slider-h:286px;//slider
 $featured-w:150px;//特色图
+$footer-h:290px;//页脚
+
+.container {
+    width: $container-w;
+    margin: 0 auto;
+}
 
 //页头
 #header{
@@ -99,6 +105,8 @@ $featured-w:150px;//特色图
 
 //主内容
 #content{
+  position: relative;
+  z-index: 2;
   margin-top: 150px;
   .container{
     border-radius: 5px;
@@ -285,4 +293,33 @@ $featured-w:150px;//特色图
   left: 2px;
   width: 75px;
   height: 75px;
+}
+
+#footer{
+  height: $footer-h;
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+  &::before{
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 8px;
+  }
+  .footer-inner{
+    padding-top: 50px;
+    max-height: $footer-h - 80px;
+    overflow: hidden;
+  }
+  .footer-end{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    font-size: 14px;
+    height: 51px;
+    line-height: 51px;
+  }
 }

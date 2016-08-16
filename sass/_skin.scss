@@ -114,3 +114,13 @@ article{
     border-bottom: 1px dashed #dfdbd0;
   }
 }
+
+#footer{
+  background: #7a6e5f url('images/skin/footer.png');
+  &::before{
+    background: url('images/skin/footer-before.png') repeat-x;
+  }
+  .footer-end{
+    background: url('images/skin/footer-end.png') repeat-x;
+  }
+}

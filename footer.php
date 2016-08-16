@@ -41,29 +41,24 @@ $video_img = cs_get_option( 'i_video_img' );
 $footer_text = cs_get_option( 'i_footer_text' );
 ?>
 
-	<footer id="footer">
-		<div class="container clearfix">
-			<div class="footer-inner m_hide">
-        <?php if ($footer_text && !is_mobile()) {?>
-            <div class="footer-text m_hide">
-                <?php echo $edit ?>
-            </div>
-        <?php }?>
-
-        <div class="footer-end clearfix">
-              <?php if( ! empty( $copyright ) ){ echo ''.$copyright.'';}else{
-                  echo'&copy; '.date("Y").' All Rights Reserved.';
-              } ?>
-
-              <a href="http://zhw-island.com/" target="_blank"> Theme by Owl</a>
-
-              <?php if( ! empty( $tongji ) ){ echo '<script>'.$tongji.'</script>';}else{
-                  echo' ';
-              } ?>
-        </div>
+<footer id="footer">
+		<div class="footer-inner">
+			<div class="container">
+	      <?php if ($footer_text && !is_mobile()) {?>
+          <div class="footer-text clearfix">
+              <?php echo $edit ?>
+          </div>
+	      <?php }?>
 			</div>
+	</div>
+	<div class="footer-end">
+		<div class="container">
+			<?php if( ! empty( $copyright ) ){ echo ''.$copyright.'';}else{echo'&copy; '.date("Y").' All Rights Reserved.';} ?>
+			<a href="http://zhw-island.com/" target="_blank"> Theme by Pluto</a>
+			<?php if( ! empty( $tongji ) ){ echo '<script>'.$tongji.'</script>';}else{echo' ';} ?>
 		</div>
-	</footer>
+	</div>
+</footer>
 
     <?php if (!is_mobile()) { ?>
 		<div id="footer__btn" class="hide m_hide">
@@ -168,15 +163,6 @@ $footer_text = cs_get_option( 'i_footer_text' );
 		<?php }	 ?>
 	<?php }	 ?>
 
-	<?php if ($switcher == true && !is_mobile()  ) { ?>
-				<i class="skin_btn hand"></i>
-        <div class="skin_switcher m_hide">
-						<div class="switcher_ctrl hand">
-
-						</div>
-        </div>
-	<?php }	 ?>
-
 	<?php if ( is_single() && !is_mobile() && $download) {?>
         <div class="cd-user-modal download-modal m_hide">
             <div class="cd-user-modal-container">
@@ -200,7 +186,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 	<?php }	?>
 
     <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
-        <div class="cd-user-modal login-modal m_hide">
+        <div class="cd-user-modal login-modal m_hide hide">
             <a href="#" class="cd-close-form"></a>
             <div class="cd-user-modal-container">
                 <div class="login-img" style="background-image: url('<?php echo $login_img; ?>');"></div>
@@ -231,15 +217,8 @@ $footer_text = cs_get_option( 'i_footer_text' );
 		<canvas id="pixie"></canvas>
 	<?php }?>
 
-	<?php if ( $video == true && !is_mobile()  ) { ?>
-        <div id="video_container" class="m_hide">
-            <video id="background_video" loop muted autoplay data-video="<?php echo $video_link; ?>"></video>
-            <div id="video_cover" style="background-image:url('<?php echo $video_img; ?>')"></div>
-            <div id="overlay"></div>
-        </div>
-	<?php }?>
-
 	<?php wp_footer(); ?>
+
 	<script>
 
     <?php if ($sliders == true) { ?>
