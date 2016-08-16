@@ -1,5 +1,4 @@
 <?php
-// 获取选项
 error_reporting(0);
 $excerpt = cs_get_option( 'i_post_readmore' );
 $view = cs_get_option( 'i_post_view' );

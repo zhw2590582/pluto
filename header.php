@@ -1,5 +1,5 @@
 <?php
-// 获取选项
+error_reporting(0);
 $notice = cs_get_option( 'i_notice' );
 $notice_main = cs_get_option( 'i_notice_main' );
 $keywords = cs_get_option( 'i_seo_keywords' );

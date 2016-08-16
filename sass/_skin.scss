@@ -40,3 +40,41 @@ body{
 .logo a{
   background: url('images/skin/logo.png') no-repeat center center;
 }
+
+#content{
+  .container{
+    background: #645a4c url('images/skin/content.png');
+    border: 1px solid #50483e
+  }
+  .content-inner{
+    background: #c3bca6 url('images/skin/content-inner.png');
+    border: 1px solid #dfdbd0;
+    box-shadow: 0px 0px 1px #564c40;
+  }
+}
+
+.mianmenu{
+  a{
+    color: #fff;
+    &:hover{
+      color: #fff;
+    }
+  }
+  background: #13a6ac url('images/skin/mainMenu.png') repeat-x;
+  &::before{
+    background: url('images/skin/mainMenu-l.png') no-repeat center center;
+  }
+  &::after{
+    background: url('images/skin/mainMenu-r.png') no-repeat center center;
+  }
+  .menu-wrapper{
+    &::before,&::after{
+      background: url('images/skin/mainMenu-dot.png') no-repeat center center;
+    }
+  }
+}
+
+.app_slider{
+  background: #938975;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+}

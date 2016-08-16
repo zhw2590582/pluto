@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
-//宽度
-$container-w:900px;
-$logo-w:230px;
+$container-w:900px;//宽度
+$logo-w:230px;//logo
+$slider-h:324px;//slider
 
+//页头
 #header{
   position: relative;
   height: 195px;
@@ -49,6 +50,7 @@ $logo-w:230px;
   }
 }
 
+//头菜单
 .topmenu{
   position: absolute;
   z-index: 1;
@@ -62,11 +64,11 @@ $logo-w:230px;
     padding: 25px 0 0 0;
     li{
       display: inline-block;
-      width: 12.5%;
+      width: ($container-w - $logo-w)/6;
       text-align: center;
       float: left;
       &:nth-child(4){
-        margin-left: 225px;
+        margin-left: $logo-w;
       }
       a{
         font-size: 13px;
@@ -79,6 +81,7 @@ $logo-w:230px;
   }
 }
 
+//Logo
 .logo{
   position: absolute;
   z-index: 2;
@@ -90,5 +93,90 @@ $logo-w:230px;
     display: inline-block;
     width: $logo-w;
     height: $logo-w;
+  }
+}
+
+//主内容
+#content{
+  margin-top: 150px;
+  .container{
+    border-radius: 5px;
+    padding: 8px;
+  }
+  .content-inner{
+    border-radius: 3px;
+  }
+}
+
+//分类菜单
+.mianmenu{
+  position: relative;
+  height: 46px;
+  margin: 15px -1px 0 -1px;
+  .menu-wrapper{
+    position: relative;
+    &::before,&::after{
+      position: absolute;
+      content: '';
+      top:20px;
+      width: 6px;
+      height: 7px;
+    }
+    &::before{
+      left: 10px;
+    }
+    &::after{
+      right: 10px;
+    }
+  }
+  .menu-list{
+    padding: 15px 5px 0;
+    li{
+      display: inline-block;
+      float: left;
+      width: 12.5%;
+      text-align: center;
+      a{
+        display: inline-block;
+        font-size: 13px;
+        text-shadow: 0px 1px 1px #000;
+      }
+    }
+    .sub-menu{
+      display: none
+    }
+  }
+  &::before,&::after{
+    position: absolute;
+    content: '';
+    top:15px;
+    width: 46px;
+    height: 45px;
+  }
+  &::before{
+    left: -46px;
+  }
+  &::after{
+    right: -46px;
+  }
+}
+
+//Slider
+.app_slider {
+    margin: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    .slider_inner{
+      min-height: $slider-h;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+}
+
+//文章
+.posts {
+  margin: 10px;
+  article{
+    
   }
 }

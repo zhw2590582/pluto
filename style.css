@@ -53,11 +53,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     padding: 25px 0 0 0; }
     .topmenu .menu-list li {
       display: inline-block;
-      width: 12.5%;
+      width: 111.66667px;
       text-align: center;
       float: left; }
       .topmenu .menu-list li:nth-child(4) {
-        margin-left: 225px; }
+        margin-left: 230px; }
       .topmenu .menu-list li a {
         font-size: 13px;
         text-shadow: 0px 1px 1px #000; }
@@ -75,6 +75,66 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     display: inline-block;
     width: 230px;
     height: 230px; }
+
+#content {
+  margin-top: 150px; }
+  #content .container {
+    border-radius: 5px;
+    padding: 8px; }
+  #content .content-inner {
+    border-radius: 3px; }
+
+.mianmenu {
+  position: relative;
+  height: 46px;
+  margin: 15px -1px 0 -1px; }
+  .mianmenu .menu-wrapper {
+    position: relative; }
+    .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
+      position: absolute;
+      content: '';
+      top: 20px;
+      width: 6px;
+      height: 7px; }
+    .mianmenu .menu-wrapper::before {
+      left: 10px; }
+    .mianmenu .menu-wrapper::after {
+      right: 10px; }
+  .mianmenu .menu-list {
+    padding: 15px 5px 0; }
+    .mianmenu .menu-list li {
+      display: inline-block;
+      float: left;
+      width: 12.5%;
+      text-align: center; }
+      .mianmenu .menu-list li a {
+        display: inline-block;
+        font-size: 13px;
+        text-shadow: 0px 1px 1px #000; }
+    .mianmenu .menu-list .sub-menu {
+      display: none; }
+  .mianmenu::before, .mianmenu::after {
+    position: absolute;
+    content: '';
+    top: 15px;
+    width: 46px;
+    height: 45px; }
+  .mianmenu::before {
+    left: -46px; }
+  .mianmenu::after {
+    right: -46px; }
+
+.app_slider {
+  margin: 10px;
+  border-radius: 3px;
+  padding: 5px; }
+  .app_slider .slider_inner {
+    min-height: 324px;
+    border-radius: 3px;
+    overflow: hidden; }
+
+.posts {
+  margin: 10px; }
 
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -787,11 +847,33 @@ body {
 .logo a {
   background: url("images/skin/logo.png") no-repeat center center; }
 
+#content .container {
+  background: #645a4c url("images/skin/content.png");
+  border: 1px solid #50483e; }
+#content .content-inner {
+  background: #c3bca6 url("images/skin/content-inner.png");
+  border: 1px solid #dfdbd0;
+  box-shadow: 0px 0px 1px #564c40; }
+
+.mianmenu {
+  background: #13a6ac url("images/skin/mainMenu.png") repeat-x; }
+  .mianmenu a {
+    color: #fff; }
+    .mianmenu a:hover {
+      color: #fff; }
+  .mianmenu::before {
+    background: url("images/skin/mainMenu-l.png") no-repeat center center; }
+  .mianmenu::after {
+    background: url("images/skin/mainMenu-r.png") no-repeat center center; }
+  .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
+    background: url("images/skin/mainMenu-dot.png") no-repeat center center; }
+
+.app_slider {
+  background: #938975;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25); }
+
 /* plugins */
 /* nivoSlider */
-.app_slider {
-  padding: 10px 0; }
-
 .nivoSlider {
   position: relative;
   width: 100%;
