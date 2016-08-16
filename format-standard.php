@@ -28,8 +28,11 @@ $feature_num = cs_get_option( 'i_feature_num' );
 </ul>
 
 <div class="post-inner">
+
   <?php if ( !is_single() && !is_page() ) { ?>
     <div class="post_left featured-box clearfix">
+
+      <!-- 特色图 开始 -->
       <?php if ( has_post_thumbnail() ) { ?>
         <div class="featured-image" >
           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -43,20 +46,25 @@ $feature_num = cs_get_option( 'i_feature_num' );
           </a>
         </div>
       <?php } ?>
+      <!-- 特色图 结束 -->
+
       <?php if (!empty($music)) { ?>
-          <div class="audio-wrapper">
-              <audio class="wp-audio-shortcode" preload="none" style="width: 100%">
-                  <source type="audio/mpeg" src="<?php echo $music; ?>">
-              </audio>
-              <?php wp_enqueue_script('mediaelement'); ?>
-              <?php wp_enqueue_style('mediaelement'); ?>
-              <script>
-                  jQuery(document).ready(function($) {
-                      $('.audio-wrapper audio').mediaelementplayer();
-                  });
-              </script>
-          </div>
+        <!-- 播放器 开始 -->
+        <div class="audio-wrapper">
+            <audio class="wp-audio-shortcode" preload="none" style="width: 100%">
+                <source type="audio/mpeg" src="<?php echo $music; ?>">
+            </audio>
+            <?php wp_enqueue_script('mediaelement'); ?>
+            <?php wp_enqueue_style('mediaelement'); ?>
+            <script>
+                jQuery(document).ready(function($) {
+                    $('.audio-wrapper audio').mediaelementplayer();
+                });
+            </script>
+        </div>
+        <!-- 播放器 结束 -->
       <?php } ?>
+
     </div>
   <?php } ?>
 
