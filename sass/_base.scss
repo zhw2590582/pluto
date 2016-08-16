@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-$container-w:900px;//宽度
+$container-w:800px;//宽度
 $logo-w:230px;//logo
-$slider-h:324px;//slider
+$slider-h:286px;//slider
+$featured-w:150px;//特色图
 
 //页头
 #header{
@@ -178,6 +179,16 @@ $slider-h:324px;//slider
   margin: 10px;
   article{
     position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    &::after{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      height: 2px;
+    }
   }
 }
 
@@ -215,4 +226,63 @@ $slider-h:324px;//slider
     line-height: 22px;
     font-size: 13px;
   }
+}
+
+.post-title{
+  min-height: 30px;
+  margin-bottom: 10px;
+  a{
+    font-size: 22px;
+  }
+}
+
+.post-wrap{
+  .post-inner{
+    margin-bottom: 15px;
+    .post-left{
+      position: relative;
+      width: $featured-w;
+      height: $featured-w;
+    }
+
+    .post-right {
+      .post-content{
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.index-post{
+  .post-right{
+    padding-left: 10px;
+  }
+  .post-content{
+    max-height: $featured-w;
+    overflow: hidden;
+  }
+}
+
+.post-featured{
+  height: $featured-w;
+  border-radius: 3px;
+  padding: 5px;
+  a{
+    border-radius: 3px;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    img{
+
+    }
+  }
+}
+
+.post-sticky{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 75px;
+  height: 75px;
 }

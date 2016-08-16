@@ -7,20 +7,6 @@ $like = cs_get_option( 'i_post_like' );
 
 <?php get_header(); ?>
 
-<!-- content 开始-->
-<section id="content">
-  <!-- container 开始-->
-  <div class="container">
-    <!-- content-inner 开始-->
-    <div class="content-inner">
-
-        <?php if (!is_mobile()) { ?>
-          <!-- mianmenu 开始-->
-          <div class="mianmenu m_hide">
-              <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list header-item clearfix')); ?>
-          </div>
-          <!-- mianmenu 结束-->
-        <?php } ?>
 
         <?php if(is_home() && !is_paged()) { ?>
           <!-- slider 开始 -->
@@ -68,19 +54,13 @@ $like = cs_get_option( 'i_post_like' );
         <div class="posts clearfix">
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php setPostViews(get_the_ID());?>
-          <article <?php post_class('post'); ?>>
+          <article <?php post_class('index-post'); ?>>
             <div class="post-date">
               <span class="date-month"><?php the_time('m'); ?>月</span>
               <span class="date-day"><?php the_time('d'); ?></span>
               <span class="date-year"><?php the_time('Y'); ?></span>
             </div>
-            <div class="post-wrap rel">
-
-              <?php if ( is_sticky() ) : ?>
-                <!-- 置顶文章 -->
-                <div class="post-sticky with-tooltip m_hide" data-tooltip="置顶文章"></div>
-                <?php else : ?>
-              <?php endif; ?>
+            <div class="post-wrap">
 
               <?php get_template_part('format', 'standard'); ?>
 

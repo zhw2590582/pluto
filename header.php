@@ -99,3 +99,18 @@ $switcher = cs_get_option( 'i_switcher' );
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>"></a>
 		</div>
 	</header>
+
+	<!-- content 开始-->
+	<section id="content">
+	  <!-- container 开始-->
+	  <div class="container">
+	    <!-- content-inner 开始-->
+	    <div class="content-inner">
+
+	        <?php if (!is_mobile()) { ?>
+	          <!-- 分类菜单 开始-->
+	          <div class="mianmenu m_hide">
+	              <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list header-item clearfix')); ?>
+	          </div>
+	          <!-- 分类菜单 结束-->
+	        <?php } ?>

@@ -2,8 +2,6 @@
 error_reporting(0);
 $excerpt = cs_get_option( 'i_post_readmore' );
 $view = cs_get_option( 'i_post_view' );
-$sticky_img = cs_get_option( 'i_related_image' );
-$featured = cs_get_option( 'i_post_featured' );
 $meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
 $music = $meta_data['i_post_music'];
 $download = $meta_data['i_download'];
@@ -11,36 +9,31 @@ $web = $meta_data['i_download_web'];
 $charge = $meta_data['i_download_charge'];
 $link = $meta_data['i_download_link'];
 $code = $meta_data['i_download_code'];
-$player = cs_get_option('i_player');
-$player_mobi = cs_get_option('i_player_mobi');
-$author = cs_get_option( 'i_post_author' );
 $jieya = cs_get_option( 'i_download_jieya' );
 $dlview = cs_get_option( 'i_download_view' );
 $feature_num = cs_get_option( 'i_feature_num' );
 ?>
 
-<ul class="post_meta shadow clearfix">
-    <li class="mate-view"><div class="mate-num ofh"><?php echo getPostViews(get_the_ID()); ?></div><i class="fa fa-eye"></i></li>
-    <li class="mate-com"><div class="mate-num ofh"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></div><i class="fa fa-comments-o"></i></li>
-    <?php if(current_user_can('level_10')){  ?>
-      <li class="mate-edit"><?php edit_post_link( __( '<i class="fa fa-edit"></i>' ), '<div class="edit-link" alt="编辑文章"  title="编辑文章">', '</div>' ); ?></li>
-    <?php } ?>
-</ul>
+<header class="post-title">
+  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+    <?php the_title(); ?>
+  </a>
+</header>
 
-<div class="post-inner">
+<div class="post-inner colbox">
 
   <?php if ( !is_single() && !is_page() ) { ?>
-    <div class="post_left featured-box clearfix">
+    <div class="post-left col">
 
       <!-- 特色图 开始 -->
       <?php if ( has_post_thumbnail() ) { ?>
-        <div class="featured-image" >
+        <div class="post-featured" >
           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <?php the_post_thumbnail( 'thumbnail' ); ?>
           </a>
         </div>
       <?php }else{?>
-        <div class="featured-image" >
+        <div class="post-featured" >
           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1,$feature_num)?>.png" alt="<?php the_title(); ?>" />
           </a>
@@ -65,15 +58,18 @@ $feature_num = cs_get_option( 'i_feature_num' );
         <!-- 播放器 结束 -->
       <?php } ?>
 
+      <?php if ( is_sticky() ) : ?>
+        <!-- 置顶文章 -->
+        <div class="post-sticky with-tooltip m_hide" data-tooltip="置顶文章"></div>
+        <?php else : ?>
+      <?php endif; ?>
+
     </div>
   <?php } ?>
 
-  <div class="post_right">
-    <header>
-      <h4 class="entry-title ofh"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-    </header>
-    <div class="post-content">
-      <div class="content clearfix">
+  <div class="post-right col">
+
+    <div class="post-content clearfix">
       <?php if(is_search() || is_archive()) { ?>
         <div class="excerpt-more">
             <?php the_excerpt(__( 'Read More','island')); ?>
@@ -89,10 +85,18 @@ $feature_num = cs_get_option( 'i_feature_num' );
           <?php the_content(__( 'Read More','island')); ?>
         <?php } ?>
       <?php } ?>
-      </div>
     </div>
+
   </div>
 </div>
+
+<ul class="post_meta clearfix hide">
+    <li class="mate-view"><div class="mate-num ofh"><?php echo getPostViews(get_the_ID()); ?></div><i class="fa fa-eye"></i></li>
+    <li class="mate-com"><div class="mate-num ofh"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></div><i class="fa fa-comments-o"></i></li>
+    <?php if(current_user_can('level_10')){  ?>
+      <li class="mate-edit"><?php edit_post_link( __( '<i class="fa fa-edit"></i>' ), '<div class="edit-link" alt="编辑文章"  title="编辑文章">', '</div>' ); ?></li>
+    <?php } ?>
+</ul>
 
 <?php if ( is_single() && $download && !is_mobile() ) {?>
   <!-- 下载盒子 开始 -->

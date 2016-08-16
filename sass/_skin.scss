@@ -74,7 +74,7 @@ body{
   }
 }
 
-.app_slider{
+.app_slider,.post-featured{
   background: #938975;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
 }
@@ -85,5 +85,32 @@ body{
   background: url('images/skin/post-time.png') no-repeat center center;
   &::before{
     background: url('images/skin/post-time-over.png') no-repeat center center;
+  }
+}
+
+.post-featured{
+  a{
+    background: url('images/skin/featured.png') no-repeat center center;
+  }
+}
+
+.post-sticky{
+  background: url('images/skin/sticky.png') no-repeat center center;
+  background-size: contain;
+}
+
+.post-title{
+  a{
+    color: #000;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+article{
+  &::after{
+    border-top: 1px dashed #837c72;
+    border-bottom: 1px dashed #dfdbd0;
   }
 }
