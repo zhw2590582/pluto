@@ -54,7 +54,7 @@ $footer-h:290px;//页脚
         font-size: 18px;
         width: 24px;
         height: 24px;
-        line-height: 22px;
+        line-height: 26px;
         text-align: center;
       }
   }
@@ -115,6 +115,9 @@ $footer-h:290px;//页脚
       a{
         font-size: 13px;
         text-shadow: 0px 1px 1px #000;
+        .fa{
+          margin-right: 5px;
+        }
       }
       &::before{
         position: absolute;
@@ -136,17 +139,18 @@ $footer-h:290px;//页脚
     .sub-menu{
       display: none;
       position: absolute;
+      z-index: 2;
       top: 40px;
       left: -26px;
       width: 150px;
       text-align: center;
     li{
-      float: none;
-      display: block;
-      width: 100%;
+      float: none !important;
+      display: block !important;
+      width: 100% !important;
       padding: 0 1px;
       a{
-        display: block;
+        display: block !important;
         width: 148px;
         padding: 7px 10px;
         overflow: hidden;
@@ -242,6 +246,7 @@ $footer-h:290px;//页脚
   .menu-list{
     padding: 15px 5px 0;
     li{
+      position: relative;
       display: inline-block;
       float: left;
       width: 12.5%;
@@ -250,10 +255,10 @@ $footer-h:290px;//页脚
         display: inline-block;
         font-size: 13px;
         text-shadow: 0px 1px 1px #000;
+        .fa{
+          margin-right: 5px;
+        }
       }
-    }
-    .sub-menu{
-      display: none
     }
   }
   &::before,&::after{

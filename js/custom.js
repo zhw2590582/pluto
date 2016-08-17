@@ -166,7 +166,7 @@ if (item.length > 0) {
 
 //登录Modal
     var $form_modal = $('.login-modal');
-    $(".navbar-btn").click(function(){
+    $(".login-btn").click(function(){
         $form_modal.toggleClass("is-visible");
     });
 

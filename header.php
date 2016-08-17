@@ -106,7 +106,7 @@ $switcher = cs_get_option( 'i_switcher' );
 	        <?php if (!is_mobile()) { ?>
 	          <!-- 分类菜单 开始-->
 	          <nav class="mianmenu m_hide">
-	              <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list header-item clearfix')); ?>
+	              <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div','depth' => 2, 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list header-item clearfix')); ?>
 	          </nav>
 	          <!-- 分类菜单 结束-->
 	        <?php } ?>

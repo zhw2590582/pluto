@@ -56,11 +56,12 @@ body{
   background: url('images/skin/submenu-bg.png') repeat-y;
   li{
     a{
-      color: #000;
+      color: #796e5f;
       text-shadow: none !important;
       border-top: 1px solid #edeee6;
       border-bottom: 1px solid #cdd1bb;
       &:hover{
+        color: #716049;
         background: #cdd1bb;
       }
     }
@@ -159,4 +160,8 @@ article{
   .footer-end{
     background: url('images/skin/footer-end.png') repeat-x;
   }
+}
+
+.cd-user-modal-container{
+  background: #c3bca6 url('images/skin/content-inner.png');
 }

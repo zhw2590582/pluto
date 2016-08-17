@@ -200,7 +200,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 
   <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
 		<!-- 登陆弹窗 开始 -->
-    <div class="cd-user-modal login-modal m_hide hide">
+    <div class="cd-user-modal login-modal m_hide">
       <a href="#" class="cd-close-form"></a>
       <div class="cd-user-modal-container">
         <div class="login-img" style="background-image: url('<?php echo $login_img; ?>');"></div>
