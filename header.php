@@ -36,7 +36,7 @@ $switcher = cs_get_option( 'i_switcher' );
         <a href="javascript:void(0)" class="clo-notice"><i class="fa fa-times"></i></a>
     </div>
   <?php }?>
-
+	<!-- header 开始-->
   <header id="header">
 
 		<div class="topbar">
@@ -89,16 +89,17 @@ $switcher = cs_get_option( 'i_switcher' );
 			</div>
 		</div>
 
-		<div class="topmenu">
+		<nav class="topmenu">
 			<div class="container clearfix">
 				<?php wp_nav_menu(array('theme_location' => 'header', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list clearfix')); ?>
 			</div>
-		</div>
+		</nav>
 
 		<div class="logo">
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>"></a>
 		</div>
 	</header>
+	<!-- header 结束-->
 
 	<!-- content 开始-->
 	<section id="content">
@@ -109,8 +110,8 @@ $switcher = cs_get_option( 'i_switcher' );
 
 	        <?php if (!is_mobile()) { ?>
 	          <!-- 分类菜单 开始-->
-	          <div class="mianmenu m_hide">
+	          <nav class="mianmenu m_hide">
 	              <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list header-item clearfix')); ?>
-	          </div>
+	          </nav>
 	          <!-- 分类菜单 结束-->
 	        <?php } ?>

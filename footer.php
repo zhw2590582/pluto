@@ -41,6 +41,10 @@ $video_img = cs_get_option( 'i_video_img' );
 $footer_text = cs_get_option( 'i_footer_text' );
 ?>
 
+<?php if ($sidebar == true && !is_mobile() ) {?>
+			<?php get_sidebar(); ?>
+<?php }?>
+<!-- footer 开始-->
 <footer id="footer">
 		<div class="footer-inner">
 			<div class="container">
@@ -59,9 +63,12 @@ $footer_text = cs_get_option( 'i_footer_text' );
 		</div>
 	</div>
 </footer>
+<!-- footer 结束-->
 
-    <?php if (!is_mobile()) { ?>
-		<div id="footer__btn" class="hide m_hide">
+
+  <?php if (!is_mobile()) { ?>
+		<!-- 浮动按钮 开始 -->
+		<div id="footer-btn" class="m_hide">
 			<ul>
 				<?php if ($gotop == true) {
 					echo '<li>
@@ -154,63 +161,71 @@ $footer_text = cs_get_option( 'i_footer_text' );
 
 			</ul>
 		</div>
+		<!-- 浮动按钮 结束 -->
 	<?php }?>
 
 	<?php if ($player_mobi == true && is_mobile() ) { }else{ ?>
 		<?php if ($player == true && ! empty( $player_id ) && function_exists('cue_playlist') ) {?>
-			<!-- 音乐播放器 -->
+				<!-- 播放器 开始 -->
 				<?php cue_playlist( $player_id ); ?>
+				<!-- 播放器 结束 -->
 		<?php }	 ?>
 	<?php }	 ?>
 
 	<?php if ( is_single() && !is_mobile() && $download) {?>
-        <div class="cd-user-modal download-modal hide">
-            <div class="cd-user-modal-container">
-                <div class="modal-head">
-                    <div class="modal-title"><i class="fa fa-download"></i>资源下载</div>
+		<!-- 下载弹窗 开始 -->
+    <div class="cd-user-modal download-modal hide">
+      <div class="cd-user-modal-container">
+        <div class="modal-head">
+          <div class="modal-title"><i class="fa fa-download"></i>资源下载</div>
 					<a href="#" class="cd-close-form"></a>
-                </div>
-                <div class="modal-main">
-                    <div class="dl-btn"><a class="btn" href="javascript:void(0)" target="_black"><i class="fa fa-arrow-circle-o-down"></i>点击下载</a></div>
-                    <div class="dl-tqcode">提取码：<span></span></div>
-                </div>
-                <div class="modal-bottom">
-                    <span>下载声明：<?php echo $shengming ?></span>
-                </div>
-            </div>
         </div>
+        <div class="modal-main">
+          <div class="dl-btn"><a class="btn" href="javascript:void(0)" target="_black"><i class="fa fa-arrow-circle-o-down"></i>点击下载</a></div>
+          <div class="dl-tqcode">提取码：<span></span></div>
+        </div>
+        <div class="modal-bottom">
+          <span>下载声明：<?php echo $shengming ?></span>
+        </div>
+      </div>
+    </div>
+		<!-- 下载弹窗 结束 -->
 	<?php }	?>
 
 	<?php if ( is_single() && !is_mobile() && $index) {?>
+		<!-- 文章索引 开始 -->
 		<div class="index-box"></div>
+		<!-- 文章索引 结束 -->
 	<?php }	?>
 
-    <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
-        <div class="cd-user-modal login-modal m_hide hide">
-            <a href="#" class="cd-close-form"></a>
-            <div class="cd-user-modal-container">
-                <div class="login-img" style="background-image: url('<?php echo $login_img; ?>');"></div>
-            	<div class="login-form">
-                    <?php
-                        $login_form_args = array (
-                            'form_id' => 'login-form',
-                            'label_log_in' => '登录',
-                            'remember' => false,
-                            'value_remember' => false
-                        );
-                    ?>
-                    <?php wp_login_form($login_form_args); ?>
-                    <p class="login-links clearfix">
-                        <span class="fl">
-                            <a href="<?php echo htmlspecialchars(wp_lostpassword_url(get_permalink()), ENT_QUOTES); ?>"><?php echo __('忘记密码', 'pinthis'); ?></a>
-                        </span>
-                        <?php if (get_option('users_can_register')) { ?>
-                            <span class="fr"><?php wp_register('', ''); ?></span>
-                        <?php } ?>
-                    </p>
-            	</div>
-            </div>
-        </div>
+  <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
+		<!-- 登陆弹窗 开始 -->
+    <div class="cd-user-modal login-modal m_hide hide">
+      <a href="#" class="cd-close-form"></a>
+      <div class="cd-user-modal-container">
+        <div class="login-img" style="background-image: url('<?php echo $login_img; ?>');"></div>
+      	<div class="login-form">
+          <?php
+              $login_form_args = array (
+                  'form_id' => 'login-form',
+                  'label_log_in' => '登录',
+                  'remember' => false,
+                  'value_remember' => false
+              );
+          ?>
+          <?php wp_login_form($login_form_args); ?>
+          <p class="login-links clearfix">
+              <span class="fl">
+                  <a href="<?php echo htmlspecialchars(wp_lostpassword_url(get_permalink()), ENT_QUOTES); ?>"><?php echo __('忘记密码', 'pinthis'); ?></a>
+              </span>
+              <?php if (get_option('users_can_register')) { ?>
+                  <span class="fr"><?php wp_register('', ''); ?></span>
+              <?php } ?>
+          </p>
+      	</div>
+      </div>
+    </div>
+		<!-- 登陆弹窗 结束 -->
 	<?php }	?>
 
 	<?php if ( $circle == true && !is_mobile()  ) { ?>
