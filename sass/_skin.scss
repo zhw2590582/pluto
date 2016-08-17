@@ -21,19 +21,55 @@ body{
    color: #867d73;
    background: #3f3c35;
  }
+
  .login-btn{
-   color: #6b6258;
+   color: #3e3a34;
+   text-shadow: 0px 1px 0px #6d6963;
+ }
+ .admin-box{
    background: #3f3c35;
+   a{
+     color: #716d68;
+     &:hover{
+       color: #96928c;
+     }
+   }
  }
 }
 
 .topmenu{
   background: url('images/skin/topMenu.png') repeat-x;
+  li{
+    &::before{
+      background: url('images/skin/menu-after.png') no-repeat center center;
+    }
+  }
   a{
     color: #e6e2d4;
     &:hover{
       color: #fff;
     }
+  }
+}
+
+.sub-menu{
+  background: url('images/skin/submenu-bg.png') repeat-y;
+  li{
+    a{
+      color: #000;
+      text-shadow: none !important;
+      border-top: 1px solid #edeee6;
+      border-bottom: 1px solid #cdd1bb;
+      &:hover{
+        background: #cdd1bb;
+      }
+    }
+  }
+  &::before{
+    background: url('images/skin/submenu-before.png') no-repeat center center;
+  }
+  &::after{
+    background: url('images/skin/submenu-after.png') no-repeat center center;
   }
 }
 

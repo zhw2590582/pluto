@@ -20,14 +20,14 @@ $footer-h:290px;//页脚
 //顶部工具条
 .topbar{
   height: 45px;
-  padding: 10px 0;
+  padding: 8px 0;
 
   .skin{
     a{
       display: inline-block;
       float: left;
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       margin-right: 10px;
       border-radius: 3px;
     }
@@ -36,7 +36,7 @@ $footer-h:290px;//页脚
   .search{
     .search-form-input{
       border: none;
-      height: 22px;
+      height: 24px;
       padding: 0 10px;
       width: 160px;
       border-radius: 10px;
@@ -47,14 +47,48 @@ $footer-h:290px;//页脚
   .login{
       margin-left: 10px;
       a{
+        font-size: 14px;
+      }
+      .login-btn{
         display: inline-block;
-        width: 22px;
-        height: 22px;
+        font-size: 18px;
+        width: 24px;
+        height: 24px;
         line-height: 22px;
         text-align: center;
-        border-radius: 3px;
       }
   }
+
+  .admin-box{
+    height: 24px;
+    padding: 3px;
+    border-radius: 3px;
+    .avatar-box{
+      img{
+        float: left;
+        margin-right: 5px;
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+      }
+      span{
+        float: left;
+        height: 18px;
+        line-height: 20px;
+        font-size: 13px;
+      }
+    }
+    .logout-btn{
+      display: inline-block;
+      font-size: 16px;
+      height: 18px;
+      line-height: 20px;
+      text-align: center;
+      padding-left:5px;
+      margin-left: 5px;
+    }
+  }
+
 }
 
 //头菜单
@@ -70,20 +104,87 @@ $footer-h:290px;//页脚
     z-index: 3;
     padding: 25px 0 0 0;
     li{
+      position: relative;
       display: inline-block;
       width: ($container-w - $logo-w)/6;
       text-align: center;
       float: left;
-      &:nth-child(4){
+      &:nth-child(4){ //第四个hack
         margin-left: $logo-w;
       }
       a{
         font-size: 13px;
         text-shadow: 0px 1px 1px #000;
       }
+      &::before{
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        top: 1px;
+        right: -8px;
+      }
+      &:nth-child(3)::before,&:last-child::before{ //第三个和最后一个hack
+        display: none;
+      }
     }
+  }
+}
+
+//二级菜单
+.menu-item-has-children{
     .sub-menu{
       display: none;
+      position: absolute;
+      top: 40px;
+      left: -26px;
+      width: 150px;
+      text-align: center;
+    li{
+      float: none;
+      display: block;
+      width: 100%;
+      padding: 0 1px;
+      a{
+        display: block;
+        width: 148px;
+        padding: 7px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &:first-child a{
+        border-top: none;
+      }
+      &:last-child a{
+        border-bottom: none;
+      }
+      &::before{
+        display: none;
+      }
+    }
+    &::before{
+      position: absolute;
+      top:-24px;
+      left: 0;
+      right: 0;
+      content: '';
+      width: 150px;
+      height: 24px;
+    }
+    &::after{
+      position: absolute;
+      bottom:-24px;
+      left: 0;
+      right: 0;
+      content: '';
+      width: 150px;
+      height: 24px;
+    }
+  }
+  &:hover{
+    .sub-menu{
+      display: block;
     }
   }
 }

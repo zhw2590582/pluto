@@ -43,10 +43,10 @@ $switcher = cs_get_option( 'i_switcher' );
 			<div class="container clearfix">
 				<?php if ($switcher == true && !is_mobile()) { ?>
 					<div class="skin fl clearfix">
-						<a href="#"></a>
-						<a href="#"></a>
-						<a href="#"></a>
-						<a href="#"></a>
+						<a href="#" class="with-tooltip skin-cloth" data-tooltip="布质"></a>
+						<a href="#" class="with-tooltip skin-wood" data-tooltip="木质"></a>
+						<a href="#" class="with-tooltip skin-paper" data-tooltip="纸质"></a>
+						<a href="#" class="with-tooltip skin-steam" data-tooltip="蒸汽朋克"></a>
 					</div>
 				<?php }?>
 				<div class="fr clearfix m_hide">
@@ -60,24 +60,19 @@ $switcher = cs_get_option( 'i_switcher' );
 						<?php if ($login == true && !is_mobile()) { ?>
 								<?php $current_user = wp_get_current_user(); ?>
 								<?php if ( is_user_logged_in() ) { ?>
-										<a class="avatar-box" href="<?php if(current_user_can('level_10')){ echo admin_url( 'admin.php?page=cs-framework' ) ;}else {echo admin_url( 'index.php' ) ;}  ?>" title="后台管理">
+									<div class="admin-box clearfix">
+										<a class="avatar-box fl clearfix with-tooltip" data-tooltip="管理" href="<?php if(current_user_can('level_10')){ echo admin_url( 'admin.php?page=cs-framework' ) ;}else {echo admin_url( 'index.php' ) ;}  ?>">
 												<?php if (strlen(get_avatar($current_user->ID, 40)) > 0) { ?>
 														<?php echo get_avatar($current_user->ID, 40); ?>
 												<?php } else { ?>
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-avatar.png" alt="<?php echo $current_user->display_name; ?>">
+														<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-avatar.png" alt="">
 												<?php } ?>
+												<span><?php echo $current_user->display_name; ?></span>
 										</a>
-										<ul class="sub-menu clearfix">
-												<li class="name">
-														<a href="<?php if(current_user_can('level_10')){ echo admin_url( 'admin.php?page=cs-framework' ) ;}else {echo admin_url( 'index.php' ) ;}  ?>"><i class="fa fa-tachometer"></i>后台管理</a>
-												</li>
-												<li class="edit-post">
-														<a href="<?php echo admin_url( 'post-new.php' ) ; ?>"><i class="fa fa-edit"></i>发文章</a>
-												</li>
-												<li class="log-out">
-														<a href="<?php echo wp_logout_url(home_url()); ?>" class="tooltip"><i class="fa fa-sign-out"></i>登出</a>
-												</li>
-										</ul>
+										<a href="<?php echo wp_logout_url(home_url()); ?>" class="logout-btn fl with-tooltip" data-tooltip="登出">
+											<i class="fa fa-sign-out"></i>
+										</a>
+									</div>
 								<?php } else { ?>
 								 <a href="#" onclick="return false;" class="login-btn">
 									 <i class="fa fa-user" aria-hidden="true"></i>
@@ -91,7 +86,7 @@ $switcher = cs_get_option( 'i_switcher' );
 
 		<nav class="topmenu">
 			<div class="container clearfix">
-				<?php wp_nav_menu(array('theme_location' => 'header', 'container' => 'div', 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list clearfix')); ?>
+				<?php wp_nav_menu(array('theme_location' => 'header', 'container' => 'div','depth' => 2, 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list clearfix')); ?>
 			</div>
 		</nav>
 

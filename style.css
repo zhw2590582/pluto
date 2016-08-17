@@ -701,17 +701,17 @@ mark {
 
 .topbar {
   height: 45px;
-  padding: 10px 0; }
+  padding: 8px 0; }
   .topbar .skin a {
     display: inline-block;
     float: left;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
     border-radius: 3px; }
   .topbar .search .search-form-input {
     border: none;
-    height: 22px;
+    height: 24px;
     padding: 0 10px;
     width: 160px;
     border-radius: 10px;
@@ -719,12 +719,37 @@ mark {
   .topbar .login {
     margin-left: 10px; }
     .topbar .login a {
+      font-size: 14px; }
+    .topbar .login .login-btn {
       display: inline-block;
-      width: 22px;
-      height: 22px;
+      font-size: 18px;
+      width: 24px;
+      height: 24px;
       line-height: 22px;
-      text-align: center;
+      text-align: center; }
+  .topbar .admin-box {
+    height: 24px;
+    padding: 3px;
+    border-radius: 3px; }
+    .topbar .admin-box .avatar-box img {
+      float: left;
+      margin-right: 5px;
+      width: 18px;
+      height: 18px;
       border-radius: 3px; }
+    .topbar .admin-box .avatar-box span {
+      float: left;
+      height: 18px;
+      line-height: 20px;
+      font-size: 13px; }
+    .topbar .admin-box .logout-btn {
+      display: inline-block;
+      font-size: 16px;
+      height: 18px;
+      line-height: 20px;
+      text-align: center;
+      padding-left: 5px;
+      margin-left: 5px; }
 
 .topmenu {
   position: absolute;
@@ -738,6 +763,7 @@ mark {
     z-index: 3;
     padding: 25px 0 0 0; }
     .topmenu .menu-list li {
+      position: relative;
       display: inline-block;
       width: 95px;
       text-align: center;
@@ -747,8 +773,59 @@ mark {
       .topmenu .menu-list li a {
         font-size: 13px;
         text-shadow: 0px 1px 1px #000; }
-    .topmenu .menu-list .sub-menu {
+      .topmenu .menu-list li::before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        top: 1px;
+        right: -8px; }
+      .topmenu .menu-list li:nth-child(3)::before, .topmenu .menu-list li:last-child::before {
+        display: none; }
+
+.menu-item-has-children .sub-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: -26px;
+  width: 150px;
+  text-align: center; }
+  .menu-item-has-children .sub-menu li {
+    float: none;
+    display: block;
+    width: 100%;
+    padding: 0 1px; }
+    .menu-item-has-children .sub-menu li a {
+      display: block;
+      width: 148px;
+      padding: 7px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .menu-item-has-children .sub-menu li:first-child a {
+      border-top: none; }
+    .menu-item-has-children .sub-menu li:last-child a {
+      border-bottom: none; }
+    .menu-item-has-children .sub-menu li::before {
       display: none; }
+  .menu-item-has-children .sub-menu::before {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 150px;
+    height: 24px; }
+  .menu-item-has-children .sub-menu::after {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 150px;
+    height: 24px; }
+.menu-item-has-children:hover .sub-menu {
+  display: block; }
 
 .logo {
   position: absolute;
@@ -945,15 +1022,37 @@ body {
     color: #867d73;
     background: #3f3c35; }
   .topbar .login-btn {
-    color: #6b6258;
+    color: #3e3a34;
+    text-shadow: 0px 1px 0px #6d6963; }
+  .topbar .admin-box {
     background: #3f3c35; }
+    .topbar .admin-box a {
+      color: #716d68; }
+      .topbar .admin-box a:hover {
+        color: #96928c; }
 
 .topmenu {
   background: url("images/skin/topMenu.png") repeat-x; }
+  .topmenu li::before {
+    background: url("images/skin/menu-after.png") no-repeat center center; }
   .topmenu a {
     color: #e6e2d4; }
     .topmenu a:hover {
       color: #fff; }
+
+.sub-menu {
+  background: url("images/skin/submenu-bg.png") repeat-y; }
+  .sub-menu li a {
+    color: #000;
+    text-shadow: none !important;
+    border-top: 1px solid #edeee6;
+    border-bottom: 1px solid #cdd1bb; }
+    .sub-menu li a:hover {
+      background: #cdd1bb; }
+  .sub-menu::before {
+    background: url("images/skin/submenu-before.png") no-repeat center center; }
+  .sub-menu::after {
+    background: url("images/skin/submenu-after.png") no-repeat center center; }
 
 .logo a {
   background: url("images/skin/logo.png") no-repeat center center; }
