@@ -278,7 +278,7 @@ $footer-h:290px;//页脚
 
 //Slider
 .app_slider {
-    margin: 10px;
+    margin: 10px 10px 30px;
     border-radius: 3px;
     padding: 5px;
     .slider_inner{
@@ -310,6 +310,7 @@ $footer-h:290px;//页脚
   position: absolute;
   width: 67px;
   height: 78px;
+  top:0;
   left: -95px;
   text-align: center;
   &::before{
@@ -343,10 +344,64 @@ $footer-h:290px;//页脚
 }
 
 .post-title{
+  position: relative;
   min-height: 30px;
+  padding: 5px;
   margin-bottom: 10px;
+  border-radius: 3px;
+  .state{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 29px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
   a{
-    font-size: 22px;
+    font-size: 20px;
+  }
+  &::before{
+    position: absolute;
+    display: inline-block;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: -11px;
+    width: 3px;
+    height: 100%;
+  }
+}
+
+.read_more{
+  a{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 7px 15px;
+    border-radius: 15px;
+  }
+}
+
+.post-meta{
+  li{
+    margin-right: 15px;
+    &:last-child{
+      margin-right: 0;
+    }
+    .fa{
+      line-height: 18px;
+      margin-right: 5px;
+    }
+    a{
+      margin-right: 5px;
+    }
+  }
+  .meta-tabs{
+    a::before{
+      content: '#'
+    }
   }
 }
 
@@ -362,6 +417,7 @@ $footer-h:290px;//页脚
     .post-right {
       .post-content{
         font-size: 14px;
+        line-height: 1.5;
       }
     }
   }
@@ -375,6 +431,10 @@ $footer-h:290px;//页脚
     max-height: $featured-w;
     overflow: hidden;
   }
+}
+
+.single-post{
+  margin-top: 30px;
 }
 
 .post-featured{

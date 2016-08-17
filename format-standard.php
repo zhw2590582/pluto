@@ -14,8 +14,9 @@ $dlview = cs_get_option( 'i_download_view' );
 $feature_num = cs_get_option( 'i_feature_num' );
 ?>
 
-<header class="post-title wb">
-  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+<header class="post-title clearfix wb">
+  <i class="with-tooltip fl state fa fa-smile-o" data-tooltip="心情如何" aria-hidden="true"></i>
+  <a class="fl" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
     <?php the_title(); ?>
   </a>
 </header>

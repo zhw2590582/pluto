@@ -64,12 +64,12 @@ $like = cs_get_option( 'i_post_like' );
 
               <?php get_template_part('format', 'standard'); ?>
 
-              <ul class="bottom_meta clearfix">
-                <li class="mate-time fl"><i class="fa fa-clock-o"></i><?php echo ''.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?></li>
-                <li class="mate-cat fl"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
-                <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta_tabs fl"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
-                <?php if ($like == true) { ?> <li class="meta_like fr"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
+              <ul class="post-meta clearfix">
+                <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
+                <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
+                <?php if ($like == true) { ?> <li class="meta-like fr"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
               </ul>
+
             </div>
           </article>
           <?php endwhile; ?>

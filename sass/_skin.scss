@@ -136,19 +136,61 @@ body{
   background-size: contain;
 }
 
-.post-title{
-  a{
-    color: #000;
-    &:hover{
-      color: #fff;
-    }
-  }
-}
 
 article{
+  .post-title{
+    background: #b3ac97;
+    a{
+      color: #524638;
+      text-shadow: 0px 1px 0px #d4d0c4;
+      &:hover{
+        color: #3c362f;
+      }
+    }
+    &::before{
+      background: #a50d0f;
+    }
+  }
+  .post-content{
+    color: #524638
+  }
   &::after{
     border-top: 1px dashed #837c72;
     border-bottom: 1px dashed #dfdbd0;
+  }
+}
+
+.state{
+  color: #524638;
+  text-shadow: 0px 1px 0px #d4d0c4;
+}
+
+.post-meta{
+  color: #696156;
+    a{
+      color: #696156;
+      &:hover{
+        color: #000;
+      }
+    }
+}
+
+.jm-post-like.liked{
+  color: #a50d0f
+}
+
+.read_more{
+  a{
+    color: #70675c;
+    background: #b3ac97;
+    &:hover{
+      background: #a29b84;
+    }
+    &::after{
+      font-family: FontAwesome;
+      content: "\f101";
+      margin-left: 5px;
+    }
   }
 }
 
