@@ -280,8 +280,31 @@ $footer-h:290px;//页脚
 
 //归档标题
 .archive-title{
+  text-align: center;
   .title-inner{
-
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    &::before{
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 100px;
+      top: 18px;
+      left: -120px;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 100px;
+      top: 18px;
+      right: -120px;
+    }
+    .fa{
+      margin-right: 5px;
+    }
   }
 }
 
@@ -490,6 +513,7 @@ $footer-h:290px;//页脚
 
 .post-meta{
   li{
+    font-size: 13px;
     margin-right: 15px;
     .fa{
       line-height: 18px;
@@ -502,6 +526,41 @@ $footer-h:290px;//页脚
   .meta-tabs{
     a::before{
       content: '#'
+    }
+  }
+}
+
+.post-copyright{
+  text-align: center;
+  margin-bottom: 15px;
+  .post-copyright-inner{
+    display: inline-block;
+    font-size: 13px;
+    padding: 5px 20px;
+    border-radius: 3px;
+  }
+}
+
+.post-related{
+  margin-bottom: 20px;
+  li{
+    display: inline-block;
+    width: ($container-w - 40px)/5;
+    float: left;
+    padding: 0 5px;
+    .r_pic{
+      padding: 5px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      height: ($container-w - 90px)/5;
+      a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+      img{
+        border-radius: 3px;
+      }
     }
   }
 }

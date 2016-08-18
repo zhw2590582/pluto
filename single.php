@@ -37,7 +37,9 @@ $like = cs_get_option( 'i_post_like' );
 
                       <?php if ($link == true && !is_mobile()) { ?>
                         <div class="post-copyright m_hide">
+                          <div class="post-copyright-inner">
                             转载原创文章请注明，转载自： <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> » <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                          </div>
                         </div>
                       <?php } ?>
 
@@ -99,18 +101,11 @@ $like = cs_get_option( 'i_post_like' );
                         </ul>
                         <?php } ?>
                     </div>
-                    <ul class="bottom_meta clearfix">
-                        <li class="mate-time fl"><i class="fa fa-clock-o"></i><?php echo ''.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?></li>
-                        <li class="mate-cat fl m_hide"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
-                        <?php $posttags = get_the_tags(); if ($posttags) { ?>
-                            <li class="meta_tabs fl m_hide"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li>
-                        <?php } ?>
-
-                        <?php if ($like == true) { ?>
-                            <li class="meta_like fr">
-                                <?php echo getPostLikeLink( get_the_ID() ); ?>
-                            </li>
-                        <?php } ?>
+                    <ul class="post-meta clearfix">
+                      <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
+                      <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
+                      <?php if ($like == true) { ?> <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
+                      <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num ofh"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
                     </ul>
                   </div>
                 </article>
