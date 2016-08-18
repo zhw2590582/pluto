@@ -220,6 +220,7 @@ $footer-h:290px;//页脚
   .content-inner{
     position: relative;
     border-radius: 3px;
+    padding-bottom: 30px;
   }
 }
 
@@ -227,7 +228,7 @@ $footer-h:290px;//页脚
 .mianmenu{
   position: relative;
   height: 46px;
-  margin: 15px -1px 0 -1px;
+  margin: 15px -1px 30px -1px;
   .menu-wrapper{
     position: relative;
     &::before,&::after{
@@ -277,9 +278,44 @@ $footer-h:290px;//页脚
   }
 }
 
+//归档标题
+.archive-title{
+  .title-inner{
+
+  }
+}
+
+//公告
+.notice{
+  position: fixed;
+  z-index: 10;
+  width: 340px;
+  height: 90px;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -170px;
+  background: #000;
+  background: hsla(0,0%,7%,.85);
+  color: #fff;
+  box-shadow: 0 0 5px 0 hsla(0,0%,7%,.35);
+  border-radius: 45px;
+  visibility: visibility;
+  opacity: 0;
+  -webkit-transform:translateY(20px);
+  transform:translateY(20px);
+  -webkit-transition:all .6s ease;
+  transition:all .6s ease;
+  &.open{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform:translateY(0);
+    transform:translateY(0);
+  }
+}
+
 //Slider
 .app_slider {
-    margin: 10px 10px 30px;
+    margin: 0 10px 30px;
     border-radius: 3px;
     padding: 5px;
     .slider_inner{
@@ -294,7 +330,7 @@ $footer-h:290px;//页脚
   margin: 10px;
   article{
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     margin-bottom: 15px;
     &::after{
       position: absolute;
@@ -459,10 +495,6 @@ $footer-h:290px;//页脚
   }
 }
 
-.single-post{
-  margin-top: 30px;
-}
-
 .post-featured{
   height: $featured-w;
   border-radius: 3px;
@@ -487,23 +519,85 @@ $footer-h:290px;//页脚
   height: 75px;
 }
 
-#footer{
-  height: $footer-h;
-  position: relative;
-  z-index: 1;
-  margin-top: 100px;
-  &::before{
-    position: absolute;
-    top: -8px;
-    left: 0;
-    right: 0;
-    content: '';
-    height: 8px;
+.posts-nav{
+  .nav-inside{
+    display: inline-block;
+    .page-numbers{
+      display: inline-block;
+      float: left;
+      position: relative;
+      margin-left: -1px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      &:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      &:last-child{
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
   }
+}
+
+.ias-trigger-next{
+  a{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+  }
+}
+
+.ias-noneleft{
+  font-size: 14px;
+  font-style: italic;
+}
+
+#awaiting_comments {
+  position: fixed;
+  top: 65px;
+  right: 24px;
+  z-index: 9999;
+  max-width: 180px;
+  _width: 130px;
+  display: block;
+  float: none;
+  padding: 7px 12px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  .fa{
+    margin-right: 7px;
+  }
+  a{
+    color: #d32;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+}
+
+#footer{
+  position: relative;
+  margin-top: 100px;
   .footer-inner{
-    padding-top: 50px;
-    max-height: $footer-h - 80px;
-    overflow: hidden;
+    position: relative;
+    font-size: 13px;
+    padding: 30px 0 80px;
+    &::before{
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      content: '';
+      height: 8px;
+    }
   }
   .footer-end{
     position: absolute;

@@ -68,7 +68,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 
   <?php if (!is_mobile()) { ?>
 		<!-- 浮动按钮 开始 -->
-		<div id="footer-btn" class="m_hide">
+		<div id="footer-btn" class="m_hide hide">
 			<ul>
 				<?php if ($gotop == true) {
 					echo '<li>
@@ -227,6 +227,12 @@ $footer_text = cs_get_option( 'i_footer_text' );
     </div>
 		<!-- 登陆弹窗 结束 -->
 	<?php }	?>
+
+	<!-- 公告弹窗 开始 -->
+	<div class="notice open">
+
+	</div>
+	<!-- 公告弹窗 结束 -->
 
 	<?php if ( $circle == true && !is_mobile()  ) { ?>
 		<canvas id="pixie"></canvas>

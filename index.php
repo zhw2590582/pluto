@@ -103,16 +103,16 @@ $like = cs_get_option( 'i_post_like' );
                 </div>
                 <?php endif; ?>
             <?php } else { ?>
-            <div class="posts-nav">
-              <div class="nav-inside text-c clearfix">
+            <div class="posts-nav text-c">
+              <div class="nav-inside clearfix">
                 <?php echo paginate_links(array(
-                    'prev_next'          => 0,
+                    'prev_text'          =>'<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+                    'next_text'          =>'<i class="fa fa-chevron-right" aria-hidden="true"></i>',
                     'before_page_number' => '',
                     'mid_size'           => 2,
                 ));?>
               </div>
             </div>
-            <?php ?>
         <?php } ?>
         <span class="post-top"></span>
     </div>

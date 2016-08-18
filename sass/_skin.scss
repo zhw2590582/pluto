@@ -173,7 +173,7 @@ article{
   }
   &::after{
     border-top: 1px dashed #837c72;
-    border-bottom: 1px dashed #dfdbd0;
+    border-bottom: 1px dashed #dad3be;
   }
 }
 
@@ -215,15 +215,43 @@ article{
   }
 }
 
+.page-numbers,.ias-trigger-next a{
+  color: #544e47;
+  background: #cfccbf;
+  border: 1px solid #6f665c;
+  &:hover,&.current{
+    background: #e0dfda;
+  }
+}
+
+.ias-noneleft{
+  color: #6d655a
+}
+
 #footer{
-  background: #7a6e5f url('images/skin/footer.png');
-  &::before{
-    background: url('images/skin/footer-before.png') repeat-x;
+  .footer-inner{
+    background: #7a6e5f url('images/skin/footer.png');
+    &::before{
+      background: url('images/skin/footer-before.png') repeat-x;
+    }
+  }
+  .footer-text{
+    color: #dedacf;
+    text-shadow: 0px 1px 0px #4e463e;
   }
   .footer-end{
+    color: #aba58f;
+    text-shadow: 0px 1px 0px #4e463e;
+    a{
+      color: #aba58f;
+      &:hover{
+        color: #dedacf;
+      }
+    }
     background: url('images/skin/footer-end.png') repeat-x;
   }
 }
+
 
 .cd-user-modal-container{
   background: #c3bca6 url('images/skin/content-inner.png');
