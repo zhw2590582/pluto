@@ -359,11 +359,15 @@ $footer_text = cs_get_option( 'i_footer_text' );
 				$('.audio-wrapper audio').mediaelementplayer();
 			};
 
-            $("img").addClass('ajax_gif').load(function() {
-                $(this).removeClass('ajax_gif');
-            }).on('error', function () {
-                $(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-            });
+			$("img").not($(".wp-smiley")) .addClass('ajax_gif').load(function() {
+				$(this).removeClass('ajax_gif');
+			}).on('error', function () {
+				$(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+			}).each(function(){
+		    if ($(this).attr('src') == '') {
+		      $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+		    }
+		  });
 
 
 		});

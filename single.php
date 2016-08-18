@@ -68,7 +68,7 @@ $like = cs_get_option( 'i_post_like' );
                                     <img src="<?php echo post_thumbnail_src(); ?>" alt="<?php the_title(); ?>" class="thumbnail" />
                                     </a>
                                     </div>
-                                    <div class="r_title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"  rel="bookmark"><?php the_title(); ?></a></div>
+                                    <div class="r_title"><a class="wb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"  rel="bookmark"><?php the_title(); ?></a></div>
                                     </li>
                                 <?php
                                     $exclude_id .= ',' . $post->ID; $i ++;
@@ -91,7 +91,7 @@ $like = cs_get_option( 'i_post_like' );
                                     <img src="<?php echo post_thumbnail_src(); ?>" alt="<?php the_title(); ?>" class="thumbnail" />
                                     </a>
                                     </div>
-                                    <div class="r_title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"  rel="bookmark"><?php the_title(); ?></a></div>
+                                    <div class="r_title"><a class="wb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"  rel="bookmark"><?php the_title(); ?></a></div>
                                 </li>
                                 <?php $i++;
                                 } wp_reset_query();

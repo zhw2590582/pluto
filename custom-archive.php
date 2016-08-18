@@ -9,11 +9,6 @@ error_reporting(0);
                       <!-- 归档 -->
         	            <div class="posts clearfix">
         								<article <?php post_class('single-post'); ?>>
-                          <div class="post-date">
-                            <span class="date-month"><?php the_time('m'); ?>月</span>
-                            <span class="date-day"><?php the_time('d'); ?></span>
-                            <span class="date-year"><?php the_time('Y'); ?></span>
-                          </div>
         									<div class="post-wrap">
                             <header class="post-title wb">
                               <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -57,14 +52,15 @@ error_reporting(0);
         										</div>
         									</div>
         								</article>
+                        <!-- 评论 -->
+                        <?php if ('open' == $post->comment_status) { ?>
+                          <div id="comment-jump" class="comments">
+                              <?php comments_template(); ?>
+                          </div>
+                        <?php } ?>
         	            </div>
 
-    									<!-- 评论 -->
-    									<?php if ('open' == $post->comment_status) { ?>
-                        <div id="comment-jump" class="comments">
-                            <?php comments_template(); ?>
-                        </div>
-    									<?php } ?>
+
 
                   </div>
                       <!-- content-inner 结束-->

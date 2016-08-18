@@ -115,7 +115,12 @@ if (item.length > 0) {
 		$(this).removeClass('ajax_gif');
 	}).on('error', function () {
 		$(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-	});
+	}).each(function(){
+    if ($(this).attr('src') == '') {
+      $(this).prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    }
+  });
+
 
 //友链小图标
 	$(".linkcat li a").each(function(i) {

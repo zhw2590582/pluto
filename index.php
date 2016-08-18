@@ -34,7 +34,7 @@ $like = cs_get_option( 'i_post_like' );
 
         <!-- archive title 开始  -->
         <?php if(is_search()) { ?>
-          <h6 class="archive-title"><div class="title-inner">搜索： <?php printf( __( '搜索结果: %s' ), '<span>' . get_search_query() . '</span>' ); ?></div></h6>
+          <h6 class="archive-title"><div class="title-inner"><?php printf( __( '搜索:  %s' ), '<span>' . get_search_query() . '</span>' ); ?></div></h6>
         <?php } else if(is_tag()) { ?>
           <h6 class="archive-title"><div class="title-inner">标签： <?php single_tag_title(); ?></div></h6>
         <?php } else if(is_day()) { ?>

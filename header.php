@@ -97,7 +97,7 @@ $switcher = cs_get_option( 'i_switcher' );
 	<!-- header 结束-->
 
 	<!-- content 开始-->
-	<section id="content">
+	<section id="content" name="content">
 	  <!-- container 开始-->
 	  <div class="container">
 	    <!-- content-inner 开始-->

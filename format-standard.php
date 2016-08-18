@@ -17,7 +17,7 @@ $feature_num = cs_get_option( 'i_feature_num' );
 <header class="post-title clearfix wb">
   <i class="with-tooltip fl state fa fa-smile-o" data-tooltip="心情如何" aria-hidden="true"></i>
   <div class="fl">
-    <a class="" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+    <a class="" href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
       <?php the_title(); ?>
     </a>
   </div>
@@ -31,13 +31,13 @@ $feature_num = cs_get_option( 'i_feature_num' );
       <!-- 特色图 开始 -->
       <?php if ( has_post_thumbnail() ) { ?>
         <div class="post-featured" >
-          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+          <a href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
             <?php the_post_thumbnail( 'thumbnail' ); ?>
           </a>
         </div>
       <?php }else{?>
         <div class="post-featured" >
-          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+          <a href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-echo="<?php bloginfo('template_directory'); ?>/images/thumbnail/img<?php echo rand(1,$feature_num)?>.png" alt="<?php the_title(); ?>" />
           </a>
         </div>
