@@ -16,9 +16,11 @@ $feature_num = cs_get_option( 'i_feature_num' );
 
 <header class="post-title clearfix wb">
   <i class="with-tooltip fl state fa fa-smile-o" data-tooltip="心情如何" aria-hidden="true"></i>
-  <a class="fl" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-    <?php the_title(); ?>
-  </a>
+  <div class="fl">
+    <a class="" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <?php the_title(); ?>
+    </a>
+  </div>
 </header>
 
 <div class="post-inner colbox">
@@ -90,14 +92,6 @@ $feature_num = cs_get_option( 'i_feature_num' );
 
   </div>
 </div>
-
-<ul class="post_meta clearfix hide">
-    <li class="mate-view"><div class="mate-num ofh"><?php echo getPostViews(get_the_ID()); ?></div><i class="fa fa-eye"></i></li>
-    <li class="mate-com"><div class="mate-num ofh"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></div><i class="fa fa-comments-o"></i></li>
-    <?php if(current_user_can('level_10')){  ?>
-      <li class="mate-edit"><?php edit_post_link( __( '<i class="fa fa-edit"></i>' ), '<div class="edit-link" alt="编辑文章"  title="编辑文章">', '</div>' ); ?></li>
-    <?php } ?>
-</ul>
 
 <?php if ( is_single() && $download && !is_mobile() ) {?>
   <!-- 下载盒子 开始 -->

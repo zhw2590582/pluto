@@ -218,6 +218,7 @@ $footer-h:290px;//页脚
     padding: 8px;
   }
   .content-inner{
+    position: relative;
     border-radius: 3px;
   }
 }
@@ -306,13 +307,18 @@ $footer-h:290px;//页脚
   }
 }
 
-.post-date{
+.post-tool{
   position: absolute;
-  width: 67px;
-  height: 78px;
   top:0;
   left: -95px;
+}
+
+.post-date{
+  position: relative;
+  width: 65px;
+  height: 78px;
   text-align: center;
+  margin-bottom: 10px;
   &::before{
     position: absolute;
     top: 0;
@@ -343,6 +349,29 @@ $footer-h:290px;//页脚
   }
 }
 
+.post-view,.post-edit{
+  margin-bottom: 10px;
+  min-width: 65px;
+  height: 24px;
+  line-height: 25px;
+  padding: 0 2px;
+  text-align: center;
+  border-radius: 3px;
+  .fa{
+    margin-right: 5px;
+  }
+}
+
+.post-top{
+  position: absolute;
+  bottom: -62px;
+  left: 50%;
+  width: 80px;
+  height: 61px;
+  cursor: pointer;
+  margin-left: -40px;
+}
+
 .post-title{
   position: relative;
   min-height: 30px;
@@ -353,7 +382,7 @@ $footer-h:290px;//页脚
     display: inline-block;
     width: 28px;
     height: 28px;
-    line-height: 29px;
+    line-height: 28px;
     font-size: 20px;
     text-align: center;
     border-radius: 3px;
@@ -387,9 +416,6 @@ $footer-h:290px;//页脚
 .post-meta{
   li{
     margin-right: 15px;
-    &:last-child{
-      margin-right: 0;
-    }
     .fa{
       line-height: 18px;
       margin-right: 5px;
@@ -465,7 +491,7 @@ $footer-h:290px;//页脚
   height: $footer-h;
   position: relative;
   z-index: 1;
-  margin-top: -30px;
+  margin-top: 100px;
   &::before{
     position: absolute;
     top: -8px;

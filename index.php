@@ -55,11 +55,27 @@ $like = cs_get_option( 'i_post_like' );
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php setPostViews(get_the_ID());?>
           <article <?php post_class('index-post'); ?>>
-            <div class="post-date">
-              <span class="date-month"><?php the_time('m'); ?>月</span>
-              <span class="date-day"><?php the_time('d'); ?></span>
-              <span class="date-year"><?php the_time('Y'); ?></span>
+            <div class="post-tool">
+              <!-- 日期  -->
+              <div class="post-date">
+                <span class="date-month"><?php the_time('m'); ?>月</span>
+                <span class="date-day"><?php the_time('d'); ?></span>
+                <span class="date-year"><?php the_time('Y'); ?></span>
+              </div>
+              <!-- 浏览  -->
+              <div class="post-view">
+                <a href="javascript:void(0)">
+                  <i class="fa fa-eye"></i><span class="view-num"><?php echo getPostViews(get_the_ID()); ?></span>
+                </a>
+              </div>
+              <?php if(current_user_can('level_10')){  ?>
+                <!-- 编辑  -->
+                <div class="post-edit">
+                    <?php edit_post_link( __( '<i class="fa fa-edit"></i><span class="view-num">编辑</span>' ), '<div class="edit-link">', '</div>' ); ?>
+                </div>
+              <?php } ?>
             </div>
+
             <div class="post-wrap">
 
               <?php get_template_part('format', 'standard'); ?>
@@ -67,7 +83,8 @@ $like = cs_get_option( 'i_post_like' );
               <ul class="post-meta clearfix">
                 <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
                 <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
-                <?php if ($like == true) { ?> <li class="meta-like fr"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
+                <?php if ($like == true) { ?> <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
+                <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num ofh"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
               </ul>
 
             </div>
@@ -97,7 +114,7 @@ $like = cs_get_option( 'i_post_like' );
             </div>
             <?php ?>
         <?php } ?>
-
+        <span class="post-top"></span>
     </div>
         <!-- content-inner 结束-->
   </div>

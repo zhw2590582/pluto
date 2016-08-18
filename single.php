@@ -12,10 +12,25 @@ $like = cs_get_option( 'i_post_like' );
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php setPostViews(get_the_ID());?>
                 <article <?php post_class('single-post'); ?>>
-                  <div class="post-date">
-                    <span class="date-month"><?php the_time('m'); ?>月</span>
-                    <span class="date-day"><?php the_time('d'); ?></span>
-                    <span class="date-year"><?php the_time('Y'); ?></span>
+                  <div class="post-tool">
+                    <!-- 日期  -->
+                    <div class="post-date">
+                      <span class="date-month"><?php the_time('m'); ?>月</span>
+                      <span class="date-day"><?php the_time('d'); ?></span>
+                      <span class="date-year"><?php the_time('Y'); ?></span>
+                    </div>
+                    <!-- 浏览  -->
+                    <div class="post-view">
+                      <a href="javascript:void(0)">
+                        <i class="fa fa-eye"></i><span class="view-num"><?php echo getPostViews(get_the_ID()); ?></span>
+                      </a>
+                    </div>
+                    <?php if(current_user_can('level_10')){  ?>
+                      <!-- 编辑  -->
+                      <div class="post-edit">
+                          <?php edit_post_link( __( '<i class="fa fa-edit"></i><span class="view-num">编辑</span>' ), '<div class="edit-link">', '</div>' ); ?>
+                      </div>
+                    <?php } ?>
                   </div>
                   <div class="post-wrap">
                       <?php get_template_part('format', 'standard'); ?>
@@ -111,7 +126,7 @@ $like = cs_get_option( 'i_post_like' );
                 <?php } ?>
 
             </div>
-
+            <span class="post-top"></span>
           </div>
               <!-- content-inner 结束-->
         </div>
