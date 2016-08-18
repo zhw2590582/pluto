@@ -908,7 +908,6 @@ mark {
   margin-left: -170px;
   background: #000;
   background: rgba(18, 18, 18, 0.85);
-  color: #fff;
   box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35);
   border-radius: 45px;
   visibility: visibility;
@@ -922,6 +921,37 @@ mark {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0); }
+  .notice .notice-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 13px 0 0 13px; }
+    .notice .notice-img img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%; }
+  .notice .notice-txt {
+    width: 220px;
+    margin: 13px 0 0 13px; }
+  .notice .notice-close {
+    position: absolute;
+    cursor: pointer;
+    top: 35px;
+    right: 12px;
+    font-size: 14px;
+    color: #fff;
+    opacity: .7; }
+    .notice .notice-close:hover {
+      opacity: 1; }
+
+.notice-txt .notice-title {
+  color: #fff;
+  font-size: 13px;
+  margin: 0 0 3px 0; }
+.notice-txt .notice-content {
+  color: #999;
+  max-height: 50px;
+  overflow: hidden; }
 
 .app_slider {
   margin: 0 10px 30px;
