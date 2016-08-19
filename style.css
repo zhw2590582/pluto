@@ -1073,8 +1073,7 @@ mark {
       .post-related li .r_pic img {
         width: 100%;
         height: 100%;
-        border-radius: 3px;
-        background: url("images/skin/featured.png") no-repeat center center; }
+        border-radius: 3px; }
     .post-related li .r_title a {
       display: inline-block;
       max-height: 33px;
@@ -1386,9 +1385,7 @@ blockquote {
       margin-top: 5px;
       margin-right: 10px; }
       .comment-block .comment-header .author-img img {
-        border-radius: 3px;
-        background: url("images/default/d-avatar.jpg") no-repeat center center;
-        background-size: cover; }
+        border-radius: 3px; }
   .comment-block .comment-body {
     min-height: 50px;
     padding: 15px;
@@ -1402,6 +1399,38 @@ blockquote {
     border-bottom-right-radius: 3px; }
     .comment-block .comment-bottom span {
       margin-right: 10px; }
+
+#sidebar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #999;
+  width: 300px; }
+  #sidebar .sideinner {
+    position: absolute;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 325px;
+    padding: 15px 15px 15px 35px; }
+  #sidebar .sidectrl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 25px;
+    background: #333;
+    cursor: pointer; }
+
+.sidebar-content aside {
+  margin-bottom: 20px; }
+  .sidebar-content aside .widget-title {
+    font-size: 18px;
+    margin-top: 0; }
 
 #footer {
   position: relative;
@@ -1528,6 +1557,13 @@ a {
 
 .post-featured a {
   background: url("images/skin/featured.png") no-repeat center center; }
+
+.post-related img {
+  background: url("images/skin/featured.png") no-repeat center center; }
+
+.author-img img {
+  background: url("images/default/d-avatar.jpg") no-repeat center center;
+  background-size: cover; }
 
 .post-sticky {
   background: url("images/skin/sticky.png") no-repeat center center;

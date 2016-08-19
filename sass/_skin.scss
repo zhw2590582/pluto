@@ -153,6 +153,19 @@ a{
   }
 }
 
+.post-related{
+  img{
+    background: url('images/skin/featured.png') no-repeat center center;
+  }
+}
+
+.author-img{
+  img{
+    background: url('images/default/d-avatar.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
 .post-sticky{
   background: url('images/skin/sticky.png') no-repeat center center;
   background-size: contain;

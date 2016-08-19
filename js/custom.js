@@ -57,19 +57,6 @@ $('body').on('click', '#comment-nav-below a', function(e) {
     });
 });
 
-//固定小工具
-var item = $("#sidebar");
-if (item.length > 0) {
-	var navHeight = item.offset().top - 10;
-	$(window).bind('scroll', function() {
-		if ($(window).scrollTop() > navHeight) {
-			item.addClass('fixed');
-		}else {
-			item.removeClass('fixed');
-		}
-	});
-}
-
 //选项卡
 	$('.tabs_title').addClass('active').find('> li:eq(0)').addClass('current');
 	$('.tabs_title li a').click(function (g) {
