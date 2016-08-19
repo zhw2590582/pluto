@@ -1,8 +1,9 @@
+//获取地址
 var temp = jQuery("script").last().attr("src");
-url = temp.substring(0, temp.indexOf('js'));
-
+var url = temp.substring(0, temp.indexOf('js'));
 
 jQuery(document).ready(function($) {
+
   //滚动函数
   $('a[href*="#"]:not([href="#"])').click(function() {
      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -16,7 +17,6 @@ jQuery(document).ready(function($) {
          }
      }
   });
-
 
 //左侧栏
 $(".sidectrl").click(function(){
@@ -83,16 +83,17 @@ $('body').on('click', '#comment-nav-below a', function(e) {
     }
   });
 
-
 //友链小图标
 	$(".linkcat li a").each(function(i) {
 		var linkhref = $(this).attr('href');
+    if (linkhref.charAt(linkhref.length - 1) != '/') {
+      linkhref += '/';
+    }
 		$(this).prepend( '<img src="' + linkhref + 'favicon.ico">');
 	});
 	$(".linkcat img").on('error', function () {
 		$(this).prop('src', url + 'images/default/d_favicon.ico');
 	});
-
 
 //底部按钮
 	$(window).scroll(function() {
@@ -103,21 +104,7 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 		}
 	});
 
-	$(".scrolltotop").click(function() {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 1000);
-		return false;
-	});
-
-	$(".comment_btn").click(function() {
-		$("html,body").animate({
-			scrollTop: $("#comment-jump").offset().top
-		}, 1000);
-		return false;
-	});
-
-//Modal
+//关闭Modal
 	var $modal = $('.cd-user-modal');
 	$('.cd-user-modal').on('click', function(event){
 		if( $(event.target).is($modal) || $(event.target).is('.cd-close-form') ) {
@@ -130,6 +117,8 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 			$modal.removeClass('is-visible');
 		}
 	});
+
+//打开Modal
 
 //登录Modal
     var $form_modal = $('.login-modal');

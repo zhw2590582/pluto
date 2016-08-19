@@ -68,11 +68,11 @@ $footer_text = cs_get_option( 'i_footer_text' );
 
   <?php if (!is_mobile()) { ?>
 		<!-- 浮动按钮 开始 -->
-		<div id="footer-btn" class="m_hide hide">
+		<div id="footer-btn" class="m_hide">
 			<ul>
 				<?php if ($gotop == true) {
 					echo '<li>
-							<a href="#totop" class="scrolltotop icon">
+							<a href="#top" class="scrolltotop icon">
 								<i class="hand fa fa-chevron-up"></i>
 							</a>
 						</li>';
@@ -115,7 +115,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 
 				<?php if ($comment == true && is_single ()) {
 					echo '<li class="mate-com">
-							<a href="#comment-jump" class="comment_btn hand icon"><i class="fa fa-comment-o"></i></a>
+							<a href="#comments" class="comment_btn hand icon"><i class="fa fa-comment-o"></i></a>
 						  </li>';
 				}?>
 
