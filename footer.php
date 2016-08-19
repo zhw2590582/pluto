@@ -229,7 +229,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 	<?php }	?>
 
 	<!-- 公告弹窗 开始 -->
-	<div class="notice clearfix open">
+	<div class="notice clearfix">
 		<div class="notice-img fl">
 			<img src="http://zhw-island.com/test/wp-content/themes/pluto/images/thumbnail/img2.png" alt="" class="">
 		</div>

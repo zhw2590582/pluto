@@ -143,12 +143,12 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 	});
 
 //通知Modal
-	$(".clo-notice").click(function() {
+	$(".notice-close").click(function() {
 		$(".notice").hide();
 		setCookie("notice","close","h1");
 	});
 	if(!getCookie("notice")){
-		$(".notice").show();
+		$(".notice").addClass('open');
 	}
 
 //捐赠
