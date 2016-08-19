@@ -218,6 +218,15 @@ article{
     }
 }
 
+.post-related{
+  a{
+    color: #524638;
+    &:hover{
+      color: #3a2e21;
+    }
+  }
+}
+
 .jm-post-like.liked{
   color: #a50d0f
 }
@@ -334,4 +343,35 @@ article{
 blockquote {
   border-left: 0.2rem solid #8e3e3e;
   background: #b3ac97;
+}
+
+.post-download{
+  border: 1px solid #837c72;
+  .dl-title{
+    background: #b3ac97;
+  }
+  .dl-item{
+    border-bottom: 1px solid #837c72;
+  }
+}
+
+.comment-block{
+  background: #ded9c8;
+  .comment-header{
+    border-bottom: 1px dashed #b3ac97;
+    .comment-count{
+      color: #968c7e;
+    }
+  }
+  .comment-body{
+    color: #6c6359;
+    border-top: 1px dashed #e8e6dd;
+    border-bottom: 1px dashed #b3ac97;
+  }
+  .comment-bottom{
+    border-top: 1px dashed #e8e6dd;
+    a{
+      color: #968c7e;
+    }
+  }
 }

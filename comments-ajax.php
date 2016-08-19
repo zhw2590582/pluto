@@ -100,7 +100,7 @@ if ( $wpdb->get_var($dupe) ) {
 }
 
 // 增加: 檢查評論太快功能
-if ( $lasttime = $wpdb->get_var( $wpdb->prepare("SELECT comment_date_gmt FROM $wpdb->comments WHERE comment_author = %s ORDER BY comment_date DESC LIMIT 1", $comment_author) ) ) { 
+if ( $lasttime = $wpdb->get_var( $wpdb->prepare("SELECT comment_date_gmt FROM $wpdb->comments WHERE comment_author = %s ORDER BY comment_date DESC LIMIT 1", $comment_author) ) ) {
 $time_lastcomment = mysql2date('U', $lasttime, false);
 $time_newcomment  = mysql2date('U', current_time('mysql', 1), false);
 $flood_die = apply_filters('comment_flood_filter', false, $time_lastcomment, $time_newcomment);
@@ -143,38 +143,49 @@ $tmp_c = get_comment($tmp_c->comment_parent);
 
 //以下是評論式樣, 不含 "回覆". 要用你模板的式樣 copy 覆蓋.
 ?>
-	<li <?php comment_class('clearfix'); ?> id="li-comment-<?php comment_ID() ?>">
-	<span class="commentcount"><?php echo $commentcountText; ?></span>	
-		<div class="comment-block" id="comment-<?php comment_ID(); ?>">
-			<div class="author-img"><?php echo get_avatar($comment->comment_author_email, 50); ?></div>
-			<div class="comment-body clearfix">
-				<div class="comment-name">
-					<span class="arrow left"></span>
-					<?php printf(__('<cite class="fn">%s</cite>', 'island') , get_comment_author_link()) ?>
-					<?php comment_admin_title($comment->comment_author_email); ?>
-				</div>
-				<div class="comment-text">
-					<?php comment_text() ?>			
-				</div>
-				<div class="comment-info clearfix">
-					<span class="comment-date">
-							<a class="comment-time" href="<?php echo esc_url(get_comment_link($comment->comment_ID)) ?>">
-							<?php printf(__('%1$s - %2$s', 'island') , get_comment_date('m/d/Y') , get_comment_time()) ?></a>
-					</span>
-					<span class="comment-reply">
-						<?php comment_reply_link(array_merge((array)$args, array(
-							'depth' => $depth,
-							'max_depth' => $args['max_depth']
-						))) ?>
-					</span>		
-					<span class="comment-edit">
-						<?php edit_comment_link(__('(Edit)', 'island') , '  ', '') ?>
-					</span>
-					<?php if ($comment->comment_approved == '0'): ?>
-						<span class="comment-awaiting-moderation">
-						<?php _e('Your comment is awaiting moderation.', 'island') ?></span>
-					<?php endif; ?>
-				</div>
-
-			</div>
+<li <?php comment_class('clearfix'); ?> id="li-comment-<?php comment_ID() ?>">
+	<div class="comment-block" id="comment-<?php comment_ID(); ?>">
+		<!-- comment-header -->
+		<div class="comment-header clearfix">
+			<!-- 头像 -->
+			<span class="author-img fl">
+				<?php echo get_avatar($comment->comment_author_email, 50); ?>
+			</span>
+			<!-- 名字 -->
+			<span class="author-name fl">
+				<?php printf(__('%s', 'island') , get_comment_author_link()) ?>
+				<?php comment_admin_title($comment->comment_author_email); ?>
+			</span>
+			<?php if ($comment->comment_approved == '0'): ?>
+				<!-- 审核 -->
+				<span class="comment-awaiting-moderation fl">
+					<?php _e('Your comment is awaiting moderation.', 'island') ?>
+				</span>
+			<?php endif; ?>
+			<!-- 楼层 -->
+			<span class="comment-count fr"><?php echo $commentcountText; ?></span>
 		</div>
+		<!-- comment-body -->
+		<div class="comment-body wb clearfix">
+			<?php comment_text() ?>
+		</div>
+		<!-- comment-bottom -->
+		<div class="comment-bottom clearfix">
+			<!-- 日期 -->
+			<span class="comment-date">
+					<a class="comment-time" href="<?php echo esc_url(get_comment_link($comment->comment_ID)) ?>">
+					<?php printf(__('%1$s - %2$s', 'island') , get_comment_date('m/d/Y') , get_comment_time()) ?></a>
+			</span>
+			<!-- 回复 -->
+			<span class="comment-reply">
+				<?php comment_reply_link(array_merge($args, array(
+					'depth' => $depth,
+					'max_depth' => $args['max_depth']
+				))) ?>
+			</span>
+			<!-- 编辑 -->
+			<span class="comment-edit">
+				<?php edit_comment_link(__('(Edit)', 'island') , '  ', '') ?>
+			</span>
+		</div>
+	</div>

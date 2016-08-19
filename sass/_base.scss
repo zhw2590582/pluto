@@ -641,9 +641,9 @@ $footer-h:290px;//页脚
       top: 50%;
       left: 50%;
       height: 36px;
+      width: 40px;
       line-height: 36px;
-      width: 36px;
-      margin: -18px 0 0 -18px;
+      margin: -18px 0 0 -20px;
       text-align: center;
       font-size: 36px;
       color: rgba(255, 255, 255, 0.8);
@@ -768,6 +768,7 @@ blockquote {
 
 #commentform{
   position: relative;
+  margin-bottom: 30px;
   input,textarea{
     -webkit-appearance: none;
     resize: none;
@@ -894,6 +895,105 @@ blockquote {
       height: 20px;
       line-height: 20px;
       margin: 3px;
+    }
+  }
+}
+
+.download-wrap{
+  margin: 30px 0;
+  padding: 0 15px;
+  .post-download{
+    border-radius: 5px;
+    .dl-title,.dl-box > div,.dl-view{
+      height: 35px;
+      line-height: 35px;
+      padding-left: 10px;
+      i{
+        margin-right: 5px;
+      }
+    }
+
+    .dl-title{
+      font-size: 14px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .dl-view{
+	  display:none;
+      color: red;
+      border-bottom: none;
+    }
+  }
+	.dlview .dl-box{
+		display: none;
+	}
+
+	.dlview .dl-view{
+		display: block;
+	}
+}
+
+#comments{
+
+}
+
+.commentlist {
+  .comment {
+    .children{
+      padding-left: 15px;
+    }
+    .success_tip{
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.comment-block{
+  margin-bottom: 25px;
+  border-radius: 3px;
+  box-shadow:0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2);
+  .comment-header{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    .author-img{
+      width: 30px;
+      height: 30px;
+      margin-top: 5px;
+      margin-right: 10px;
+      img{
+        border-radius: 3px;
+        background: url('images/default/d-avatar.jpg') no-repeat center center;
+        background-size: cover;
+      }
+    }
+    .author-name{
+
+    }
+    .comment-count{
+
+    }
+  }
+  .comment-body{
+    min-height: 50px;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 2
+  }
+  .comment-bottom{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    span{
+      margin-right: 10px;
     }
   }
 }
