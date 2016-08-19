@@ -29,6 +29,12 @@ $(".sidectrl").click(function(){
 	}
 });
 
+//菜单hack
+$('.topmenu .menu-list > li').each(function(i) {
+  var index = +$(this).index() + 1;
+  $(this).addClass('nth' + index);
+});
+
 //评论分页
 $body=(window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
 $('body').on('click', '#comment-nav-below a', function(e) {

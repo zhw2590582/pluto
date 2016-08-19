@@ -716,7 +716,7 @@ mark {
       width: 95px;
       text-align: center;
       float: left; }
-      .topmenu .menu-list li:nth-child(4) {
+      .topmenu .menu-list li:nth-child(4), .topmenu .menu-list li.nth4 {
         margin-left: 230px; }
       .topmenu .menu-list li a {
         font-size: 13px;
@@ -730,7 +730,7 @@ mark {
         height: 15px;
         top: 1px;
         right: -8px; }
-      .topmenu .menu-list li:nth-child(3)::before, .topmenu .menu-list li:last-child::before {
+      .topmenu .menu-list li:nth-child(3)::before, .topmenu .menu-list li.nth3::before, .topmenu .menu-list li:last-child::before, .topmenu .menu-list li.nth6::before {
         display: none; }
 
 .menu-item-has-children .sub-menu {

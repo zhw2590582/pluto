@@ -110,7 +110,7 @@ $footer-h:290px;//页脚
       width: ($container-w - $logo-w)/6;
       text-align: center;
       float: left;
-      &:nth-child(4){ //第四个hack
+      &:nth-child(4),&.nth4{ //第四个hack
         margin-left: $logo-w;
       }
       a{
@@ -128,7 +128,7 @@ $footer-h:290px;//页脚
         top: 1px;
         right: -8px;
       }
-      &:nth-child(3)::before,&:last-child::before{ //第三个和最后一个hack
+      &:nth-child(3)::before,&.nth3::before,&:last-child::before,&.nth6::before{ //第三个和最后一个hack
         display: none;
       }
     }
