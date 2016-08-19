@@ -234,7 +234,7 @@ $footer_text = cs_get_option( 'i_footer_text' );
 			<img src="http://zhw-island.com/test/wp-content/themes/pluto/images/thumbnail/img2.png" alt="" class="">
 		</div>
 		<div class="notice-txt fl">
-			<h5 class="ofh notice-title wb">我是标题啊</h5>
+			<h5 class="ofh notice-title ofh">我是标题啊</h5>
 			<div class="notice-content wb">
 				88元的Owl正式版已发布，可以通过网站右边的二维码付费下载...
 			</div>
