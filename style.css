@@ -997,7 +997,6 @@ mark {
   left: 50%;
   width: 80px;
   height: 61px;
-  cursor: pointer;
   margin-left: -40px; }
 
 .post-title {
@@ -1409,7 +1408,14 @@ blockquote {
   height: 100%;
   width: 300px;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateX(275px);
+  transform: translateX(275px);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
+  #sidebar.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
   #sidebar .sideinner {
     position: absolute;
     height: 100%;

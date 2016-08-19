@@ -72,7 +72,7 @@ $num = cs_get_option('i_comment_num');
                           </div>
                         <?php } ?>
         	            </div>
-                      <span class="post-top"></span>
+                      <a href="#top" class="post-top"></a>
                   </div>
                       <!-- content-inner 结束-->
                 </div>

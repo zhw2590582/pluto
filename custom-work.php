@@ -111,7 +111,7 @@ $worksnum = cs_get_option( 'i_works_num' );
 		  										</div>
 		  								</article>
 		  	            </div>
-                    <span class="post-top"></span>
+                    <a href="#top" class="post-top"></a>
                   </div>
                       <!-- content-inner 结束-->
                 </div>

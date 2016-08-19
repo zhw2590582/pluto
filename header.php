@@ -22,7 +22,7 @@ $switcher = cs_get_option( 'i_switcher' );
 	<link rel="shortcut icon" href="<?php echo $favicon; ?>" title="Favicon">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="top">
 
 	<?php if (is_mobile()) { ?>
 		<!-- 微信缩略图 -->

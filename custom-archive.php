@@ -61,7 +61,7 @@ error_reporting(0);
         	            </div>
 
 
-                      <span class="post-top"></span>
+                      <a href="#top" class="post-top"></a>
                   </div>
                       <!-- content-inner 结束-->
                 </div>
