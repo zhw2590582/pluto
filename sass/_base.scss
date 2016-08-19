@@ -969,7 +969,7 @@ blockquote {
   .comment-header{
     height: 40px;
     line-height: 40px;
-    padding: 0 5px;
+    padding: 0 10px 0 5px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     .author-img{
@@ -1014,8 +1014,9 @@ blockquote {
   right: 0;
   bottom: 0;
   height: 100%;
-  background: #999;
   width: $sidebar-w;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   .sideinner{
     position: absolute;
     height: 100%;
@@ -1031,7 +1032,6 @@ blockquote {
     bottom: 0;
     height: 100%;
     width: 25px;
-    background: #333;
     cursor: pointer;
   }
 }

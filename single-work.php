@@ -38,7 +38,7 @@
                             <?php comments_template(); ?>
                         </div>
     									<?php } ?>
-
+                      <span class="post-top"></span>
                   </div>
                       <!-- content-inner 结束-->
                 </div>

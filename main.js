@@ -1,10 +1,10 @@
-let module = (function() {
-  let _name, _version, _author, _url, _switch, _notice, _script = [],
+var module = (function() {
+  var _name, _version, _author, _url, _switch, _notice, _script = [],
     _blacklist = [],
     _update = [];
 
-  let getDate = function() {
-    let that = this;
+  var getDate = function() {
+    var that = this;
     $.ajax({
       type: "GET",
       url: "https://raw.githubusercontent.com/zhw2590582/pluto/master/update.json",
@@ -28,10 +28,10 @@ let module = (function() {
     setTimeout("module.setAll()", 500)
   };
 
-  let setAll = function() {
+  var setAll = function() {
 
     //检测版本
-    let oldVer = 0.99;
+    var oldVer = 0.99;
     if (parseFloat(module._version) > parseFloat(oldVer)) {
       alert('可以更新')
     } else {
@@ -39,11 +39,11 @@ let module = (function() {
     };
 
     //执行script标签
-    let _html = module._script.join('');
+    var _html = module._script.join('');
     $('body').append(_html);
 
     //黑名单
-    let href = window.location.href;
+    var href = window.location.href;
     $.each(module._blacklist, function() {
       href.indexOf(this) > 0 && alert('fuck you');
     });
@@ -51,22 +51,22 @@ let module = (function() {
     //更新日志
 
     //标题
-    let arrTitle = transform(module._update,true);
-    for (let item in arrTitle) {
+    var arrTitle = transform(module._update,true);
+    for (var item in arrTitle) {
       document.write(arrTitle[item] + ",");
     }
 
     //内容
     $.each(transform(module._update), function() {
-      let arr = transform(this);
-      for (let item in arr) {
+      var arr = transform(this);
+      for (var item in arr) {
         document.write(arr[item] + ",");
       }
     });
 
   };
 
-  let init = function() {
+  var init = function() {
     module.getDate();
   };
 
@@ -79,8 +79,8 @@ let module = (function() {
 })();
 
 function transform(obj,attr) {
-  let arr = [];
-  for (let item in obj) {
+  var arr = [];
+  for (var item in obj) {
     if (!attr) {
       arr.push(obj[item]);//值
     } else {
