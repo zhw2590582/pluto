@@ -38,11 +38,11 @@ $num = cs_get_option('i_comment_num');
 																						$tmp = "
 																						<li>
 																						<a target=\"_blank\" href=\"".$comment->comment_author_url."\">
-																								<div class='readers-inner colbox'>
-																										<div class='col avatar-img'>
+																								<div class='readers-inner clearfix'>
+																										<div class='avatar-img fl'>
 																												".$avatar."
 																										</div>
-																										<div class='col'>
+																										<div class='avatar-msg fl'>
 																												<p class='name'>
 																														".$comment->comment_author."
 																												</p>
