@@ -499,5 +499,8 @@ blockquote {
     color: #524638;
     text-shadow: 0px 1px 0px #d4d0c4;
     background: #b3ac97;
+    .name{
+      border-bottom: 1px solid #a79e86;
+    }
   }
 }

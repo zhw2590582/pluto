@@ -38,7 +38,7 @@ $num = cs_get_option('i_comment_num');
 																						$tmp = "
 																						<li>
 																						<a target=\"_blank\" href=\"".$comment->comment_author_url."\">
-																								<div class='readers-inner clearfix'>
+																								<div class='readers-inner with-tooltip clearfix' data-tooltip=\"".$comment->comment_author_url."\">
 																										<div class='avatar-img fl'>
 																												".$avatar."
 																										</div>
