@@ -59,13 +59,14 @@ $('body').on('click', '#comment-nav-below a', function(e) {
     });
 });
 
-//文章目录
-  $(".index-box").append($(".content #article-index").clone());
+//滚动显示
 	$(window).scroll(function (){
-		if ($(window).scrollTop()> 300){
-			$(".index-box").fadeIn();
+		if ($(window).scrollTop() > 400){
+			$("#article-index").fadeIn();
+      $("#footer-btn").fadeIn();
 		}else {
-			$(".index-box").hide();
+			$("#article-index").hide();
+      $("#footer-btn").fadeOut();
 		}
 	});
 
@@ -101,19 +102,10 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 		$(this).prop('src', url + 'images/default/d_favicon.ico');
 	});
 
-//底部按钮
-	$(window).scroll(function() {
-		if ($(window).scrollTop() > 200) {
-			$("#footer_btn").fadeIn(500);
-		} else {
-			$("#footer_btn").fadeOut(500);
-		}
-	});
-
 //关闭Modal
-	var $modal = $('.cd-user-modal');
-	$('.cd-user-modal').on('click', function(event){
-		if( $(event.target).is($modal) || $(event.target).is('.cd-close-form') ) {
+	var $modal = $('.modal-wrap');
+	$('.modal-wrap').on('click', function(event){
+		if( $(event.target).is($modal) || $(event.target).is('.modal-close .fa') ) {
 			$modal.removeClass('is-visible');
 			return false;
 		}
@@ -124,18 +116,14 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 		}
 	});
 
-//打开Modal
-
 //登录Modal
-    var $form_modal = $('.login-modal');
-    $(".login-btn").click(function(){
-        $form_modal.toggleClass("is-visible");
-    });
+  $(".login-btn").click(function(){
+      $('.login-modal').toggleClass("is-visible");
+  });
 
 //下载Modal
-	var $download_modal = $('.download-modal');
 	$(".dl-link a").click(function() {
-		$download_modal.toggleClass("is-visible");
+		$('.download-modal').toggleClass("is-visible");
 		var dlLink = $(this).attr('data-dl');
 		var dlCode = $(this).attr('data-code');
 		$(".dl-btn a").attr("href",dlLink);
@@ -147,18 +135,12 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 		$(".notice").hide();
 		setCookie("notice","close","h1");
 	});
+
 	if(!getCookie("notice")){
-		$(".notice").addClass('open');
+    $(".notice").addClass("open")
 	}
 
-//捐赠
-	$("#donate #donate_alipay").click(function() {
-		$("#donate .full").addClass('alipay').removeClass('wechat');
-	});
-	$("#donate #donate_wechat").click(function() {
-		$("#donate .full").addClass('wechat').removeClass('alipay');
-	});
-
+  //自适应菜单
 	$(".menu-toggle").click(function() {
 		$(".header-menu,.menu-toggle").toggleClass("open-nav");
 	});

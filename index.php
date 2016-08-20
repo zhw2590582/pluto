@@ -12,7 +12,7 @@ $like = cs_get_option( 'i_post_like' );
           <!-- slider 开始 -->
           <?php if ($sliders == true) { ?>
                   <div class="app_slider">
-                      <div class="slider_inner">
+                      <div class="slider_inner loading">
                           <div id="slider" class="nivoSlider">
                               <?php
                                   $my_sliders = cs_get_option( 'i_slider_custom' );
@@ -84,7 +84,7 @@ $like = cs_get_option( 'i_post_like' );
                 <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
                 <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
                 <?php if ($like == true) { ?> <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
-                <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num ofh"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
+                <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
               </ul>
 
             </div>

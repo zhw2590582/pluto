@@ -417,15 +417,15 @@
 }
 
 //modal
-.cd-user-modal {
+.modal-wrap {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 9999;
-  overflow-y: auto;
+  overflow-y: hidden;
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
@@ -434,7 +434,7 @@
   transition: opacity 0.3s 0, visibility 0 0.3s;
 }
 
-.cd-user-modal.is-visible {
+.modal-wrap.is-visible {
   visibility: visible;
   opacity: 1;
   -webkit-transition: opacity 0.3s 0, visibility 0 0;
@@ -442,7 +442,7 @@
   transition: opacity 0.3s 0, visibility 0 0;
 }
 
-.cd-user-modal.is-visible .cd-user-modal-container {
+.modal-wrap.is-visible .modal-container {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -450,13 +450,11 @@
   transform: translateY(0);
 }
 
-.cd-user-modal-container {
+.modal-container {
   position: relative;
-  width: 90%;
-  max-width: 420px;
   margin: 10em auto 4em;
   cursor: auto;
-  border-radius: 0.25em;
+  border-radius: 3px;
   -webkit-transform: translateY(-30px);
   -moz-transform: translateY(-30px);
   -ms-transform: translateY(-30px);
@@ -474,54 +472,43 @@
   border: none;
 }
 
-.user-modal-title {
-  text-align: left;
-  font-size: 20px;
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 40px;
+.modal-container{
+    width: 420px;
+    height: 300px;
+    .modal-header{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      overflow: hidden;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      .modal-title {
+        font-size: 14px;
+      }
+      .modal-close {
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+    .modal-body{
+
+    }
+    .modal-bottom{
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
 }
 
-.cd-close-form {
-  position: absolute;
-  right: 25px;
-  top: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  color: #999;
-  background: rgba(0, 0, 0, 0.5);
-  display: inline-block;
-}
-.cd-close-form:hover {
-  color: #fff;
-}
-
-.cd-close-form:before {
-  content: "\f00d";
-  font-family: FontAwesome;
-  font-size: 20px;
-}
-
-.modal-head {
-  color: #867F6F;
-}
-.modal-head .cd-close-form {
-  background: none;
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
-  top: 10px;
-  right: 12px;
-}
-.modal-head .cd-close-form:before {
-  font-size: 16px;
-}
-.modal-head a {
-  color: #867F6F;
-}
-.modal-head a:hover {
-  color: #333;
+//萤火虫
+#pixie {
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }

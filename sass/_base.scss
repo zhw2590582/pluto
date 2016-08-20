@@ -439,7 +439,7 @@ $footer-h:290px;//页脚
   .date-day{
     height: 25px;
     line-height: 26px;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
   }
   .date-year{
@@ -1061,9 +1061,190 @@ blockquote {
   }
 }
 
+//登陆弹窗
+.login-modal{
+  #login-form{
+    margin-top: 30px;
+  }
+  p{
+    position: relative;
+    margin: 0 60px 20px;
+    text-align: center;
+    label{
+      display: none;
+    }
+    input{
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 0 0 30px;
+      border-radius: 3px;
+    }
+    #wp-submit{
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+  .login-username:before {
+    content: "\f007";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-left: 4px;
+  }
+
+  .login-password:before {
+    content: "\f023";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    font-family: FontAwesome;
+    font-size: 15px;
+    margin-left: 4px;
+  }
+}
+
+.download-modal{
+  .modal-body{
+    padding-top: 60px;
+  }
+  .dl-btn{
+    a{
+     font-size: 16px;
+     display: inline-block;
+     padding: 10px 20px;
+     border-radius: 0.25em;
+     margin-bottom: 20px;
+     .fa{
+       margin-right: 5px;
+     }
+   }
+  }
+  .dl-tqcode{
+
+  }
+}
+
+//文章索引
+#article-index{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  right: 50%;
+  margin-right: -120px - $container-w / 2;
+  #index-ul{
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      left: -10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      height: 100%;
+      background: #4a443d;
+      border-radius: 3px;
+    }
+    li{
+      position: relative;
+      height: 25px;
+      line-height: 25px;
+      padding: 2px 0;
+      font-size: 13px;
+      a{
+        color: #bfb7a3;
+        text-shadow: 0px 1px 0px #4a443d;
+        width: 100px;
+        &:hover{
+          color: #d6d1c4
+        }
+      }
+      &::before{
+        position: absolute;
+        content: '';
+        left: -12px;
+        top: 10px;
+        bottom: 0;
+        width: 6px;
+        height: 6px;
+        background: #bdb6a1;
+        border: 1px solid #4a443d;
+        border-radius: 6px;
+      }
+    }
+
+  }
+}
+
+//底部按钮
+#footer-btn{
+  display: none;
+  position: fixed;
+  width: 100px;
+  z-index: 3;
+  bottom: 50px;
+  right: 50%;
+  margin-right: -120px - $container-w / 2;
+  ul{
+    .item{
+      position: relative;
+      cursor: pointer;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      margin-bottom: 10px;
+      .show-box{
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+        padding-left: 5px;
+        display: none;
+      }
+      .show-box-inner{
+        width: 120px;
+        padding: 5px;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.5)
+      }
+      & > a{
+        opacity: .3;
+        color: #fff;
+        background: #000;
+        border-radius: 3px;
+        font-size: 14px;
+        display: inline-block;
+        width: 100%;
+      }
+      &:hover{
+        & > a{
+          opacity: .7;
+        }
+        .show-box{
+          display: block;
+        }
+      }
+      .qr-box{
+        height: 120px;
+      }
+      .bdsharebuttonbox{
+        a{
+          padding-left: 20px;
+          color: #beb7a1;
+        }
+      }
+    }
+  }
+}
+
 //页脚
 #footer{
   position: relative;
+  z-index: 2;
   margin-top: 100px;
   .footer-inner{
     position: relative;

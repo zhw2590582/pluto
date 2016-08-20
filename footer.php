@@ -1,8 +1,6 @@
 <?php
  // 获取选项
 error_reporting(0);
-$banner_d = cs_get_option( 'i_banner_image' );
-$switcher = cs_get_option( 'i_switcher' );
 $edit = cs_get_option( 'i_footer_edit' );
 $copyright = cs_get_option( 'i_foot_copyright' );
 $gotop = cs_get_option( 'i_gotop' );
@@ -17,27 +15,15 @@ $player_id = cs_get_option( 'i_player_id' );
 $player = cs_get_option('i_player');
 $player_mobi = cs_get_option('i_player_mobi');
 $share = cs_get_option( 'i_share' );
-$share_img = cs_get_option( 'i_share_img' );
-$share_word = cs_get_option( 'i_share_word' );
 $tongji = cs_get_option( 'i_js_tongji' );
 $shengming = cs_get_option( 'i_download_shengming' );
-$layout = cs_get_option( 'i_layout' );
 $sliders = cs_get_option( 'i_slider' );
 $login = cs_get_option( 'i_login' );
-$login_img = cs_get_option( 'i_login_image' );
 $sidebar = cs_get_option( 'i_sidebar' );
-$topbar = cs_get_option( 'i_topbar' );
-$donate = cs_get_option( 'i_donate' );
-$donate_title = cs_get_option( 'i_donate_title' );
-$donate_alipay = cs_get_option( 'i_alipay_img' );
-$donate_wechat = cs_get_option( 'i_wechat_img' );
 $meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
 $download = $meta_data['i_download'];
 $index = $meta_data['i_index'];
 $circle = cs_get_option( 'i_circle' );
-$video = cs_get_option( 'i_video' );
-$video_link = cs_get_option( 'i_video_link' );
-$video_img = cs_get_option( 'i_video_img' );
 $footer_text = cs_get_option( 'i_footer_text' );
 ?>
 
@@ -71,94 +57,64 @@ $footer_text = cs_get_option( 'i_footer_text' );
 		<div id="footer-btn" class="m_hide">
 			<ul>
 				<?php if ($gotop == true) {
-					echo '<li>
-							<a href="#top" class="scrolltotop icon">
+					echo '<li class="item">
+							<a href="#top" class="icon">
 								<i class="hand fa fa-chevron-up"></i>
 							</a>
 						</li>';
 				}?>
 
 				<?php if ($share == true) {
-					echo '
-                    <li>
-                        <a href="javascript:void(0)" class="hand icon" title="分享">
-                            <i class="hand fa fa-share-alt"></i>
-                        </a>
-						<div class="show-box">
-							<div class="bdsharebuttonbox footer-show">
-								<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">分享到QQ空间</a>
-								<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">分享到新浪微博</a>
-								<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">分享到微信</a>
-								<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">分享到豆瓣网</a>
-								<a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">分享到百度贴吧</a>
-								<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">分享到QQ好友</a>
-								<a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享">分享到一键分享</a>
-							</div>
-							<script>
-							window._bd_share_config={
-							"common":{
-										"bdSnsKey":{},
-										"bdText":"",
-										"bdMini":"2",
-										"bdPic":"",
-										"bdStyle":"0",
-										"bdSize":"16"
-									},
-									"share":{}
-								};
-								with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];
-							</script>
-						</div>
-                    </li>
-                    ';
+					echo '<li class="item">
+                  <a href="javascript:void(0)" class="icon" title="分享">
+                      <i class="hand fa fa-share-alt"></i>
+                  </a>
+									<div class="show-box baidu-share">
+										<div class="bdsharebuttonbox show-box-inner clearfix">
+											<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">分享到QQ空间</a>
+											<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">分享到新浪微博</a>
+											<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">分享到微信</a>
+											<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">分享到豆瓣网</a>
+											<a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">分享到百度贴吧</a>
+											<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">分享到QQ好友</a>
+											<a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享">分享到一键分享</a>
+										</div>
+										<script>
+										window._bd_share_config={
+										"common":{
+													"bdSnsKey":{},
+													"bdText":"",
+													"bdMini":"2",
+													"bdPic":"",
+													"bdStyle":"0",
+													"bdSize":"16"
+												},
+												"share":{}
+											};
+											with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];
+										</script>
+									</div>
+                </li>';
 				}?>
 
 				<?php if ($comment == true && is_single ()) {
-					echo '<li class="mate-com">
-							<a href="#comments" class="comment_btn hand icon"><i class="fa fa-comment-o"></i></a>
-						  </li>';
+					echo '<li class="item">
+									<a href="#comments" class="comment_btn hand icon"><i class="fa fa-comment-o"></i></a>
+								</li>';
 				}?>
 
 				<?php if ($qrcode == true) {
-					echo '<li>
-							<a class="icon" href="javascript:void(0)">
-                                <i class="fa fa-qrcode"></i>
-							</a>
-							<div class="show-box">
-								<div class="wx-show footer-show">
-									<img src="'. $qrcodeimg .'">
-								</div>
-							</div>
-						</li>';
-				}?>
-
-				<?php if ($donate == true) {
-					echo '<li class="donate-box hand">
-							<a class="icon" href="javascript:void(0)">
-								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-								<span class="donate_title">'.$donate_title.'</span>
-							</a>
-							<div class="show-box">
-								<div id="donate" class="donate-show footer-show">
-									<div class="full alipay">
-										<h5>'.$donate_title.'</h5>
-										<div class="qr">
-											<img class="alipay_img" src="'.$donate_alipay.'" height="150" width="150">
-											<img class="wechat_img" src="'.$donate_wechat.'" height="150" width="150">
+					echo '<li class="item">
+									<a class="icon" href="javascript:void(0)">
+                  	<i class="fa fa-qrcode"></i>
+									</a>
+									<div class="show-box">
+										<div class="show-box-inner qr-box">
+											<img src="'. $qrcodeimg .'">
 										</div>
-										<div class="pays">
-											<a id="donate_alipay" href="javascript://" rev="alipay">支付宝</a>
-											<a id="donate_wechat" href="javascript://" rev="wechat">微信</a>
-										</div>
-										<p class="note">
-											打开<span class="name"></span>，使用扫一扫<br>
-										</p>
 									</div>
-								</div>
-							</div>
-						</li>';
+							</li>';
 				}?>
-
 			</ul>
 		</div>
 		<!-- 浮动按钮 结束 -->
@@ -174,55 +130,63 @@ $footer_text = cs_get_option( 'i_footer_text' );
 
 	<?php if ( is_single() && !is_mobile() && $download) {?>
 		<!-- 下载弹窗 开始 -->
-    <div class="cd-user-modal download-modal hide">
-      <div class="cd-user-modal-container">
-        <div class="modal-head">
-          <div class="modal-title"><i class="fa fa-download"></i>资源下载</div>
-					<a href="#" class="cd-close-form"></a>
-        </div>
-        <div class="modal-main">
-          <div class="dl-btn"><a class="btn" href="javascript:void(0)" target="_black"><i class="fa fa-arrow-circle-o-down"></i>点击下载</a></div>
+    <div class="modal-wrap download-modal m_hide">
+      <div class="modal-container">
+				<div class="modal-header clearfix">
+					<span class="modal-title fl">
+						资源下载
+					</span>
+					<span class="modal-close fr">
+						<i class="fa fa-times"></i>
+					</span>
+				</div>
+        <div class="modal-body text-c">
+          <div class="dl-btn">
+						<a class="btn" href="javascript:void(0)" target="_black">
+							<i class="fa fa-arrow-circle-o-down"></i>点击下载
+						</a>
+					</div>
           <div class="dl-tqcode">提取码：<span></span></div>
         </div>
         <div class="modal-bottom">
-          <span>下载声明：<?php echo $shengming ?></span>
+          <span class="ofh">下载声明：<?php echo $shengming ?></span>
         </div>
       </div>
     </div>
 		<!-- 下载弹窗 结束 -->
 	<?php }	?>
 
-	<?php if ( is_single() && !is_mobile() && $index) {?>
-		<!-- 文章索引 开始 -->
-		<div class="index-box"></div>
-		<!-- 文章索引 结束 -->
-	<?php }	?>
-
   <?php if ( !is_user_logged_in() && $login == true && !is_mobile() ) { ?>
 		<!-- 登陆弹窗 开始 -->
-    <div class="cd-user-modal login-modal m_hide">
-      <a href="#" class="cd-close-form"></a>
-      <div class="cd-user-modal-container">
-        <div class="login-img" style="background-image: url('<?php echo $login_img; ?>');"></div>
-      	<div class="login-form">
-          <?php
-              $login_form_args = array (
-                  'form_id' => 'login-form',
-                  'label_log_in' => '登录',
-                  'remember' => false,
-                  'value_remember' => false
-              );
-          ?>
-          <?php wp_login_form($login_form_args); ?>
-          <p class="login-links clearfix">
-              <span class="fl">
-                  <a href="<?php echo htmlspecialchars(wp_lostpassword_url(get_permalink()), ENT_QUOTES); ?>"><?php echo __('忘记密码', 'pinthis'); ?></a>
-              </span>
-              <?php if (get_option('users_can_register')) { ?>
-                  <span class="fr"><?php wp_register('', ''); ?></span>
-              <?php } ?>
-          </p>
-      	</div>
+    <div class="modal-wrap login-modal m_hide">
+      <div class="modal-container">
+				<div class="modal-header clearfix">
+					<span class="modal-title fl">
+						登陆
+					</span>
+					<span class="modal-close fr">
+						<i class="fa fa-times"></i>
+					</span>
+				</div>
+				<div class="modal-body">
+					<?php
+	            $login_form_args = array (
+	                'form_id' => 'login-form',
+	                'label_log_in' => '登录',
+	                'remember' => false,
+	                'value_remember' => false
+	            );
+	        ?>
+	        <?php wp_login_form($login_form_args); ?>
+				</div>
+				<div class="modal-bottom clearfix">
+					<span class="fl">
+		          <a href="<?php echo htmlspecialchars(wp_lostpassword_url(get_permalink()), ENT_QUOTES); ?>"><?php echo __('忘记密码', 'pinthis'); ?></a>
+		      </span>
+		      <?php if (get_option('users_can_register')) { ?>
+		          <span class="fr"><?php wp_register('', ''); ?></span>
+		      <?php } ?>
+				</div>
       </div>
     </div>
 		<!-- 登陆弹窗 结束 -->
@@ -318,6 +282,9 @@ $footer_text = cs_get_option( 'i_footer_text' );
                 animSpeed: 300,
                 prevText: '',
                 nextText: '',
+								afterLoad: function(){
+									jQuery('.app_slider .slider_inner').removeClass('loading');
+								}
             });
         });
     <?php } ?>

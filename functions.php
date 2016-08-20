@@ -990,10 +990,9 @@ function article_index($content) {
 		foreach($matches[1] as $key => $value) {
 			$title = trim(strip_tags($matches[2][$key]));
 			$content = str_replace($matches[0][$key], '<h' . $value . ' id="title-' . $key . '">'.$title.'</h2>', $content);
-			$ul_li .= '<li><a href="#title-'.$key.'" title="'.$title.'">'.$title."</a></li>\n";
+			$ul_li .= '<li><a class="ofh" href="#title-'.$key.'" title="'.$title.'">'.$title."</a></li>\n";
 		}
 		$content = "\n<div id=\"article-index\">
-		<p class='title'>文章目录</p>
 		<ol id=\"index-ul\">\n" . $ul_li . "</ol>
 		</div>\n" . $content;
 	}
@@ -1063,7 +1062,7 @@ function island_comment($comment, $args, $depth) {
         <?php if ($comment->comment_approved == '0'): ?>
           <!-- 审核 -->
           <span class="comment-awaiting-moderation fl">
-            <?php _e('Your comment is awaiting moderation.', 'island') ?>
+            -你的评论等待审核
           </span>
         <?php endif; ?>
         <!-- 楼层 -->

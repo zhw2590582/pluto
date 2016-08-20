@@ -74,7 +74,7 @@ $switcher = cs_get_option( 'i_switcher' );
 										</a>
 									</div>
 								<?php } else { ?>
-								 <a href="#" onclick="return false;" class="with-tooltip login-btn" data-tooltip="登陆">
+								 <a href="#" class="with-tooltip login-btn" data-tooltip="登陆">
 									 <i class="fa fa-user" aria-hidden="true"></i>
 								 </a>
 								<?php } ?>
