@@ -1008,7 +1008,7 @@ blockquote {
 //侧边栏
 #sidebar{
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1030,7 +1030,7 @@ blockquote {
     overflow-y: scroll;
     overflow-x: hidden;
     width: $sidebar-w + 25px;
-    padding: 15px 15px 15px 35px;
+    padding: 15px 25px 15px 25px;
   }
   .sidectrl{
     position: absolute;
@@ -1040,11 +1040,28 @@ blockquote {
     height: 100%;
     width: 25px;
     cursor: pointer;
+    .sidebar-ctrl {
+      position: absolute;
+      width: 16px;
+      height: 85px;
+      left: 0;
+      top: 50%;
+      margin-top: -42px;
+      padding: 35px 0 0 4px;
+      span {
+        display: inline-block;
+        float: left;
+        width: 1px;
+        height: 15px;
+        margin-right: 3px;
+      }
+    }
   }
 }
 
 .sidebar-content{
   aside{
+    position: relative;
     margin-bottom: 20px;
     .widget-title{
       font-size: 18px;
@@ -1053,11 +1070,191 @@ blockquote {
   }
   ul{
     li{
-
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      line-height: 20px;
     }
   }
-  a{
+}
 
+.sidebar-content aside{
+  > ul{
+    li{
+      &:before{
+        font-family: FontAwesome;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.widget_recent_entries,.widget_pages,.new-posts,.comm_posts{
+  li{
+    &:before{
+      content: "\f0f6";
+    }
+  }
+}
+
+.widget_archive{
+  li{
+    &:before{
+      content: "\f115";
+    }
+  }
+}
+
+.widget_links{
+  li{
+    &:before{
+      content: "\f0c1";
+    }
+  }
+}
+
+.widget_categories{
+  li{
+    &:before{
+      content: "\f097";
+    }
+  }
+}
+
+.widget_nav_menu,.widget_meta{
+  li{
+    &:before{
+      font-family: FontAwesome;
+      margin-right: 5px;
+      color: #333;
+      content: "\f101";
+    }
+  }
+}
+
+.widget_recent_comments{
+  li{
+    &:before{
+      content: "\f0e5";
+    }
+  }
+}
+
+
+//最新评论
+#comment-list{
+  li {
+   padding-bottom: 5px;
+   margin-bottom: 10px;
+   color: #867F6F;
+   a{
+     line-height: 16px;
+   }
+   .s_name {
+     display: block;
+   }
+   .s_desc {
+     display: block;
+     width: 100%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+   }
+   .avatar-box {
+     width: 32px;
+     img {
+       width: 32px;
+       height: 32px;
+       border-radius: 5px;
+     }
+   }
+   .comment_box {
+     padding-left: 5px;
+   }
+ }
+}
+
+//日历
+.widget_calendar #wp-calendar {
+  margin: 0;
+  width: 100%;
+  font-size: 13px;
+  font-size: 0.928571429rem;
+  line-height: 1.846153846;
+}
+.widget_calendar #wp-calendar #today, .widget_calendar #wp-calendar th {
+  text-align: center;
+}
+.widget_calendar #wp-calendar td {
+  text-align: center;
+}
+.widget_calendar #wp-calendar td#prev {
+  text-align: left;
+  padding-left: 10px;
+}
+.widget_calendar #wp-calendar td#next {
+  text-align: right;
+  padding-right: 10px;
+}
+.widget_calendar #wp-calendar caption {
+  letter-spacing: -0.05em;
+  font-size: 100%;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+//标签
+.widget_tag_cloud .tagcloud:after {
+  clear: both;
+  display: block;
+  content: " ";
+}
+.widget_tag_cloud .tagcloud a {
+  padding: 2px 5px;
+  border-radius: 3px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+//搜索
+.widget_search{
+
+  fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+    .search-form-input{
+      padding:7px 8px;
+      font-size: 12px;
+      vertical-align:middle;
+      height: 26px;
+	    line-height:26px;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    .search-button{
+      display: none;
+    }
+  }
+}
+
+//轮播图
+#sidebar .cs_widget_slider{
+  padding: 5px;
+  border-radius:3px;
+  .nivoSlider{
+    border-radius:3px;
+    overflow: hidden;
+  }
+  .nivo-directionNav{
+    a{
+      color: #fff;
+    }
   }
 }
 

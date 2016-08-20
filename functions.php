@@ -596,7 +596,7 @@ function my_admin_notice() {
 		$sql = "SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type,comment_author_url,comment_author_email, SUBSTRING(comment_content,1,22) AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND comment_type = '' AND post_password = '' AND user_id='0' AND comment_author != '$outer' ORDER BY comment_date_gmt DESC LIMIT $limit";
 		$comments = $wpdb->get_results($sql);
 		foreach ($comments as $comment) {
-			$output .= '<li class="colbox"><p class="col avatar-box avatar">'.get_avatar( $comment, 32,"",$comment->comment_author).'</p><p class="col comment_box"><a class="with-tooltip" href="'. get_permalink($comment->ID) .'#comment-' . $comment->comment_ID . '" data-tooltip="《'.$comment->post_title . '》上的评论"><span class="s_name">'.strip_tags($comment->comment_author).':</span><span class="s_desc">'. strip_tags($comment->com_excerpt).'</span></a></p></li>';
+			$output .= '<li class="colbox"><p class="col avatar-box">'.get_avatar( $comment, 32,"",$comment->comment_author).'</p><p class="col comment_box"><a class="with-tooltip" href="'. get_permalink($comment->ID) .'#comment-' . $comment->comment_ID . '" data-tooltip="《'.$comment->post_title . '》上的评论"><span class="s_name">'.strip_tags($comment->comment_author).':</span><span class="s_desc">'. strip_tags($comment->com_excerpt).'</span></a></p></li>';
 		}
 		$output = convert_smilies($output);
 		echo $output;

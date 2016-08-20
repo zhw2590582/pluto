@@ -80,7 +80,7 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 	});
 
 //图像CSS类
-	$("img").not($(".wp-smiley")) .addClass('ajax_gif').load(function() {
+	$("img").not($(".wp-smiley,.avatar")) .addClass('ajax_gif').load(function() {
 		$(this).removeClass('ajax_gif');
 	}).on('error', function () {
 		$(this).removeClass('ajax_gif').prop('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
