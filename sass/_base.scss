@@ -1064,8 +1064,22 @@ blockquote {
     position: relative;
     margin-bottom: 20px;
     .widget-title{
-      font-size: 18px;
+      position: relative;
+      font-size: 16px;
+      height: 30px;
+      line-height: 23px;
+      padding: 5px 13px;
       margin-top: 0;
+      &::before{
+        position: absolute;
+        display: inline-block;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+      }
     }
   }
   ul{

@@ -7,9 +7,10 @@ body{
   background: #6e655a url('images/skin/body.png') fixed;
 }
 
+//默认链接色
 a{
   color: #862525;
-  &:hover{
+  &:hover,&:focus{
     color: #3c362f;
   }
 }
@@ -387,6 +388,12 @@ blockquote {
   text-shadow: 0px 1px 0px #d4d0c4;
   background: #c3bca6 url("images/skin/content-inner.png");
   border-left: 1px solid #d4ccb6;
+  .widget-title{
+    background: #b3ac97;
+    &::before{
+      background: #a50d0f;
+    }
+  }
   .sidebar-ctrl{
     background: #b3ac97;
     span{
