@@ -138,6 +138,8 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 
 	if(!getCookie("notice")){
     $(".notice").addClass("open")
+	}else {
+	  $(".notice").remove();
 	}
 
   //自适应菜单

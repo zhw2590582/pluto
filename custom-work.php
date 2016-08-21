@@ -18,7 +18,7 @@ $worksnum = cs_get_option( 'i_works_num' );
                             </header>
         										<div class="post-inner">
                               <div class="post-right">
-                                <div class="post-content wb clearfix">
+                                <div class="post-content wb grids clearfix">
 																	<?php
 																		$temp = $wp_query;
 																		$wp_query = null;
@@ -69,43 +69,33 @@ $worksnum = cs_get_option( 'i_works_num' );
 																	<?php endwhile;?>
 																</div>
 
-																<div class="work-nav">
-																	<div class="post-nav">
-																		<div class="post-nav-inside">
-																			<?php previous_posts_link('上一页 ') ?>
-																			<?php
-																			$count_post = $count_posts->publish / $show_posts;
+																<div class="posts-nav text-c">
+																	<div class="nav-inside clearfix">
+																		<?php previous_posts_link('上一页 ') ?>
+																		<?php
+																		$count_post = $count_posts->publish / $show_posts;
 
-																			if( $count_posts->publish % $show_posts == 2 ) {
-																			$count_post++;
-																			$count_post = intval($count_post);
-																			};
+																		if( $count_posts->publish % $show_posts == 2 ) {
+																		$count_post++;
+																		$count_post = intval($count_post);
+																		};
 
-																			for($i = 1; $i <= $count_post ; $i++) { ?>
-																			<a <?php if($req_uri[1] == $i) { echo 'class=active_page'; } ?> href="<?php echo $uri . $i; ?>" rel="external nofollow" ><?php echo $i; ?></a>
-																			<?php }
-																			?>
-																			<?php next_posts_link(' 下一页') ?>
-																		</div>
+																		for($i = 1; $i <= $count_post ; $i++) { ?>
+																		<a <?php if($req_uri[1] == $i) { echo 'class=active_page'; } ?> href="<?php echo $uri . $i; ?>" rel="external nofollow" ><?php echo $i; ?></a>
+																		<?php }
+																		?>
+																		<?php next_posts_link(' 下一页') ?>
 																	</div>
 																</div>
+                                <script>
+                                  jQuery(document).ready(function($) {
+  	                                  $('.nav-inside a').addClass('page-numbers');
+                                  });
+                                </script>
 																<?php
 																$wp_query = null;
 																$wp_query = $temp;  // Reset
 																?>
-
-																<script>
-																	jQuery(document).ready(function($) {
-																			if($(".post-nav-inside a").length==0){
-																					$(".post-nav").removeClass("post-nav");
-																			} else if ($(".post-nav-inside a").length==1){
-
-																			}else{
-																					$(".post-nav-inside a:eq(0)").wrap("<div class='post-nav-left'></div>");
-																					$(".post-nav-inside a:eq(1)").wrap("<div class='post-nav-right'></div>");
-																			}
-																	});
-																</script>
 		  												</div>
 		                        </div>
 		  										</div>

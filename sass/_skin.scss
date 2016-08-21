@@ -494,6 +494,54 @@ blockquote {
   }
 }
 
+.timeline{
+  text-shadow: 0px 1px 0px #d4d0c4;
+  a{
+    color: #524638;
+    &:hover {
+      color: #524638;
+    }
+  }
+  &::before{
+    background: #988d7f;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .tl-item{
+    &::before{
+      background: #6c6358;
+    }
+    &::after{
+      background: #beb6a2;
+    }
+  }
+  .tl-wrap{
+    .tl-content {
+
+    }
+    .tl-date{
+      color: #847665;
+    }
+  }
+}
+
+//图集
+.grids{
+  color: #5d5849;
+  a{
+    color: #5d5849;
+    &:hover {
+      color: #524638;
+    }
+  }
+  .grid-inner{
+    background: #b3ac97;
+  }
+  .featured-image{
+    background: url("images/skin/featured.png") no-repeat center center;
+  }
+}
+
+
 .readers-list{
   .readers-inner{
     color: #524638;

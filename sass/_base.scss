@@ -688,7 +688,8 @@ $footer-h:290px;//页脚
       float: left;
       position: relative;
       margin-left: -1px;
-      width: 30px;
+      min-width: 30px;
+      padding: 0 5px;
       height: 30px;
       text-align: center;
       line-height: 30px;
@@ -1545,6 +1546,109 @@ blockquote {
         }
       }
     }
+}
+
+//归档
+.timeline{
+  position: relative;
+  padding-left: 20px;
+  margin-left: 20px;
+  &::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 3px;
+    height: 100%;
+    border-radius: 3px;
+  }
+  .tl-item{
+    position: relative;
+    margin: 15px 0;
+    &::before{
+      position: absolute;
+      left: -23px;
+      top: 6px;
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 9px;
+    }
+    &::after{
+      position: absolute;
+      left: -21px;
+      top: 8px;
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 5px;
+    }
+  }
+  .tl-wrap{
+    .tl-content {
+
+    }
+    .tl-date{
+      width: 110px;
+      margin-right: 10px;
+    }
+  }
+}
+
+//图集
+.grids{
+  margin: 0 auto;
+  .grid-item{
+    position: relative;
+    width: 25%;
+    float: left;
+    padding: 5px;
+    margin-bottom: 0;
+	.grid-inner{
+    border-radius: 3px;
+	}
+  .work-wrap{
+    padding: 5px;
+    .featured-image{
+      position: relative;
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      display: block;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &:hover .work-content{
+      display: block;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+  .work-content{
+    position: absolute;
+    padding: 10px;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .work-mate{
+    font-size: 12px;
+    padding: 0 5px 5px;
+    li{
+      margin-right: 10px;
+      &:last-child{
+        margin-right: 0;
+      }
+    	.fa{
+    	  margin-right:5px;
+    	}
+    }
+  }
+  }
 }
 
 //页脚

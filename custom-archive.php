@@ -23,28 +23,22 @@ error_reporting(0);
 																	<?php endif; ?>
 																	<div class="archivePost">
 																			 <ul class="timeline">
-																			 <li class="tl-header">
-																				 <div class="btn btn-info">现在</div>
-																			 </li>
 																			 <?php $count_posts = wp_count_posts(); $published_posts = $count_posts->publish;
 																			 query_posts( 'posts_per_page=-1' );
 																			 while ( have_posts() ) : the_post();
-																					 echo '<li class="tl-item"><div class="tl-wrap">';
-																					 echo '<span class="tl-date">';
-																					 the_time(get_option( 'date_format' ));
-																					 echo '</span><div class="tl-content">
-																					 <span class="arrow"></span>
+																					 echo '<li class="tl-item"><div class="tl-wrap clearfix">';
+                                           echo '<span class="tl-date fl">';
+                                           the_time(get_option( 'date_format' ));
+																					 echo '</span><div class="tl-content fl">
 																					 <a href="';
 																					 the_permalink();
 																					 echo '" title="'.esc_attr( get_the_title() ).'">';
 																					 the_title();
-																					 echo '</a></div></div></li>';
+                                           echo '</a></div>';
+                                           echo '</div></li>';
 																					 $published_posts--;
 																			 endwhile;
 																			 wp_reset_query(); ?>
-																				<li class="tl-header">
-																					<div class="btn btn-info">过去</div>
-																				</li>
 																			 </ul>
 																	 </div>
         												</div>
