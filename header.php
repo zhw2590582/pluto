@@ -8,6 +8,7 @@ $favicon = cs_get_option( 'i_favicon_icon' );
 $search = cs_get_option( 'i_search' );
 $login = cs_get_option( 'i_login' );
 $switcher = cs_get_option( 'i_switcher' );
+
 ?>
 
 <!DOCTYPE html>
