@@ -10,6 +10,32 @@ function island_scripts_styles() {
   wp_enqueue_style('style', get_template_directory_uri() . "/style.css", array() , '0.9', 'screen');
   wp_enqueue_style('font-awesome-css', get_template_directory_uri() . "/cs-framework/assets/css/font-awesome.css", array() , '0.3', 'screen');
 
+  /* 自定义皮肤 */
+    wp_register_style('switcher', get_template_directory_uri() . "/skin/switcher.php", array() , '0.3', 'screen');
+    wp_register_style('skin01', get_template_directory_uri() . "/skin/skin01.css", array() , '0.3', 'screen');
+    wp_register_style('skin02', get_template_directory_uri() . "/skin/skin02.css", array() , '0.3', 'screen');
+    wp_register_style('skin03', get_template_directory_uri() . "/skin/skin03.css", array() , '0.3', 'screen');
+    $skin = cs_get_option('i_skin');
+    $switcher = cs_get_option('i_switcher');
+
+    if ($switcher == true) {
+        wp_enqueue_style('switcher');
+    }else {
+		switch ($skin) {
+			case "i_skin01":
+				wp_enqueue_style('skin01');
+				break;
+
+			case "i_skin02":
+				wp_enqueue_style('skin02');
+				break;
+
+			case "i_skin03":
+				wp_enqueue_style('skin03');
+				break;
+		}
+	}
+
   /* 注册脚本 */
   wp_enqueue_script('jquery');
   wp_enqueue_script('plugins-js', get_template_directory_uri() . '/js/plugins.js', false, '0.3', true);

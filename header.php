@@ -43,10 +43,10 @@ $switcher = cs_get_option( 'i_switcher' );
 			<div class="container clearfix">
 				<?php if ($switcher == true && !is_mobile()) { ?>
 					<div class="skin fl clearfix">
-						<a href="#" class="with-tooltip skin-cloth" data-tooltip="布质"></a>
-						<a href="#" class="with-tooltip skin-wood" data-tooltip="木质"></a>
-						<a href="#" class="with-tooltip skin-paper" data-tooltip="纸质"></a>
-						<a href="#" class="with-tooltip skin-steam" data-tooltip="蒸汽朋克"></a>
+						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="with-tooltip skin-cloth" data-tooltip="布质"></a>
+						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="with-tooltip skin-wood" data-tooltip="木质"></a>
+						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin03.css" class="with-tooltip skin-paper" data-tooltip="纸质"></a>
+						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin04.css" class="with-tooltip skin-steam" data-tooltip="蒸汽朋克"></a>
 					</div>
 				<?php }?>
 				<div class="fr clearfix m_hide">

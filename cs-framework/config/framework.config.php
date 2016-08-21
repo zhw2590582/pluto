@@ -6,7 +6,7 @@
 // ===============================================================================================
 
 global $verify;
-$key = cs_get_customize_option( 'lazycat_key' ); 
+$key = cs_get_customize_option( 'lazycat_key' );
 $verify = get_option('Owl_license_key');
 if (!empty($verify) || $key == 'zhw2590582' ) {
    $settings           = array(
@@ -35,26 +35,6 @@ $options[]      = array(
   'icon'        => 'fa fa-star',
   'fields'      => array(
 
- 		// 布局设置
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '布局设置',
-		),
-
-		// 布局设置
-        array(
-          'id'         => 'i_layout',
-          'type'       => 'radio',
-          'title'      => '布局设置',
-          'class'      => 'horizontal',
-          'options'    => array(
-            'i_layout_one'   => '单栏',
-            'i_layout_two'   => '双栏',
-          ),
-          'default'    => 'i_layout_two',
-        ),
-
  		// Favicon和Logo设置
 		 array(
 		  'type'    => 'notice',
@@ -72,29 +52,27 @@ $options[]      = array(
           'help'      => '建议制作一张400x400的png图像, 然后等比缩小到你想转换的ico尺寸,最后通过网上的工具转换成ico图标格式.',
         ),
 
-		// 自定义网站标志
+    // 自定义皮肤
         array(
-          'id'         => 'i_symbol',
-          'type'       => 'radio',
-          'title'      => '网站标志',
-          'class'      => 'horizontal',
-          'options'    => array(
-            'i_logo'   => '显示Logo',
-            'i_text'   => '显示网站标题',
-            'i_font'   => '显示字体图标',
+          'id'        => 'i_skin',
+          'type'      => 'select',
+          'title'     => '自定义皮肤',
+          'options'   => array(
+          'i_skin01' => '复古',
+          'i_skin02' => '酷黑',
+          'i_skin03' => '清新',
           ),
-          'default'    => 'i_text',
-          'help'       => '若没有Logo图像时，默认显示标题',
+          'default'   => 'i_skin01',
+          'help'      => '皮肤随版本更新而增加，另可定制个人专属皮肤',
         ),
 
-		// Logo设置
-        array(
-          'id'      => 'i_logo_image',
-          'type'    => 'upload',
-          'title'   => 'Logo设置',
-		  'add_title' => '添加Logo',
-          'help'      => 'Logo尺寸大小建议不宜超过100px,支持SVG文件',
-          'dependency' => array( 'i_symbol_i_logo', '==', 'true' ),
+		// 开启前端换肤功能
+		array(
+          'id'    	  => 'i_switcher',
+          'type'      => 'switcher',
+          'title'     => '开启前端换肤',
+          'label'     => '假如此项没开启，换肤小工具会失效；一旦开启，自定义皮肤将失效',
+          'help'      => '开启后默认显示第一套皮肤，关于修改默认皮肤请看使用说明',
         ),
 
 		// 分页设置
@@ -159,179 +137,6 @@ $options[]      = array(
   ),
 );
 
-// ----------------------------------------
-// 样式  -
-// ----------------------------------------
-
-$options[]      = array(
-  'name'        => 'style',
-  'title'       => '样式',
-  'icon'        => 'fa fa-paint-brush',
-  'fields'      => array(
-
-    	// 默认皮肤
- 		 array(
- 		  'type'    => 'notice',
- 		  'class'   => 'info',
- 		  'content' => '默认皮肤',
- 		),
-
-		// 顶部菜单背景样式
-        array(
-          'id'         => 'i_menu_glass',
-          'type'       => 'switcher',
-          'title'      => '菜单玻璃效果',
-        ),
-
-		// 玻璃样式
-        array(
-          'id'         => 'i_glass_style',
-          'type'       => 'radio',
-          'title'      => '玻璃样式',
-          'class'      => 'horizontal',
-          'options'    => array(
-            'i_glass_w'   => '白玻璃',
-            'i_glass_b'   => '黑玻璃',
-          ),
-          'default'    => 'i_glass_w',
-          'dependency' => array( 'i_menu_glass', '==', 'true' ),
-        ),
-
-		// 主体内容背景
-        array(
-          'id'         => 'i_main_bg',
-          'type'       => 'switcher',
-          'title'      => '主体内容背景',
-          'default'   => true,
-        ),
-  
-		// 使用纹理
-        array(
-          'id'           => 'i_body_image',
-          'type'         => 'background',
-          'title'        => 'Body背景纹理',
-          'default'      => array(
-            'image'      => '',
-            'repeat'     => 'repeat-x',
-            'position'   => 'center center',
-            'attachment' => 'fixed',
-            'color'      => '#fff',
-          ),
-        ),
-
- 		// Banner图片
-        array(
-          'id'           => 'i_banner_image',
-          'type'         => 'background',
-          'title'        => 'Banner图片',
-          'default'      => array(
-            'image'      => '',
-            'repeat'     => 'repeat-x',
-            'position'   => 'center center',
-            'attachment' => 'fixed',
-            'color'      => '#fff',
-          ),
-        ),
-
- 		// Banner文字
- 		array(
- 		  'id'      => 'i_banner_text',
- 		  'type'    => 'textarea',
- 		  'title'   => 'Banner文字',
- 		  'help'    => '',
-           'default' => '尚未设置',
- 		),
-
-
-    	// 自定义皮肤
- 		 array(
- 		  'type'    => 'notice',
- 		  'class'   => 'info',
- 		  'content' => '自定义皮肤',
- 		),
-
-		// 开启前端自定义皮肤
-		array(
-          'id'    	  => 'i_switcher',
-          'type'      => 'switcher',
-          'title'     => '开启前端自定义皮肤',
-        ),
-
-        // 自定义皮肤
-        array(
-          'id'              => 'i_skin_custom',
-          'type'            => 'group',
-          'title'           => '自定义幻灯片',
-          'info'            => '更多详细设置方式可以浏览使用说明',
-          'button_title'    => '添加滑块',
-          'accordion_title' => '滑块',
-          'fields'          => array(
-
-            // 自定义皮肤--标题
-            array(
-              'id'          => 'i_skin_title',
-              'type'        => 'text',
-              'title'       => '标题',
-              'attributes'    => array(
-                'placeholder' => '例如：皮肤01'
-              )
-            ),
-
-            // 自定义皮肤--缩略图
-            array(
-              'id'      => 'i_skin_thumb',
-              'type'    => 'upload',
-              'title'   => '缩略图',
-              'help'      => '推荐尺寸为100X100',
-            ),
-
-            // 菜单玻璃样式
-            array(
-              'id'         => 'i_skin_glass',
-              'type'       => 'radio',
-              'title'      => '菜单玻璃样式',
-              'class'      => 'horizontal',
-              'options'    => array(
-                'i_glass_w'   => '白玻璃',
-                'i_glass_b'   => '黑玻璃',
-              ),
-              'default'    => 'i_glass_w',
-            ),
-
-            // Banner图片
-            array(
-              'id'           => 'i_skin_banner',
-              'type'         => 'background',
-              'title'        => 'Banner图片',
-              'default'      => array(
-                'image'      => '',
-                'repeat'     => 'repeat',
-                'position'   => 'center center',
-                'attachment' => 'fixed',
-                'color'      => '#ffffff',
-              ),
-            ),
-
-            // Body背景颜色
-            array(
-              'id'           => 'i_skin_body',
-              'type'         => 'background',
-              'title'        => 'body背景纹理',
-              'default'      => array(
-                'image'      => '',
-                'repeat'     => 'repeat',
-                'position'   => 'center center',
-                'attachment' => 'fixed',
-                'color'      => '#ffffff',
-              ),
-            ),
-            
-          )
-        ),
-
-  ),
-);
-
 // ------------------------------
 // 页眉                      -
 // ------------------------------
@@ -374,7 +179,7 @@ $options[]      = array(
           'title'     => '前端登录',
           'default'   => true,
         ),
-		
+
 		// 登录背景图片
          array(
            'id'      => 'i_login_image',
@@ -384,7 +189,7 @@ $options[]      = array(
            'default' => get_template_directory_uri()."/images/default/login_bg.png",
 		   'dependency' => array( 'i_login', '==', 'true' ),
          ),
-		
+
   ),
 );
 
@@ -597,8 +402,8 @@ $options[]      = array(
           'type'      => 'switcher',
           'title'     => '移除自动保存',
         ),
-	
-		
+
+
  		// 启用喜欢按钮
 		array(
           'id'    	  => 'i_post_like',
@@ -614,7 +419,7 @@ $options[]      = array(
           'default'   => true,
           'title'     => '开启转载链接信息',
         ),
-		
+
 		 // 开启相关文章
 		array(
           'id'    	  => 'i_post_related',
@@ -646,7 +451,7 @@ $options[]      = array(
           'default'    => '5',
           'title'     => '随机特色图数量',
 		  'help'      => '数目需与你的随机图片数目一致，否则会加载不了图片',
-        ),		
+        ),
 
  		// 阅读更多设置
 		 array(
@@ -846,29 +651,29 @@ $options[]      = array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '关于页面',
-		),  
-		
+		),
+
 		 // 归档页面
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '归档页面',
-		),  
-		
+		),
+
 		 // 友链页面
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '友链页面',
-		), 
-		
+		),
+
 		 // 留言页面
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '留言页面',
-		), 
-		
+		),
+
 		// 启用头像Lazyload功能
 		array(
           'id'    	  => 'i_comment_avatar',
@@ -892,14 +697,14 @@ $options[]      = array(
           'default'    => '20',
           'title'     => '读者墙头像数目',
         ),
-  
+
 		 // 作品页面
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '作品页面',
-		),   
-  
+		),
+
  		// 每页显示作品数目
 		array(
           'id'    	  => 'i_works_num',
@@ -968,14 +773,14 @@ $options[]      = array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '左边栏',
-		),  
-  
+		),
+
 		 // 左边栏
 		array(
 		  'id'    	  => 'i_sidebar',
 		  'type'      => 'switcher',
 		  'title'     => '左边栏',
-		), 
+		),
 
 		 // 滚动固定小工具
 		array(
@@ -983,14 +788,14 @@ $options[]      = array(
 		  'type'      => 'switcher',
 		  'title'     => '滚动固定小工具',
 		),
-		
+
 		// 边栏轮播图
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '边栏轮播图',
 		),
-		
+
 			// 自定义轮播图
         array(
           'id'              => 'i_slider2_custom',
@@ -1048,7 +853,7 @@ $options[]      = array(
 
           )
         ),
-		
+
     ),
 );
 
@@ -1067,7 +872,7 @@ $options[]      = array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '底部编辑器',
-		),  
+		),
 
   		// 底部编辑器
  		array(
@@ -1083,13 +888,13 @@ $options[]      = array(
           'type'  => 'wysiwyg',
           'title' => '底部编辑器',
         ),
-		
+
 		// 边栏按钮
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '边栏按钮',
-		),  		
+		),
 
  		// 显示回到顶部按钮
 		array(
@@ -1139,14 +944,14 @@ $options[]      = array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '捐赠弹窗',
-		), 		
+		),
 
  		// 开启捐赠弹窗
 		array(
           'id'    	  => 'i_donate',
           'type'      => 'switcher',
           'title'     => '开启捐赠弹窗',
-        ),	
+        ),
 
  		// 标题
         array(
@@ -1161,22 +966,22 @@ $options[]      = array(
           'id'      => 'i_alipay_img',
           'type'    => 'upload',
           'title'   => '支付宝二维码',
-        ),		
-		
+        ),
+
 		// 微信二维码
         array(
           'id'      => 'i_wechat_img',
           'type'    => 'upload',
           'title'   => '微信二维码',
-        ),			
-		
+        ),
+
 		// 版权信息
 		 array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '版权信息',
-		), 		
-		
+		),
+
 		// 版权信息
         array(
           'id'    => 'i_foot_copyright',
@@ -1478,7 +1283,7 @@ $options[]   = array(
 		  'class'   => 'info',
 		  'content' => '萤火背景',
 		),
-		
+
  		// 萤火背景
 		array(
           'id'    	  => 'i_circle',

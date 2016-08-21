@@ -4,7 +4,7 @@
 //body
 body{
   color: #524638;
-  background: #6e655a url('images/skin/body.png') fixed;
+  background: #6e655a url('../images/skin/body.png') fixed;
 }
 
 //默认链接色
@@ -16,11 +16,11 @@ a{
 }
 
 #header{
-  background: #403c36 url('images/skin/banner.png');
+  background: #403c36 url('../images/skin/banner.png');
 }
 
 .topbar{
-  background: url('images/skin/topbar.png') repeat-x;
+  background: url('../images/skin/topbar.png') repeat-x;
   .skin{
     a{
       background: #3f3c35;
@@ -47,10 +47,10 @@ a{
 }
 
 .topmenu{
-  background: url('images/skin/topMenu.png') repeat-x;
+  background: url('../images/skin/topMenu.png') repeat-x;
   li{
     &::before{
-      background: url('images/skin/menu-after.png') no-repeat center center;
+      background: url('../images/skin/menu-after.png') no-repeat center center;
     }
   }
   a{
@@ -62,7 +62,7 @@ a{
 }
 
 .sub-menu{
-  background: url('images/skin/submenu-bg.png') repeat-y;
+  background: url('../images/skin/submenu-bg.png') repeat-y;
   li{
     a{
       color: #796e5f;
@@ -76,31 +76,31 @@ a{
     }
   }
   &::before{
-    background: url('images/skin/submenu-before.png') no-repeat center center;
+    background: url('../images/skin/submenu-before.png') no-repeat center center;
   }
   &::after{
-    background: url('images/skin/submenu-after.png') no-repeat center center;
+    background: url('../images/skin/submenu-after.png') no-repeat center center;
   }
 }
 
 .logo a{
-  background: url('images/skin/logo.png') no-repeat center center;
+  background: url('../images/skin/logo.png') no-repeat center center;
 }
 
 #content{
   .container{
-    background: #645a4c url('images/skin/content.png');
+    background: #645a4c url('../images/skin/content.png');
     border: 1px solid #50483e
   }
   .content-inner{
-    background: #c3bca6 url('images/skin/content-inner.png');
+    background: #c3bca6 url('../images/skin/content-inner.png');
     border: 1px solid #dfdbd0;
     box-shadow: 0px 0px 1px #564c40;
   }
 }
 
 .mianmenu{
-  background: #13a6ac url('images/skin/mainMenu.png') repeat-x;
+  background: #13a6ac url('../images/skin/mainMenu.png') repeat-x;
   a{
     color: #fff;
     &:hover{
@@ -108,14 +108,14 @@ a{
     }
   }
   &::before{
-    background: url('images/skin/mainMenu-l.png') no-repeat center center;
+    background: url('../images/skin/mainMenu-l.png') no-repeat center center;
   }
   &::after{
-    background: url('images/skin/mainMenu-r.png') no-repeat center center;
+    background: url('../images/skin/mainMenu-r.png') no-repeat center center;
   }
   .menu-wrapper{
     &::before,&::after{
-      background: url('images/skin/mainMenu-dot.png') no-repeat center center;
+      background: url('../images/skin/mainMenu-dot.png') no-repeat center center;
     }
   }
 }
@@ -128,9 +128,9 @@ a{
 .post-date{
   color: #908b6b;
   text-shadow: 0px 1px 1px #fff;
-  background: url('images/skin/post-time.png') no-repeat center center;
+  background: url('../images/skin/post-time.png') no-repeat center center;
   &::before{
-    background: url('images/skin/post-time-over.png') no-repeat center center;
+    background: url('../images/skin/post-time-over.png') no-repeat center center;
   }
 }
 
@@ -150,23 +150,23 @@ a{
 
 .post-featured{
   a{
-    background: url('images/skin/featured.png') no-repeat center center;
+    background: url('../images/skin/featured.png') no-repeat center center;
   }
 }
 
 .post-related{
   img{
-    background: url('images/skin/featured.png') no-repeat center center;
+    background: url('../images/skin/featured.png') no-repeat center center;
   }
 }
 
 .avatar{
-  background: url('images/default/d-avatar.jpg') no-repeat center center;
+  background: url('../images/default/d-avatar.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .post-sticky{
-  background: url('images/skin/sticky.png') no-repeat center center;
+  background: url('../images/skin/sticky.png') no-repeat center center;
   background-size: contain;
 }
 
@@ -198,7 +198,7 @@ article{
 }
 
 .post-top{
-  background: url('images/skin/post-top.png') no-repeat center center;
+  background: url('../images/skin/post-top.png') no-repeat center center;
 }
 
 .state{
@@ -323,9 +323,9 @@ article{
 
 #footer{
   .footer-inner{
-    background: #7a6e5f url('images/skin/footer.png');
+    background: #7a6e5f url('../images/skin/footer.png');
     &::before{
-      background: url('images/skin/footer-before.png') repeat-x;
+      background: url('../images/skin/footer-before.png') repeat-x;
     }
   }
   .footer-text{
@@ -341,7 +341,7 @@ article{
         color: #dedacf;
       }
     }
-    background: url('images/skin/footer-end.png') repeat-x;
+    background: url('../images/skin/footer-end.png') repeat-x;
   }
 }
 
@@ -384,7 +384,7 @@ blockquote {
 #sidebar{
   color: #524638;
   text-shadow: 0px 1px 0px #d4d0c4;
-  background: #c3bca6 url("images/skin/content-inner.png");
+  background: #c3bca6 url("../images/skin/content-inner.png");
   border-left: 1px solid #d4ccb6;
   .widget-title{
     background: #b3ac97;
@@ -537,7 +537,7 @@ blockquote {
     background: #b3ac97;
   }
   .featured-image{
-    background: url("images/skin/featured.png") no-repeat center center;
+    background: url("../images/skin/featured.png") no-repeat center center;
   }
 }
 
