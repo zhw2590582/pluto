@@ -91,7 +91,7 @@ $pagination = cs_get_option('i_pagination');
 
               <?php get_template_part('format', 'standard'); ?>
 
-              <?php if (!is_mobile()) { ?>
+              <?php if (!is_mobile() && !is_page()) { ?>
                 <ul class="post-meta clearfix">
                   <?php if ($cat == true) { ?>
                     <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>

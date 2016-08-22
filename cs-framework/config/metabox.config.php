@@ -29,6 +29,25 @@ $options[]    = array(
 );
 
 $options[]    = array(
+  'id'        => 'about_page',
+  'title'     => '关于模板选项',
+  'post_type' => 'page',
+  'context'   => 'normal',
+  'priority'  => 'default',
+  'sections'  => array(
+
+    array(
+      'name'  => 'page_section_1',
+      'fields' => array(
+
+
+      ),
+    ),
+
+  ),
+);
+
+$options[]    = array(
   'id'        => 'archive_page',
   'title'     => '归档模板选项',
   'post_type' => 'page',

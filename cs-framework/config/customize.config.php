@@ -10,16 +10,18 @@ $options              = array();
 // Customize Core Fields                   -
 // -----------------------------------------
 $options[]            = array(
-  'name'              => 'lazycat',
-  'title'             => 'Island密钥验证',
+  'name'              => 'pluto',
+  'title'             => 'pluto密钥验证',
   'settings'          => array(
 
     // text
     array(
-      'name'          => 'lazycat_key',
+      'name'          => 'pluto_key',
       'control'       => array(
-        'label'       => '密钥',		        'wrap_class'  => 'hide',		        'class'  => 'hide',
-        'type'        => 'text',
+        'label'       => '密钥',
+        'wrap_class'  => 'hide',
+        'class'  => 'hide',
+        'type'        => 'password',
       ),
     ),
 

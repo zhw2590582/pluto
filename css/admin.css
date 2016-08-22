@@ -58,7 +58,7 @@
 	top: 223px;
 }
 
-#Owl_license_key {
+#license_key {
 	height: 33px;
 	padding-top: 13px;
 	margin-left: 100px;
@@ -127,7 +127,7 @@
 	width:50px ! important;
 	height:50px ! important;
 }
-#accordion-section-lazycat , .hide{
+#accordion-section-pluto , .hide{
 	display:none ! important;
 }
 

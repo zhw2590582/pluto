@@ -6,9 +6,9 @@
 // ===============================================================================================
 
 global $verify;
-$key = cs_get_customize_option( 'lazycat_key' );
-$verify = get_option('Owl_license_key');
-if (!empty($verify) || $key == 'zhw2590582' ) {
+$pluto_key = cs_get_customize_option( 'pluto_key' );
+$verify = get_option('pluto_license_key');
+if (!empty($verify) || $pluto_key == 'zhw2590582' ) {
    $settings           = array(
       'menu_title'      => '主题选项',
       'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
