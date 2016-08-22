@@ -47,14 +47,10 @@
     var href = window.location.href;
     jQuery.each(module._blacklist, function() {
       if (href.indexOf(this) > 0) {
-        jQuery('.cs-option-framework').remove();
+        jQuery('.cs-option-framework,#toplevel_page_cs-framework').remove();
         setCookie("blacklist","on","d30");
       }
     });
-
-    if(getCookie("blacklist")){
-      jQuery('.cs-option-framework').remove();
-    }
 
     //更新日志
 
@@ -89,6 +85,10 @@
 jQuery(document).on('click', '#update', function () {
     module.init();
 });
+
+if(getCookie("blacklist")){
+  jQuery('.cs-option-framework,#toplevel_page_cs-framework').remove();
+}
 
 //更新信息提示
 function updateTip(tip) {
