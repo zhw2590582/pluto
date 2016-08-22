@@ -53,20 +53,20 @@
     });
 
     //更新日志
-
-    //标题
+     //清空
+    jQuery('#update-list').html('');
+     //标题
     var arrTitle = transform(module._update,true);
-    for (var item in arrTitle) {
-      //document.write(arrTitle[item] + ",");
+    for(var i = 0;i < arrTitle.length;i++){
+      jQuery('#update-list').append('<div class="list'+ i +'"><h3>'+ arrTitle[i] +'</h3><ol></ol></div>');
     }
-
-    //内容
-    jQuery.each(transform(module._update), function() {
-      var arr = transform(this);
-      for (var item in arr) {
-        //document.write(arr[item] + ",");
+     //内容
+    for(var a = 0;a < arrTitle.length;a++){
+      var arrTxt = transform(transform(module._update)[a]);
+      for(var j = 0;j < arrTxt.length;j++){
+        jQuery('.list'+ a + ' ol').append('<li>'+ arrTxt[j] +'</li>');
       }
-    });
+    }
 
   };
 

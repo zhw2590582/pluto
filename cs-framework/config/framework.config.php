@@ -1510,7 +1510,6 @@ $options[]   = array(
 		  'content' => '检测更新',
 		),
 
-    // 关于主题
     array(
       'type'    => 'content',
       'content' => '<input type="button" name="update" id="update" class="button button-primary cs-update" value="检测更新">',
@@ -1520,6 +1519,11 @@ $options[]   = array(
 		  'type'    => 'notice',
 		  'class'   => 'info',
 		  'content' => '更新日志',
+		),
+
+    array(
+      'type'    => 'content',
+      'content' => '<div id="update-list"></div>',
 		),
 
   ),
