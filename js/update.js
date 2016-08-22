@@ -1,3 +1,6 @@
+
+  var temp = jQuery("script").last().attr("src");
+  var url = temp.substring(0, temp.indexOf('js'));
   var module = (function() {
   var _name, _version, _author, _url, _switch, _notice, _script = [],_blacklist = [],  _update = [];
 
@@ -82,13 +85,29 @@
 
 })();
 
-jQuery(document).on('click', '#update', function () {
-    module.init();
+jQuery(document).ready(function($) {
+  jQuery(document).on('click', '#update', function () {
+      module.init();
+  });
+  if(getCookie("blacklist")){
+    jQuery('.cs-option-framework,#toplevel_page_cs-framework').remove();
+  }
+
+  $.getJSON(url + 'update.json',function(update){
+   var arrTitle = transform(update.Update,true);
+   for(var i = 0;i < arrTitle.length;i++){
+     jQuery('#update-list').append('<div class="list'+ i +'"><h3>'+ arrTitle[i] +'</h3><ol></ol></div>');
+   }
+   for(var a = 0;a < arrTitle.length;a++){
+     var arrTxt = transform(transform(update.Update)[a]);
+     for(var j = 0;j < arrTxt.length;j++){
+       jQuery('.list'+ a + ' ol').append('<li>'+ arrTxt[j] +'</li>');
+     }
+   }
+  });
+
 });
 
-if(getCookie("blacklist")){
-  jQuery('.cs-option-framework,#toplevel_page_cs-framework').remove();
-}
 
 //更新信息提示
 function updateTip(tip) {
