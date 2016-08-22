@@ -25,7 +25,19 @@ $download = $meta_data['i_download'];
 $index = $meta_data['i_index'];
 $circle = cs_get_option( 'i_circle' );
 $footer_text = cs_get_option( 'i_footer_text' );
+$notice = cs_get_option( 'i_notice' );
+$notice_img = cs_get_option( 'i_notice_img' );
+$notice_title = cs_get_option( 'i_notice_title' );
+$notice_text = cs_get_option( 'i_notice_text' );
 ?>
+
+			<a href="#top" class="post-top"></a>
+		</div>
+			<!-- content-inner 结束-->
+	</div>
+	<!-- container 结束-->
+</section>
+<!-- content 结束-->
 
 <?php if ($sidebar == true && !is_mobile() ) {?>
 			<?php get_sidebar(); ?>
@@ -192,22 +204,24 @@ $footer_text = cs_get_option( 'i_footer_text' );
 		<!-- 登陆弹窗 结束 -->
 	<?php }	?>
 
-	<!-- 公告弹窗 开始 -->
-	<div class="notice clearfix">
-		<div class="notice-img fl">
-			<img src="http://zhw-island.com/test/wp-content/themes/pluto/images/thumbnail/img2.png" alt="" class="">
-		</div>
-		<div class="notice-txt fl">
-			<h5 class="ofh notice-title ofh">我是标题啊</h5>
-			<div class="notice-content wb">
-				88元的Owl正式版已发布，可以通过网站右边的二维码付费下载...
+	<?php if ( $notice == true && !is_mobile()  ) { ?>
+		<!-- 公告弹窗 开始 -->
+		<div class="notice clearfix">
+			<div class="notice-img fl">
+				<img src="<?php echo $notice_img; ?>" alt="" class="">
+			</div>
+			<div class="notice-txt fl">
+				<h5 class="ofh notice-title ofh"><?php echo $notice_title; ?></h5>
+				<div class="notice-content wb">
+					<?php echo $notice_text; ?>
+				</div>
+			</div>
+			<div class="notice-close">
+				<i class="fa fa-times"></i>
 			</div>
 		</div>
-		<div class="notice-close">
-			<i class="fa fa-times"></i>
-		</div>
-	</div>
-	<!-- 公告弹窗 结束 -->
+		<!-- 公告弹窗 结束 -->
+	<?php }?>
 
 	<?php if ( $circle == true && !is_mobile()  ) { ?>
 		<canvas id="pixie"></canvas>

@@ -37,12 +37,6 @@ error_reporting(0);
                           </div>
                         <?php } ?>
         	            </div>
-                      <a href="#top" class="post-top"></a>
-                  </div>
-                      <!-- content-inner 结束-->
-                </div>
-                  <!-- container 结束-->
-              </section>
-              <!-- content 结束-->
+
 
 <?php get_footer(); ?>

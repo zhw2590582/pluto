@@ -1,8 +1,12 @@
 <?php
- // 获取选项
-$excerpt = cs_get_option( 'i_post_readmore' );
+error_reporting(0);
 $link = cs_get_option( 'i_post_link' );
 $related = cs_get_option( 'i_post_related' );
+$date = cs_get_option( 'i_post_date' );
+$view = cs_get_option( 'i_post_view' );
+$com = cs_get_option( 'i_post_com' );
+$cat = cs_get_option( 'i_post_cat' );
+$tag = cs_get_option( 'i_post_tag' );
 $like = cs_get_option( 'i_post_like' );
 ?>
 
@@ -12,26 +16,32 @@ $like = cs_get_option( 'i_post_like' );
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php setPostViews(get_the_ID());?>
                 <article <?php post_class('single-post'); ?>>
-                  <div class="post-tool">
-                    <!-- 日期  -->
-                    <div class="post-date">
-                      <span class="date-month"><?php the_time('m'); ?>月</span>
-                      <span class="date-day"><?php the_time('d'); ?></span>
-                      <span class="date-year"><?php the_time('Y'); ?></span>
-                    </div>
-                    <!-- 浏览  -->
-                    <div class="post-view">
-                      <a href="javascript:void(0)">
-                        <i class="fa fa-eye"></i><span class="view-num"><?php echo getPostViews(get_the_ID()); ?></span>
-                      </a>
-                    </div>
-                    <?php if(current_user_can('level_10')){  ?>
-                      <!-- 编辑  -->
-                      <div class="post-edit">
-                          <?php edit_post_link( __( '<i class="fa fa-edit"></i><span class="view-num">编辑</span>' ), '<div class="edit-link">', '</div>' ); ?>
-                      </div>
-                    <?php } ?>
-                  </div>
+                  <?php if (!is_mobile()) { ?>
+                        <div class="post-tool">
+                          <?php if ($date == true) { ?>
+                            <!-- 日期  -->
+                            <div class="post-date">
+                              <span class="date-month"><?php the_time('m'); ?>月</span>
+                              <span class="date-day"><?php the_time('d'); ?></span>
+                              <span class="date-year"><?php the_time('Y'); ?></span>
+                            </div>
+                          <?php } ?>
+                          <?php if ($view == true) { ?>
+                            <!-- 浏览  -->
+                            <div class="post-view">
+                              <a href="javascript:void(0)">
+                                <i class="fa fa-eye"></i><span class="view-num"><?php echo getPostViews(get_the_ID()); ?></span>
+                              </a>
+                            </div>
+                          <?php } ?>
+                          <?php if(current_user_can('level_10')){  ?>
+                            <!-- 编辑  -->
+                            <div class="post-edit">
+                                <?php edit_post_link( __( '<i class="fa fa-edit"></i><span class="view-num">编辑</span>' ), '<div class="edit-link">', '</div>' ); ?>
+                            </div>
+                          <?php } ?>
+                        </div>
+                  <?php } ?>
                   <div class="post-wrap">
                       <?php get_template_part('format', 'standard'); ?>
 
@@ -101,12 +111,22 @@ $like = cs_get_option( 'i_post_like' );
                         </ul>
                         <?php } ?>
                     </div>
-                    <ul class="post-meta clearfix">
-                      <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
-                      <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
-                      <?php if ($like == true) { ?> <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li><?php } ?>
-                      <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
-                    </ul>
+                    <?php if (!is_mobile()) { ?>
+                      <ul class="post-meta clearfix">
+                        <?php if ($cat == true) { ?>
+                          <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
+                        <?php } ?>
+                        <?php if ($tag == true) { ?>
+                          <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
+                        <?php } ?>
+                        <?php if ($like == true) { ?>
+                          <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li>
+                        <?php } ?>
+                        <?php if ($com == true) { ?>
+                          <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
+                        <?php } ?>
+                      </ul>
+                    <?php } ?>
                   </div>
                 </article>
                 <?php endwhile; ?>
@@ -121,12 +141,6 @@ $like = cs_get_option( 'i_post_like' );
                 <?php } ?>
 
             </div>
-            <a href="#top" class="post-top"></a>
-          </div>
-              <!-- content-inner 结束-->
-        </div>
-          <!-- container 结束-->
-      </section>
-      <!-- content 结束-->
+
 
 <?php get_footer(); ?>

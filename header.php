@@ -1,14 +1,12 @@
 <?php
 error_reporting(0);
-$notice = cs_get_option( 'i_notice' );
-$notice_main = cs_get_option( 'i_notice_main' );
 $keywords = cs_get_option( 'i_seo_keywords' );
 $description = cs_get_option( 'i_seo_description' );
 $favicon = cs_get_option( 'i_favicon_icon' );
+$topbar = cs_get_option( 'i_topbar' );
 $search = cs_get_option( 'i_search' );
 $login = cs_get_option( 'i_login' );
 $switcher = cs_get_option( 'i_switcher' );
-
 ?>
 
 <!DOCTYPE html>
@@ -30,60 +28,55 @@ $switcher = cs_get_option( 'i_switcher' );
 		<div style="display:none;"><?php the_post_thumbnail( 'medium' ); ?></div>
 	<?php }?>
 
-  <?php if ($notice && !is_mobile()) { ?>
-		<!-- 弹窗公告 -->
-    <div class="notice hide m_hide">
-        <div class="notice-inner"><?php echo $notice_main; ?></div>
-        <a href="javascript:void(0)" class="clo-notice"><i class="fa fa-times"></i></a>
-    </div>
-  <?php }?>
 	<!-- header 开始-->
   <header id="header">
 
-		<div class="topbar">
-			<div class="container clearfix">
-				<?php if ($switcher == true && !is_mobile()) { ?>
-					<div class="skin fl clearfix">
-						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="with-tooltip skin-cloth" data-tooltip="布质"></a>
-						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="with-tooltip skin-wood" data-tooltip="木质"></a>
-						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin03.css" class="with-tooltip skin-paper" data-tooltip="纸质"></a>
-						<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin04.css" class="with-tooltip skin-steam" data-tooltip="蒸汽朋克"></a>
-					</div>
-				<?php }?>
-				<div class="fr clearfix m_hide">
-					<div class="search fl">
-						<?php if ($search == true && !is_mobile()) { ?>
+	<?php if ($topbar == true && !is_mobile()) { ?>
+			<div class="topbar">
+				<div class="container clearfix">
+					<?php if ($switcher == true) { ?>
+						<div class="skin fl clearfix">
+							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin01.css" class="with-tooltip skin-cloth" data-tooltip="布质"></a>
+							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin02.css" class="with-tooltip skin-wood" data-tooltip="木质"></a>
+							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin03.css" class="with-tooltip skin-paper" data-tooltip="纸质"></a>
+							<a href="<?php echo get_template_directory_uri(); ?>/skin/switcher.php?style=skin04.css" class="with-tooltip skin-steam" data-tooltip="蒸汽朋克"></a>
+						</div>
+					<?php }?>
+					<div class="fr clearfix m_hide">
+						<?php if ($search == true) { ?>
+						<div class="search fl">
 								<form method="get" id="searchform" action="<?php echo home_url(); ?>/">
 								<input type="text" class="search-form-input text" name="s" onfocus="if (this.value == '查找...') {this.value = '';}" onblur="if (this.value == '') {this.value = '查找...';}" value="查找...">                        </form>
+						</div>
 						<?php }?>
-					</div>
-					<div class="login fl">
-						<?php if ($login == true && !is_mobile()) { ?>
-								<?php $current_user = wp_get_current_user(); ?>
-								<?php if ( is_user_logged_in() ) { ?>
-									<div class="admin-box clearfix">
-										<a class="avatar-box fl clearfix with-tooltip" data-tooltip="管理" href="<?php if(current_user_can('level_10')){ echo admin_url( 'admin.php?page=cs-framework' ) ;}else {echo admin_url( 'index.php' ) ;}  ?>">
-												<?php if (strlen(get_avatar($current_user->ID, 40)) > 0) { ?>
-														<?php echo get_avatar($current_user->ID, 40); ?>
-												<?php } else { ?>
-														<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-avatar.png" alt="">
-												<?php } ?>
-												<span><?php echo $current_user->display_name; ?></span>
-										</a>
-										<a href="<?php echo wp_logout_url(home_url()); ?>" class="logout-btn fl with-tooltip" data-tooltip="登出">
-											<i class="fa fa-sign-out"></i>
-										</a>
-									</div>
-								<?php } else { ?>
-								 <a href="#" class="with-tooltip login-btn" data-tooltip="登陆">
-									 <i class="fa fa-user" aria-hidden="true"></i>
-								 </a>
-								<?php } ?>
+						<?php if ($login == true) { ?>
+							<div class="login fl">
+									<?php $current_user = wp_get_current_user(); ?>
+									<?php if ( is_user_logged_in() ) { ?>
+										<div class="admin-box clearfix">
+											<a class="avatar-box fl clearfix with-tooltip" data-tooltip="管理" href="<?php if(current_user_can('level_10')){ echo admin_url( 'admin.php?page=cs-framework' ) ;}else {echo admin_url( 'index.php' ) ;}  ?>">
+													<?php if (strlen(get_avatar($current_user->ID, 40)) > 0) { ?>
+															<?php echo get_avatar($current_user->ID, 40); ?>
+													<?php } else { ?>
+															<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-avatar.png" alt="">
+													<?php } ?>
+													<span><?php echo $current_user->display_name; ?></span>
+											</a>
+											<a href="<?php echo wp_logout_url(home_url()); ?>" class="logout-btn fl with-tooltip" data-tooltip="登出">
+												<i class="fa fa-sign-out"></i>
+											</a>
+										</div>
+									<?php } else { ?>
+									 <a href="#" class="with-tooltip login-btn" data-tooltip="登陆">
+										 <i class="fa fa-user" aria-hidden="true"></i>
+									 </a>
+									<?php } ?>
+							</div>
 						<?php } ?>
 					</div>
 				</div>
 			</div>
-		</div>
+	<?php } ?>
 
 		<nav class="topmenu">
 			<div class="container clearfix">

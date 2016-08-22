@@ -101,12 +101,6 @@ $worksnum = cs_get_option( 'i_works_num' );
 		  										</div>
 		  								</article>
 		  	            </div>
-                    <a href="#top" class="post-top"></a>
-                  </div>
-                      <!-- content-inner 结束-->
-                </div>
-                  <!-- container 结束-->
-              </section>
-              <!-- content 结束-->
+
 
 <?php get_footer(); ?>
