@@ -15,7 +15,7 @@ if (!empty($verify) || $key == 'zhw2590582' ) {
       'menu_slug'       => 'cs-framework',
       'ajax_save'       => true,
       'show_reset_all'  => false,
-      'framework_title' => ''.wp_get_theme()->display('Name').'<small style="color:red;margin-left:10px">'.wp_get_theme()->display('Version').'</small>',
+      'framework_title' => ''.wp_get_theme()->display('Name').'<small class="oldVer" style="color:red;margin-left:10px">'.wp_get_theme()->display('Version').'</small>',
    );
 } else {};
 
@@ -1493,6 +1493,36 @@ $options[]   = array(
     ),
 
   )
+);
+
+// ------------------------------
+// 更新                       -
+// ------------------------------
+$options[]   = array(
+  'name'     => 'update',
+  'title'    => '更新',
+  'icon'     => 'fa fa-refresh',
+  'fields' => array(
+
+    array(
+		  'type'    => 'notice',
+		  'class'   => 'info',
+		  'content' => '检测更新',
+		),
+
+    // 关于主题
+    array(
+      'type'    => 'content',
+      'content' => '<input type="button" name="update" id="update" class="button button-primary cs-update" value="检测更新">',
+		),
+
+    array(
+		  'type'    => 'notice',
+		  'class'   => 'info',
+		  'content' => '更新日志',
+		),
+
+  ),
 );
 
 // ------------------------------

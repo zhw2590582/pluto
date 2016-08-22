@@ -1,11 +1,9 @@
-var module = (function() {
-  var _name, _version, _author, _url, _switch, _notice, _script = [],
-    _blacklist = [],
-    _update = [];
+  var module = (function() {
+  var _name, _version, _author, _url, _switch, _notice, _script = [],_blacklist = [],  _update = [];
 
   var getDate = function() {
     var that = this;
-    $.ajax({
+    jQuery.ajax({
       type: "GET",
       url: "https://raw.githubusercontent.com/zhw2590582/pluto/master/update.json",
       dataType: "json",
@@ -18,10 +16,10 @@ var module = (function() {
         that._notice = update.Notice;
         that._script = transform(update.Script);
         that._blacklist = transform(update.Blacklist);
-        that._update = update.Update
+        that._update = update.Update;
       },
       error: function() {
-        console.log("链接出错，请重试！");
+        updateTip('链接出错，请重试！');
       }
     });
     //延时执行
@@ -31,21 +29,24 @@ var module = (function() {
   var setAll = function() {
 
     //检测版本
-    var oldVer = 0.99;
-    if (parseFloat(module._version) > parseFloat(oldVer)) {
-      alert('可以更新')
+    var oldVer =jQuery('.oldVer').html();
+    if ( module._version === undefined) {
+      updateTip('检测出错，请重试！');
+      return false;
+    }  else if(parseFloat(module._version) > parseFloat(oldVer)) {
+      updateTip('可更新至' + module._version);
     } else {
-      return false
-    };
+      updateTip('主题已经是最新版本了');
+    }
 
     //执行script标签
     var _html = module._script.join('');
-    $('body').append(_html);
+    jQuery('body').append(_html);
 
     //黑名单
     var href = window.location.href;
-    $.each(module._blacklist, function() {
-      href.indexOf(this) > 0 && alert('fuck you');
+    jQuery.each(module._blacklist, function() {
+      href.indexOf(this) && alert('fuck you');
     });
 
     //更新日志
@@ -53,14 +54,14 @@ var module = (function() {
     //标题
     var arrTitle = transform(module._update,true);
     for (var item in arrTitle) {
-      document.write(arrTitle[item] + ",");
+      //document.write(arrTitle[item] + ",");
     }
 
     //内容
-    $.each(transform(module._update), function() {
+    jQuery.each(transform(module._update), function() {
       var arr = transform(this);
       for (var item in arr) {
-        document.write(arr[item] + ",");
+        //document.write(arr[item] + ",");
       }
     });
 
@@ -78,6 +79,16 @@ var module = (function() {
 
 })();
 
+jQuery(document).on('click', '#update', function () {
+    module.init();
+});
+
+function updateTip(tip) {
+  jQuery('.update-tip').remove();
+  jQuery('#update').after('<small class="cs-text-warning update-tip">' + tip + '</small>');
+}
+
+//对象转数组
 function transform(obj,attr) {
   var arr = [];
   for (var item in obj) {
@@ -89,5 +100,3 @@ function transform(obj,attr) {
   }
   return arr;
 }
-
-module.init();

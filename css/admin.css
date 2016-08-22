@@ -130,3 +130,8 @@
 #accordion-section-lazycat , .hide{
 	display:none ! important;
 }
+
+.update-tip{
+	display: inline-block;
+	margin: 5px;
+}

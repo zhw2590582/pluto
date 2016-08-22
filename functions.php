@@ -3,7 +3,7 @@ error_reporting(0);
 /* 引入后台框架 */
 require_once dirname( __FILE__ ) .'/cs-framework/cs-framework.php';
 
-/* 加载脚本和样式 */
+/* 前台加载脚本和样式 */
 function island_scripts_styles() {
 
   /* 注册样式 */
@@ -59,6 +59,14 @@ function island_scripts_styles() {
 
 }
 add_action('wp_enqueue_scripts', 'island_scripts_styles');
+
+//后台加载脚本和样式
+function admin_scripts_styles() {
+  wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin.js', false, '0.1', true);
+  wp_enqueue_script('update-js', get_template_directory_uri() . '/js/update.js', false, '0.1', true);
+  wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/css/admin.css', array() );
+}
+add_action('admin_enqueue_scripts', 'admin_scripts_styles');
 
 /*移除多余信息*/
 function wpdaxue_remove_cssjs_ver( $src ) {

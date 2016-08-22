@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
-	
-	/*	判断密钥验证 */		
+
+	/*	判断密钥验证 */
 	$verify=$(".regular-text").val();
 	if($verify==""){
 		$(".verify_state").addClass("verify_no");
@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 		$(".verify_state").removeClass("verify_no");
 		$(".verify_info").html("<b style='color:#05991D;'>验证成功</b>");
 	}
-	
+
 	/*	判断文章形式 */
 	$(':radio[name="post_format"]').change(function() {
 		$('#standard_options').toggle(this.value == 0);
@@ -19,8 +19,8 @@ jQuery(document).ready(function($) {
 		$('#aside_options').toggle(this.value == 'aside');
 	});
 	$(':radio[name="post_format"]:checked').change();
-	
-	/*	判断页面模板 */	
+
+	/*	判断页面模板 */
     $('#page_template').change( function() {
 
       $('#default_page').hide();
@@ -42,16 +42,16 @@ jQuery(document).ready(function($) {
 
         case 'custom-work.php':
           $('#work_page').show();
-        break;              
-              
+        break;
+
         case 'custom-friend.php':
         $('#friend_page').show();
-        break;		
-		
+        break;
+
         case 'custom-message.php':
           $('#message_page').show();
-        break;					
-		
+        break;
+
         default:
           $('#default_page').show();
         break;

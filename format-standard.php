@@ -3,6 +3,9 @@ error_reporting(0);
 $excerpt = cs_get_option( 'i_post_readmore' );
 $view = cs_get_option( 'i_post_view' );
 $meta_data = get_post_meta( get_the_ID(), 'standard_options', true );
+$state = $meta_data['i_state'];
+$state_text = $meta_data['i_state_text'];
+$state_icon = $meta_data['i_state_icon'];
 $music = $meta_data['i_post_music'];
 $download = $meta_data['i_download'];
 $web = $meta_data['i_download_web'];
@@ -15,7 +18,11 @@ $feature_num = cs_get_option( 'i_feature_num' );
 ?>
 
 <header class="post-title clearfix wb">
-  <i class="with-tooltip fl state fa fa-smile-o" data-tooltip="心情如何" aria-hidden="true"></i>
+
+  <?php if ( $state == true && !is_mobile()  ) { ?>
+    <i class="with-tooltip fl state fa <?php echo $state_icon; ?>" data-tooltip="<?php echo $state_text; ?>" aria-hidden="true"></i>
+  <?php }?>
+
   <div class="fl">
     <a class="" href="<?php the_permalink(); ?>#content" title="<?php the_title(); ?>">
       <?php the_title(); ?>

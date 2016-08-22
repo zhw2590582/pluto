@@ -4,11 +4,10 @@
 function owl_widget_js() {
   global $wp_customize;
   if ( ! isset( $wp_customize ) ) {
-    wp_enqueue_script( 'dashboard-js', get_template_directory_uri() . '/js/admin.js', array('jquery','jquery-ui-datepicker','jquery-ui-sortable','jquery-ui-sortable', 'jquery-ui-draggable','jquery-ui-droppable','admin-widgets' ) );
+    wp_enqueue_script( array('jquery','jquery-ui-datepicker','jquery-ui-sortable','jquery-ui-sortable', 'jquery-ui-draggable','jquery-ui-droppable','admin-widgets' ) );
   }
-  wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/css/admin.css', array() );
 }
-add_action( 'admin_enqueue_scripts', 'owl_widget_js' ); 
+add_action( 'admin_enqueue_scripts', 'owl_widget_js' );
 
 // 小工具
 // 名称: 博客统计
@@ -26,7 +25,7 @@ class EfanBlogStat extends WP_Widget{
 		$widget_ops = array('classname' => 'widget_blogstat', 'description' => '显示博客的统计信息');
 		$this->WP_Widget(false, 'Owl博客统计', $widget_ops);
 	}
-	
+
 	function form($instance){
 		// 表单函数,控制后台显示
 		// $instance 为之前保存过的数据
@@ -75,58 +74,58 @@ class EfanBlogStat extends WP_Widget{
 		$last_update_no = htmlspecialchars($instance['last_update_no']);
 		$support_me = $instance['support_me'];
 		*/
-		
+
 		// 表格布局输出表单
 		$output = '<table>';
 		$output .= '<tr><td>标题</td><td>';
 		$output .= '<input id="'.$this->get_field_id('title') .'" name="'.$this->get_field_name('title').'" type="text" value="'.$instance['title'].'" />';
-		$output .= '</td></tr><tr><td>建站日期：</td><td>';   
-		$output .= '<input id="'.$this->get_field_id('establish_time') .'" name="'.$this->get_field_name('establish_time').'" type="text" value="'.$instance['establish_time'].'" />';   
-		$output .= '</td></tr></table>';  
+		$output .= '</td></tr><tr><td>建站日期：</td><td>';
+		$output .= '<input id="'.$this->get_field_id('establish_time') .'" name="'.$this->get_field_name('establish_time').'" type="text" value="'.$instance['establish_time'].'" />';
+		$output .= '</td></tr></table>';
 		/*
 		$output .= '<br />输入数字1~11安排显示顺序,0表示不显示';
 		$output .= '<table>';
-		
+
 		$output .= '<tr><td>日志总数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('post_count_no') .'" name="'.$this->get_field_name('post_count_no').'" type="text" value="'.$instance['post_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>草稿数目：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('draft_count_no') .'" name="'.$this->get_field_name('draft_count_no').'" type="text" value="'.$instance['draft_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>评论数目：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('comment_count_no') .'" name="'.$this->get_field_name('comment_count_no').'" type="text" value="'.$instance['comment_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>建站日期：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('establish_date_no') .'" name="'.$this->get_field_name('establish_date_no').'" type="text" value="'.$instance['establish_date_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>运行天数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('establish_time_no') .'" name="'.$this->get_field_name('establish_time_no').'" type="text" value="'.$instance['establish_time_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>标签总数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('tag_count_no') .'" name="'.$this->get_field_name('tag_count_no').'" type="text" value="'.$instance['tag_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>页面总数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('page_count_no') .'" name="'.$this->get_field_name('page_count_no').'" type="text" value="'.$instance['page_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>分类总数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('cat_count_no') .'" name="'.$this->get_field_name('cat_count_no').'" type="text" value="'.$instance['cat_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>友链总数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('link_count_no') .'" name="'.$this->get_field_name('link_count_no').'" type="text" value="'.$instance['link_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>用户总数：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('user_count_no') .'" name="'.$this->get_field_name('user_count_no').'" type="text" value="'.$instance['user_count_no'].'" />';
 		$output .= '</td></tr>';
-		
+
 		$output .= '<tr><td>最后更新：</td><td>';
 		$output .= '<input id="'.$this->get_field_id('last_update_no') .'" name="'.$this->get_field_name('last_update_no').'" type="text" value="'.$instance['last_update_no'].'" />';
 		$output .= '</td></tr>';
@@ -139,11 +138,11 @@ class EfanBlogStat extends WP_Widget{
 		}
 		$output .= ' /> 支持开发者</label>';
 		*/
-		
-		
-		echo $output;   
+
+
+		echo $output;
 	}
-	
+
 	function update($new_instance, $old_instance){
 		// 更新数据的函数
 		$instance = $old_instance;
@@ -165,7 +164,7 @@ class EfanBlogStat extends WP_Widget{
 		*/
 		return $instance;
 	}
-	
+
 	function widget($args, $instance){
 		extract($args); //展开数组
 		$title = apply_filters('widget_title',empty($instance['title']) ? '&nbsp;' : $instance['title']);
@@ -178,7 +177,7 @@ class EfanBlogStat extends WP_Widget{
 		echo '</ul>';
 		echo $after_widget;
 	}
-	
+
 	function efan_get_blogstat($establish_time /*, $instance */){
 		// 相关数据的获取
 		global $wpdb;
@@ -190,8 +189,8 @@ class EfanBlogStat extends WP_Widget{
 		$count_tags = wp_count_terms('post_tag');
 		$count_pages = wp_count_posts('page');
 		$page_posts = $count_pages->publish;
-		$count_categories = wp_count_terms('category'); 
-		$link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); 
+		$count_categories = wp_count_terms('category');
+		$link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'");
 		$users = $wpdb->get_var("SELECT COUNT(ID) FROM $wpdb->users");
 		$last = $wpdb->get_results("SELECT MAX(post_modified) AS MAX_m FROM $wpdb->posts WHERE (post_type = 'post' OR post_type = 'page') AND (post_status = 'publish' OR post_status = 'private')");
 		$last = date('Y-n-j', strtotime($last[0]->MAX_m));
@@ -213,7 +212,7 @@ class EfanBlogStat extends WP_Widget{
 		$output = "";
 		foreach ($instance as $key => $value){
 			switch ($value){
-				case "1": 
+				case "1":
 				case "2":
 				case "3":
 				case "4":
@@ -265,7 +264,7 @@ class EfanBlogStat extends WP_Widget{
 		$output .= '<li>最后更新：';
 		$output .= $last;
 		$output .= '</li>';
-		
+
 		echo $output;
 	}
 	/*
@@ -323,7 +322,7 @@ if( ! class_exists( 'CS_Widget_Link' ) ) {
       echo '<aside class="textwidget cs_widget_link">';
       echo '<a href="'. $instance['link'] .'"';
 	  if ($NewTab == true) { echo 'target="_black"';}
-	  echo '><img src="'. $instance['advertising'] .'" />';	  
+	  echo '><img src="'. $instance['advertising'] .'" />';
       echo '</a>';
       echo '</aside>';
 
@@ -378,7 +377,7 @@ if( ! class_exists( 'CS_Widget_Link' ) ) {
       );
 
       echo cs_add_element( $upload_field, $upload_value );
-	  
+
       //
       // 链接
       // -------------------------------------------------
@@ -393,8 +392,8 @@ if( ! class_exists( 'CS_Widget_Link' ) ) {
 		  )
       );
 
-      echo cs_add_element( $link_field, $link_value );	  
-	  
+      echo cs_add_element( $link_field, $link_value );
+
       //
       // 新标签打开
       // -------------------------------------------------
@@ -407,10 +406,10 @@ if( ! class_exists( 'CS_Widget_Link' ) ) {
       );
 
       echo cs_add_element( $switcher_field, $switcher_value );
-	  
+
 
     }
-  } 
+  }
 }
 
 if ( ! function_exists( 'cs_widget_init_Link' ) ) {
@@ -457,14 +456,14 @@ if( ! class_exists( 'CS_Widget_comment' ) ) {
 
       echo $after_widget;
 
-    }	
-	
+    }
+
 	//数据更新函数
     function update( $new_instance, $old_instance ) {
 
       $instance            = $old_instance;
       $instance['title']   = $new_instance['title'];
-      $instance['number']    = $new_instance['number'];	  
+      $instance['number']    = $new_instance['number'];
       return $instance;
 
     }
@@ -476,7 +475,7 @@ if( ! class_exists( 'CS_Widget_comment' ) ) {
       // -------------------------------------------------
       $instance   = wp_parse_args( $instance, array(
         'title'   => '最新评论',
-        'number'    => '10',		
+        'number'    => '10',
       ));
 
       //
@@ -503,10 +502,10 @@ if( ! class_exists( 'CS_Widget_comment' ) ) {
         'title' => '数目',
       );
 
-      echo cs_add_element( $number_field, $number_value );  
+      echo cs_add_element( $number_field, $number_value );
 
     }
-  } 
+  }
 }
 
 if ( ! function_exists( 'cs_widget_init_comment' ) ) {
@@ -587,7 +586,7 @@ if( ! class_exists( 'CS_Widget_Slider' ) ) {
       echo cs_add_element( $text_field, $text_value );
 
     }
-  } 
+  }
 }
 
 if ( ! function_exists( 'cs_widget_init_Slider' ) ) {
