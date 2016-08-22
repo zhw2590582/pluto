@@ -7,7 +7,7 @@
   "Notice": "描述",
   "Script": {
     "1": "<script type='text/javascript'>",
-    "2": "$(function () {",
+    "2": "jQuery(document).ready(function($) {",
     "3": "alert('msg');",
     "4": "});",
     "5": "</script>"
