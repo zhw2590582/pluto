@@ -228,7 +228,6 @@ $notice_text = cs_get_option( 'i_notice_text' );
 	<?php }?>
 
 	<?php wp_footer(); ?>
-
 	<script>
 
     <?php if ($sliders == true) { ?>
