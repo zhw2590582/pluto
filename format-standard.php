@@ -20,7 +20,7 @@ $feature_num = cs_get_option( 'i_feature_num' );
 <header class="post-title clearfix wb">
 
   <?php if ( $state == true && !is_mobile()  ) { ?>
-    <i class="with-tooltip fl state fa <?php echo $state_icon; ?>" data-tooltip="<?php echo $state_text; ?>" aria-hidden="true"></i>
+    <i class="with-tooltip m_hide fl state fa <?php echo $state_icon; ?>" data-tooltip="<?php echo $state_text; ?>" aria-hidden="true"></i>
   <?php }?>
 
   <div class="fl">
@@ -32,8 +32,8 @@ $feature_num = cs_get_option( 'i_feature_num' );
 
 <div class="post-inner colbox">
 
-  <?php if ( !is_single() && !is_page() ) { ?>
-    <div class="post-left col">
+  <?php if ( !is_single() && !is_page() && !is_mobile() ) { ?>
+    <div class="post-left col m_hide">
 
       <!-- 特色图 开始 -->
       <?php if ( has_post_thumbnail() ) { ?>

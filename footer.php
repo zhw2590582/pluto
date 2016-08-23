@@ -47,7 +47,7 @@ $notice_text = cs_get_option( 'i_notice_text' );
 		<div class="footer-inner">
 			<div class="container">
 	      <?php if ($footer_text && !is_mobile()) {?>
-          <div class="footer-text wb clearfix">
+          <div class="footer-text wb clearfix m_hide">
               <?php echo $edit ?>
           </div>
 	      <?php }?>

@@ -1,2 +1,33 @@
 @charset "UTF-8";
 /* queries */
+@media only screen and (max-width:$container-w + 30px) {
+  .m_hide{
+    display: none !important;
+  }
+  .m_show{
+    display: block;;
+  }
+  .container{
+    width: 100%;
+  }
+  #content{
+    margin-top: 50px;
+    .container {
+     border: none!important;
+     background-color: transparent !important;
+     background-image: none !important;
+   }
+  }
+  .app_slider{
+    margin: 10px;
+    .slider_inner{
+      min-height: 50px;
+    }
+  }
+  .link_box .blogroll li{
+    width: 50%;
+  }
+  .grids .grid-item{
+    width: 100%;
+  }
+}

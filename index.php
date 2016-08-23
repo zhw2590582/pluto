@@ -61,7 +61,7 @@ $pagination = cs_get_option('i_pagination');
           <?php setPostViews(get_the_ID());?>
           <article <?php post_class('index-post'); ?>>
           <?php if (!is_mobile()) { ?>
-                <div class="post-tool">
+                <div class="post-tool m_hide">
                   <?php if ($date == true) { ?>
                     <!-- 日期  -->
                     <div class="post-date">
@@ -97,7 +97,7 @@ $pagination = cs_get_option('i_pagination');
                     <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
                   <?php } ?>
                   <?php if ($tag == true) { ?>
-                    <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
+                    <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix m_hide"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
                   <?php } ?>
                   <?php if ($like == true) { ?>
                     <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li>

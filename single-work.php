@@ -15,7 +15,7 @@
         	            <div class="posts clearfix">
         								<article <?php post_class('single-post'); ?>>
                           <?php if (!is_mobile()) { ?>
-                                <div class="post-tool">
+                                <div class="post-tool m_hide">
                                   <?php if ($date == true) { ?>
                                     <!-- 日期  -->
                                     <div class="post-date">

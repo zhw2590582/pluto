@@ -569,6 +569,7 @@ blockquote {
   .featured-image{
     @include retina('featured',$skin);
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

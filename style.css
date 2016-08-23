@@ -2335,4 +2335,33 @@ blockquote {
   top: 0;
   left: 0; }
 
+/* queries */
+@media only screen and (max-width: 830px) {
+  .m_hide {
+    display: none !important; }
+
+  .m_show {
+    display: block; }
+
+  .container {
+    width: 100%; }
+
+  #content {
+    margin-top: 50px; }
+    #content .container {
+      border: none !important;
+      background-color: transparent !important;
+      background-image: none !important; }
+
+  .app_slider {
+    margin: 10px; }
+    .app_slider .slider_inner {
+      min-height: 50px; }
+
+  .link_box .blogroll li {
+    width: 50%; }
+
+  .grids .grid-item {
+    width: 100%; } }
+
 /*# sourceMappingURL=style.css.map */
