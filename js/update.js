@@ -1,4 +1,3 @@
-
   var temp = jQuery("script").last().attr("src");
   var url = temp.substring(0, temp.indexOf('js'));
   var module = (function() {
@@ -11,7 +10,6 @@
       url: "https://raw.githubusercontent.com/zhw2590582/pluto/master/update.json",
       dataType: "json",
       success: function(update) {
-        console.log(update);
         that._name = update.Name;
         that._version = update.Version;
         that._author = update.Author;
