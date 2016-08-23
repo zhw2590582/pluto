@@ -11,6 +11,7 @@
       url: "https://raw.githubusercontent.com/zhw2590582/pluto/master/update.json",
       dataType: "json",
       success: function(update) {
+        console.log(update);
         that._name = update.Name;
         that._version = update.Version;
         that._author = update.Author;

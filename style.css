@@ -1473,6 +1473,7 @@ blockquote {
   right: 0;
   bottom: 0;
   height: 100%;
+  font-size: 13px;
   width: 300px;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
