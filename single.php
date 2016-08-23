@@ -111,22 +111,20 @@ $like = cs_get_option( 'i_post_like' );
                         </ul>
                         <?php } ?>
                     </div>
-                    <?php if (!is_mobile()) { ?>
-                      <ul class="post-meta clearfix">
-                        <?php if ($cat == true) { ?>
-                          <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
-                        <?php } ?>
-                        <?php if ($tag == true) { ?>
-                          <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix m_hide"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
-                        <?php } ?>
-                        <?php if ($like == true) { ?>
-                          <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li>
-                        <?php } ?>
-                        <?php if ($com == true) { ?>
-                          <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
-                        <?php } ?>
-                      </ul>
-                    <?php } ?>
+                    <ul class="post-meta clearfix">
+                      <?php if ($cat == true) { ?>
+                        <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php the_category(' '); ?></li>
+                      <?php } ?>
+                      <?php if ($tag == true) { ?>
+                        <?php $posttags = get_the_tags(); if ($posttags) { ?><li class="meta-tabs fl clearfix m_hide"><i class="fa fa-tags"></i><?php the_tags('', ' ', ''); ?></li><?php } ?>
+                      <?php } ?>
+                      <?php if ($like == true) { ?>
+                        <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li>
+                      <?php } ?>
+                      <?php if ($com == true) { ?>
+                        <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
+                      <?php } ?>
+                    </ul>
                   </div>
                 </article>
                 <?php endwhile; ?>

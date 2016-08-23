@@ -640,6 +640,9 @@ mark {
 .mr0 {
   margin-right: 0 !important; }
 
+.m_show {
+  display: none; }
+
 /* queries */
 .container {
   width: 800px;
@@ -648,6 +651,67 @@ mark {
 #header {
   position: relative;
   height: 195px; }
+
+#m-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px; }
+  #m-header .m-back {
+    font-size: 18px;
+    text-align: center;
+    width: 30px; }
+  #m-header .m-logo {
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  #m-header .m-menu {
+    font-size: 18px;
+    text-align: center;
+    width: 30px; }
+
+#m-menu {
+  position: fixed;
+  z-index: 11;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease; }
+  #m-menu.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1); }
+
+.menu-tab {
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px; }
+  .menu-tab .menu-tab-item {
+    display: inline-block;
+    width: 40%;
+    text-align: center; }
+  .menu-tab .m-menu-close {
+    display: inline-block;
+    width: 20%;
+    text-align: center; }
+
+.menu-content a {
+  display: block;
+  font-size: 14px;
+  padding: 10px; }
+  .menu-content a .fa {
+    margin-right: 5px; }
 
 .topbar {
   height: 45px;
@@ -2341,13 +2405,13 @@ blockquote {
     display: none !important; }
 
   .m_show {
-    display: block; }
+    display: block !important; }
 
   .container {
     width: 100%; }
 
   #content {
-    margin-top: 50px; }
+    margin-top: 55px; }
     #content .container {
       border: none !important;
       background-color: transparent !important;

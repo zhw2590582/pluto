@@ -1,17 +1,17 @@
 @charset "UTF-8";
 /* queries */
 @media only screen and (max-width:$container-w + 30px) {
-  .m_hide{
+  .m_hide{ 
     display: none !important;
   }
   .m_show{
-    display: block;;
+    display: block !important;
   }
   .container{
     width: 100%;
   }
   #content{
-    margin-top: 50px;
+    margin-top: 55px;
     .container {
      border: none!important;
      background-color: transparent !important;

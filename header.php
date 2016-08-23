@@ -91,6 +91,32 @@ $switcher = cs_get_option( 'i_switcher' );
 		<!-- header 结束-->
 	<?php } ?>
 
+	<header id="m-header" class="m_show">
+		<div class="m-header-inner colbox">
+			<a class="col m-back" href="javascript:history.go(-1)">
+				<i class="fa fa-chevron-left" aria-hidden="true"></i>
+			</a>
+			<a class="col m-logo" href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?>">
+				<?php bloginfo('name'); ?>
+			</a>
+			<a class="col m-menu" href="javascript:void(0)">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</a>
+		</div>
+	</header>
+
+	<nav id="m-menu">
+		<div class="menu-tab clearfix">
+			<a href="javascript:void(0)" class="menu-tab-item fl current">菜单</a>
+			<a href="javascript:void(0)" class="menu-tab-item fl">分类</a>
+			<a href="javascript:void(0)" class="m-menu-close fl"><i class="fa fa-times" aria-hidden="true"></i></a>
+		</div>
+		<div class="menu-content">
+			<?php wp_nav_menu(array('theme_location' => 'header', 'container' => 'div','depth' => 1, 'container_class' => 'menu-wrapper', 'menu_class' => 'menu-list clearfix')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'div','depth' => 1, 'container_class' => 'menu-wrapper hide', 'menu_class' => 'menu-list clearfix')); ?>
+		</div>
+	</nav>
+
 	<!-- content 开始-->
 	<section id="content" name="content">
 	  <!-- container 开始-->

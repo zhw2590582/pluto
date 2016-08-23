@@ -24,6 +24,51 @@ a{
   @include retina('banner',$skin);
 }
 
+#m-header{
+  background-color: #c3bca6;
+  @include retina('content-inner',$skin);
+  border-bottom: 1px solid #cec9b7;
+  box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 1px 0px #d4d0c4;
+    a{
+      color: #5d5448;
+      &:hover{
+        color: #585249;
+      }
+    }
+}
+
+#m-menu{
+  background-color: #c3bca6;
+  @include retina('content-inner',$skin);
+  border-left: 1px solid #cec9b7;
+  text-shadow: 0px 1px 0px #d4d0c4;
+    a{
+      color: #5d5448;
+      &:hover{
+        color: #585249;
+      }
+    }
+}
+
+.menu-tab{
+  border-bottom: 1px solid #b5a794;
+  .menu-tab-item{
+    border-right: 1px solid #b5a794;
+    &.current{
+      background: #b1a990;
+    }
+  }
+}
+
+.menu-content{
+  li{
+    a{
+      border-bottom: 1px solid #b5a794;
+    }
+  }
+}
+
 .topbar{
   @include retina('topbar',$skin);
   background-repeat: repeat-x;

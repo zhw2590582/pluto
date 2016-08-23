@@ -55,6 +55,17 @@
         												</div>
                               </div>
         										</div>
+                            <ul class="post-meta clearfix">
+                              <?php if ($cat == true) { ?>
+                                <li class="mate-cat fl clearfix"><i class="fa fa-bookmark"></i><?php $terms_as_text = get_the_term_list( $post->ID, 'genre', '', ', ', '' ) ; echo strip_tags($terms_as_text); ?></li>
+                              <?php } ?>
+                              <?php if ($like == true) { ?>
+                                <li class="meta-like fr mr0"><?php echo getPostLikeLink( get_the_ID() ); ?></li>
+                              <?php } ?>
+                              <?php if ($com == true) { ?>
+                                <li class="mate-com fr"><i class="fa fa-comments-o"></i><span class="mate-num"><?php comments_number(__('0','island'),__('1','island'),__( '%','island') );?></span></li>
+                              <?php } ?>
+                            </ul>
         									</div>
         								</article>
                         <!-- 评论 -->

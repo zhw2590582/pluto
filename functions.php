@@ -538,12 +538,12 @@ function improved_trim_excerpt($text) {
         $text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
 		/* 可自定义不过滤html标签 */
         $text = strip_tags($text, '<span><pre><code><script><style><br><em><i><ul><ol><li><a><p><img><video><audio><strong><em><blockquote>');
-        $text = mb_substr($text, 0, cs_get_option('i_post_excerpt') , 'utf-8') . '...<div class="read_more"><a href="' . get_permalink($post->ID) . '">' . cs_get_option('i_post_more') . '</a></div>';
+        $text = mb_substr($text, 0, cs_get_option('i_post_excerpt') , 'utf-8') . '...<div class="read_more m_hide"><a href="' . get_permalink($post->ID) . '">' . cs_get_option('i_post_more') . '</a></div>';
         $excerpt_length = cs_get_option('i_post_excerpt');
         $words = explode(' ', $text, $excerpt_length + 1);
         if (count($words) > $excerpt_length) {
             array_pop($words);
-            array_push($words, '...<div class="read_more"><a " href="' . get_permalink($post->ID) . '">' . cs_get_option('i_post_more') . '</a></div>');
+            array_push($words, '...<div class="read_more m_hide"><a " href="' . get_permalink($post->ID) . '">' . cs_get_option('i_post_more') . '</a></div>');
             $text = implode(' ', $words);
         }
     }
@@ -554,7 +554,7 @@ function custom_excerpt_length($length) {
 }
 function new_excerpt_more($more) {
     global $post;
-    return '...<div class="read_more"><a href="' . get_permalink($post->ID) . '">' . cs_get_option('i_post_more') . '</a></div>';
+    return '...<div class="read_more m_hide"><a href="' . get_permalink($post->ID) . '">' . cs_get_option('i_post_more') . '</a></div>';
 }
 $excerpt = cs_get_option('i_post_readmore');
 $html = cs_get_option('i_post_html');
@@ -774,7 +774,7 @@ function get_not_audit_comments(){
         $awaiting_mod = $awaiting_mod->moderated;
         if($awaiting_mod){
             //当存在未审核留言
-            echo "<div id=\"awaiting_comments\"><a href=".admin_url( 'edit-comments.php' ).'><i class=\'fa fa-comments\'></i>你有'.$awaiting_mod.'条新回复</a></div>';
+            echo "<div id=\"awaiting_comments\" class=\"m_hide\"><a href=".admin_url( 'edit-comments.php' ).'><i class=\'fa fa-comments\'></i>你有'.$awaiting_mod.'条新回复</a></div>';
          }
     }
 }

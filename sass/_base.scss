@@ -18,6 +18,80 @@ $footer-h:290px;//页脚
   height: 195px;
 }
 
+#m-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  .m-back{
+    font-size: 18px;
+    text-align: center;
+    width: 30px;
+  }
+  .m-logo{
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .m-menu{
+    font-size: 18px;
+    text-align: center;
+    width: 30px;
+  }
+}
+
+#m-menu{
+  position: fixed;
+  z-index: 11;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  -webkit-transform:translateX(200px);
+  transform:translateX(200px);
+  -webkit-transition:all .2s ease;
+  transition:all .2s ease;
+  &.open{
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.menu-tab{
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+  .menu-tab-item{
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+  }
+  .m-menu-close{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+  }
+}
+
+.menu-content{
+  a{
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    .fa{
+      margin-right: 5px;
+    }
+  }
+}
+
 //顶部工具条
 .topbar{
   height: 45px;

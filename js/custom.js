@@ -137,14 +137,24 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 	});
 
 	if(!getCookie("notice")){
-    $(".notice").addClass("open")
+    $(".notice").addClass("open");
 	}else {
 	  $(".notice").remove();
 	}
 
   //自适应菜单
-	$(".menu-toggle").click(function() {
-		$(".header-menu,.menu-toggle").toggleClass("open-nav");
+	$(".m-menu").click(function() {
+		$("#m-menu").addClass("open");
+	});
+
+  $(".menu-tab-item").click(function() {
+    var i = $(this).index();
+    $(this).addClass("current").siblings().removeClass('current');
+    $('#m-menu .menu-content').find('.menu-wrapper').eq(i).show().siblings().hide();
+  });
+
+  $(".m-menu-close").click(function() {
+		$("#m-menu").removeClass("open");
 	});
 
 });
