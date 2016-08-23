@@ -1,9 +1,15 @@
 @charset "UTF-8";
 /* 纸质 */
+/* queries */
 /* skin */
 body {
   color: #524638;
-  background: #6e655a url("../images/skin/body.png") fixed; }
+  background-color: #6e655a;
+  background-attachment: fixed;
+  background-image: url(../images/skin/skin1/body.png); }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    body {
+      background-image: url(../images/skin/skin1/body@2x.png); } }
 
 a {
   color: #862525; }
@@ -11,10 +17,18 @@ a {
     color: #3c362f; }
 
 #header {
-  background: #403c36 url("../images/skin/banner.png"); }
+  background-color: #403c36;
+  background-image: url(../images/skin/skin1/banner.png); }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #header {
+      background-image: url(../images/skin/skin1/banner@2x.png); } }
 
 .topbar {
-  background: url("../images/skin/topbar.png") repeat-x; }
+  background-image: url(../images/skin/skin1/topbar.png);
+  background-repeat: repeat-x; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .topbar {
+      background-image: url(../images/skin/skin1/topbar@2x.png); } }
   .topbar .skin a {
     background: #3f3c35; }
   .topbar #searchform input {
@@ -31,16 +45,28 @@ a {
         color: #96928c; }
 
 .topmenu {
-  background: url("../images/skin/topMenu.png") repeat-x; }
+  background-image: url(../images/skin/skin1/topMenu.png);
+  background-repeat: repeat-x; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .topmenu {
+      background-image: url(../images/skin/skin1/topMenu@2x.png); } }
   .topmenu li::before {
-    background: url("../images/skin/menu-after.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/menu-after.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .topmenu li::before {
+        background-image: url(../images/skin/skin1/menu-after@2x.png); } }
   .topmenu a {
     color: #e6e2d4; }
     .topmenu a:hover {
       color: #fff; }
 
 .sub-menu {
-  background: url("../images/skin/submenu-bg.png") repeat-y; }
+  background-image: url(../images/skin/skin1/submenu-bg.png);
+  background-repeat: repeat-y; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .sub-menu {
+      background-image: url(../images/skin/skin1/submenu-bg@2x.png); } }
   .sub-menu li a {
     color: #796e5f;
     text-shadow: none !important;
@@ -50,33 +76,70 @@ a {
       color: #716049;
       background: #cdd1bb; }
   .sub-menu::before {
-    background: url("../images/skin/submenu-before.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/submenu-before.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .sub-menu::before {
+        background-image: url(../images/skin/skin1/submenu-before@2x.png); } }
   .sub-menu::after {
-    background: url("../images/skin/submenu-after.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/submenu-after.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .sub-menu::after {
+        background-image: url(../images/skin/skin1/submenu-after@2x.png); } }
 
 .logo a {
-  background: url("../images/skin/logo.png") no-repeat center center; }
+  background-image: url(../images/skin/skin1/logo.png);
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .logo a {
+      background-image: url(../images/skin/skin1/logo@2x.png); } }
 
 #content .container {
-  background: #645a4c url("../images/skin/content.png");
+  background-color: #645a4c;
+  background-image: url(../images/skin/skin1/content.png);
   border: 1px solid #50483e; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #content .container {
+      background-image: url(../images/skin/skin1/content@2x.png); } }
 #content .content-inner {
-  background: #c3bca6 url("../images/skin/content-inner.png");
+  background-color: #c3bca6;
+  background-image: url(../images/skin/skin1/content-inner.png);
   border: 1px solid #dfdbd0;
   box-shadow: 0px 0px 1px #564c40; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #content .content-inner {
+      background-image: url(../images/skin/skin1/content-inner@2x.png); } }
 
 .mianmenu {
-  background: #13a6ac url("../images/skin/mainMenu.png") repeat-x; }
+  background-image: url(../images/skin/skin1/mainMenu.png);
+  background-repeat: repeat-x; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .mianmenu {
+      background-image: url(../images/skin/skin1/mainMenu@2x.png); } }
   .mianmenu a {
     color: #fff; }
     .mianmenu a:hover {
       color: #fff; }
   .mianmenu::before {
-    background: url("../images/skin/mainMenu-l.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/mainMenu-l.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .mianmenu::before {
+        background-image: url(../images/skin/skin1/mainMenu-l@2x.png); } }
   .mianmenu::after {
-    background: url("../images/skin/mainMenu-r.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/mainMenu-r.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .mianmenu::after {
+        background-image: url(../images/skin/skin1/mainMenu-r@2x.png); } }
   .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
-    background: url("../images/skin/mainMenu-dot.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/mainMenu-dot.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
+        background-image: url(../images/skin/skin1/mainMenu-dot@2x.png); } }
 
 .app_slider, .post-featured, .r_pic, .cs_widget_slider {
   background: #938975;
@@ -85,9 +148,17 @@ a {
 .post-date {
   color: #908b6b;
   text-shadow: 0px 1px 1px #fff;
-  background: url("../images/skin/post-time.png") no-repeat center center; }
+  background-image: url(../images/skin/skin1/post-time.png);
+  background-repeat: no-repeat; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .post-date {
+      background-image: url(../images/skin/skin1/post-time@2x.png); } }
   .post-date::before {
-    background: url("../images/skin/post-time-over.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/post-time-over.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .post-date::before {
+        background-image: url(../images/skin/skin1/post-time-over@2x.png); } }
 
 .post-view, .post-edit {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -100,18 +171,31 @@ a {
       color: #b7aa98; }
 
 .post-featured a {
-  background: url("../images/skin/featured.png") no-repeat center center; }
+  background-image: url(../images/skin/skin1/featured.png);
+  background-repeat: no-repeat; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .post-featured a {
+      background-image: url(../images/skin/skin1/featured@2x.png); } }
 
 .post-related img {
-  background: url("../images/skin/featured.png") no-repeat center center; }
+  background-image: url(../images/skin/skin1/featured.png);
+  background-repeat: no-repeat; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .post-related img {
+      background-image: url(../images/skin/skin1/featured@2x.png); } }
 
 .avatar {
-  background: url("../images/default/d-avatar.jpg") no-repeat center center;
+  background: url("../images/default/d-avatar.jpg");
+  background-repeat: no-repeat;
   background-size: cover; }
 
 .post-sticky {
-  background: url("../images/skin/sticky.png") no-repeat center center;
+  background-image: url(../images/skin/skin1/sticky.png);
+  background-repeat: no-repeat;
   background-size: contain; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .post-sticky {
+      background-image: url(../images/skin/skin1/sticky@2x.png); } }
 
 article .post-title {
   background: #b3ac97; }
@@ -131,7 +215,11 @@ article::after {
   border-bottom: 1px dashed #dad3be; }
 
 .post-top {
-  background: url("../images/skin/post-top.png") no-repeat center center; }
+  background-image: url(../images/skin/skin1/post-top.png);
+  background-repeat: no-repeat; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .post-top {
+      background-image: url(../images/skin/skin1/post-top@2x.png); } }
 
 .state {
   color: #524638;
@@ -215,20 +303,32 @@ article::after {
     background: #008ebd; }
 
 #footer .footer-inner {
-  background: #7a6e5f url("../images/skin/footer.png"); }
+  background-color: #7a6e5f;
+  background-image: url(../images/skin/skin1/footer.png); }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #footer .footer-inner {
+      background-image: url(../images/skin/skin1/footer@2x.png); } }
   #footer .footer-inner::before {
-    background: url("../images/skin/footer-before.png") repeat-x; }
+    background-image: url(../images/skin/skin1/footer-before.png);
+    background-repeat: repeat-x; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      #footer .footer-inner::before {
+        background-image: url(../images/skin/skin1/footer-before@2x.png); } }
 #footer .footer-text {
   color: #dedacf;
   text-shadow: 0px 1px 0px #4e463e; }
 #footer .footer-end {
   color: #aba58f;
   text-shadow: 0px 1px 0px #4e463e;
-  background: url("../images/skin/footer-end.png") repeat-x; }
+  background-image: url(../images/skin/skin1/footer-end.png);
+  background-repeat: repeat-x; }
   #footer .footer-end a {
     color: #aba58f; }
     #footer .footer-end a:hover {
       color: #dedacf; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #footer .footer-end {
+      background-image: url(../images/skin/skin1/footer-end@2x.png); } }
 
 blockquote {
   border-left: 0.2rem solid #8e3e3e;
@@ -259,8 +359,12 @@ blockquote {
 #sidebar {
   color: #524638;
   text-shadow: 0px 1px 0px #d4d0c4;
-  background: #c3bca6 url("../images/skin/content-inner.png");
+  background-color: #c3bca6;
+  background-image: url(../images/skin/skin1/content-inner.png);
   border-left: 1px solid #d4ccb6; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #sidebar {
+      background-image: url(../images/skin/skin1/content-inner@2x.png); } }
   #sidebar .widget-title {
     background: #b3ac97; }
     #sidebar .widget-title::before {
@@ -359,7 +463,11 @@ blockquote {
   .grids .grid-inner {
     background: #b3ac97; }
   .grids .featured-image {
-    background: url("../images/skin/featured.png") no-repeat center center; }
+    background-image: url(../images/skin/skin1/featured.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .grids .featured-image {
+        background-image: url(../images/skin/skin1/featured@2x.png); } }
 
 .readers-list .readers-inner {
   color: #524638;
@@ -367,3 +475,5 @@ blockquote {
   background: #b3ac97; }
   .readers-list .readers-inner .name {
     border-bottom: 1px solid #a79e86; }
+
+/*# sourceMappingURL=skin03.css.map */

@@ -14,3 +14,16 @@
 @mixin bg-w ($n) {
     background: rgba(255, 255, 255, $n);
 }
+//retina
+$image-path: '../images/skin' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin retina($name,$skin:false,$size:false){
+    background-image: url(#{$image-path}/#{$skin}/#{$name}.#{$fallback-extension});
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      background-image: url(#{$image-path}/#{$skin}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+    }
+    @if($size){
+        background-size: $size;
+    }
+}

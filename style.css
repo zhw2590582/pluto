@@ -640,6 +640,7 @@ mark {
 .mr0 {
   margin-right: 0 !important; }
 
+/* queries */
 .container {
   width: 800px;
   margin: 0 auto; }
@@ -1896,7 +1897,6 @@ blockquote {
     height: 51px;
     line-height: 51px; }
 
-/* queries */
 /* plugins */
 /* nivoSlider */
 .nivoSlider {
