@@ -105,7 +105,7 @@ $switcher = cs_get_option( 'i_switcher' );
 		</div>
 	</header>
 
-	<nav id="m-menu">
+	<nav id="m-menu" class="m_show">
 		<div class="menu-tab clearfix">
 			<a href="javascript:void(0)" class="menu-tab-item fl current">菜单</a>
 			<a href="javascript:void(0)" class="menu-tab-item fl">分类</a>
