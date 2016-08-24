@@ -1061,7 +1061,7 @@ $options[]      = array(
 
  		// 显示简介
 		array(
-          'id'    	  => 'i_me_switch',
+          'id'    	  => 'i_profile',
           'type'      => 'switcher',
           'default'   => true,
           'title'     => '显示简介',
@@ -1069,7 +1069,7 @@ $options[]      = array(
 
  		// 头像
         array(
-          'id'      => 'i_avatar_image',
+          'id'      => 'i_profile_avatar',
           'type'    => 'upload',
           'title'   => '头像	',
           'default' => get_template_directory_uri()."/images/default/avatar.png",
@@ -1077,7 +1077,7 @@ $options[]      = array(
 
     // 昵称
         array(
-          'id'      => 'i_avatar_name',
+          'id'      => 'i_profile_name',
           'type'    => 'text',
           'title'   => '昵称',
           'default' => '你的昵称',
@@ -1085,7 +1085,7 @@ $options[]      = array(
 
  		// 简介
         array(
-          'id'      => 'i_avatar_content',
+          'id'      => 'i_profile_content',
           'type'    => 'textarea',
           'title'   => '简介',
           'default' => '你的简介',
@@ -1099,67 +1099,67 @@ $options[]      = array(
           'info'            => '更多详细设置方式可以浏览使用说明',
           'button_title'    => '添加链接项',
           'accordion_title' => '链接项',
-		  'help'            => '社交链接显示在关于我小工具里面',
+		      'help'            => '社交链接显示在关于我小工具里面',
           'fields'          => array(
 
 				// 自定义社交链接--标题
             array(
               'id'          => 'i_social_title',
-			  'type'        => 'text',
+			        'type'        => 'text',
               'title'       => '菜单标题',
-			  'attributes'    => array(
-				'placeholder' => '例如：我的微博'
-			  )
+      			  'attributes'    => array(
+      				'placeholder' => '例如：我的微博'
+			         )
             ),
 
 				// 自定义图标类型
-			array(
-			  'id'         => 'i_icon_style',
-			  'type'       => 'radio',
-			  'title'      => '图标类型',
-			  'class'      => 'horizontal',
-			  'options'    => array(
-				'i_icon'   => '字体图标',
-				'i_image'  => '自定义图片',
-			  ),
-			  'default'    => 'i_icon',
-			),
+    			array(
+    			  'id'         => 'i_icon_style',
+    			  'type'       => 'radio',
+    			  'title'      => '图标类型',
+    			  'class'      => 'horizontal',
+    			  'options'    => array(
+    				'i_icon'   => '字体图标',
+    				'i_image'  => '自定义图片',
+    			  ),
+    			  'default'    => 'i_icon',
+    			),
 
 				// 自定义社交链接--字体图标
-			array(
-			  'id'      => 'i_social_icon',
-			  'type'    => 'icon',
-			  'title'   => '字体图标',
-			  'dependency' => array( 'i_icon_style_i_icon', '==', 'true' ),
-			),
+    			array(
+    			  'id'      => 'i_social_icon',
+    			  'type'    => 'icon',
+    			  'title'   => '字体图标',
+    			  'dependency' => array( 'i_icon_style_i_icon', '==', 'true' ),
+    			),
 
 				// 自定义社交链接--自定义图片
-			array(
-			  'id'      => 'i_social_image',
-			  'type'    => 'upload',
-			  'title'   => '自定义图片',
-			  'dependency' => array( 'i_icon_style_i_image', '==', 'true' ),
-			  'help'      => '自定义图片大小建议不宜超过100px',
-			),
+    			array(
+    			  'id'      => 'i_social_image',
+    			  'type'    => 'upload',
+    			  'title'   => '自定义图片',
+    			  'dependency' => array( 'i_icon_style_i_image', '==', 'true' ),
+    			  'help'      => '自定义图片大小建议不宜超过100px',
+    			),
 
 
 				// 自定义社交链接--链接
-			array(
-			  'id'            => 'i_social_link',
-			  'type'          => 'text',
-			  'title'         => '菜单链接',
-			  'attributes'    => array(
-				'placeholder' => 'http://...'
-			  )
-			),
+    			array(
+    			  'id'            => 'i_social_link',
+    			  'type'          => 'text',
+    			  'title'         => '菜单链接',
+    			  'attributes'    => array(
+    				'placeholder' => 'http://...'
+    			  )
+    			),
 
 				// 自定义社交链接--新标签
-			array(
-			  'id'    	  => 'i_social_newtab',
-			  'type'      => 'switcher',
-			  'title'     => '新标签打开',
-			  'dependency'   => array( 'i_social_link', '!=', '' ),
-			),
+    			array(
+    			  'id'    	  => 'i_social_newtab',
+    			  'type'      => 'switcher',
+    			  'title'     => '新标签打开',
+    			  'dependency'   => array( 'i_social_link', '!=', '' ),
+    			),
 
           )
         ),
