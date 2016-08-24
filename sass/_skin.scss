@@ -70,7 +70,7 @@ a{
 }
 
 .topbar{
-  @include retina('topbar',$skin);
+  @include retina('topbar',$skin,40px);
   background-repeat: repeat-x;
   .skin{
     a{
@@ -102,7 +102,7 @@ a{
   background-repeat: repeat-x;
   li{
     &::before{
-      @include retina('menu-after',$skin);
+      @include retina('menu-after',$skin,15px);
       background-repeat: no-repeat;
     }
   }
@@ -178,7 +178,7 @@ a{
   }
   .menu-wrapper{
     &::before,&::after{
-      @include retina('mainMenu-dot',$skin);
+      @include retina('mainMenu-dot',$skin,6px);
       background-repeat: no-repeat;
     }
   }
@@ -267,7 +267,7 @@ article{
 }
 
 .post-top{
-  @include retina('post-top',$skin);
+  @include retina('post-top',$skin,80px);
   background-repeat: no-repeat;
 }
 
