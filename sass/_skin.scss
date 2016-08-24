@@ -93,7 +93,7 @@ a{
 }
 
 .topmenu{
-  @include retina('topMenu',$skin);
+  @include retina('topMenu',$skin,70px);
   background-repeat: repeat-x;
   li{
     &::before{
