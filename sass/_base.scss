@@ -314,6 +314,7 @@ $footer-h:290px;//页脚
   .content-inner{
     position: relative;
     border-radius: 3px;
+    padding-top: 10px;
     padding-bottom: 30px;
   }
 }
@@ -322,7 +323,7 @@ $footer-h:290px;//页脚
 .mianmenu{
   position: relative;
   height: 46px;
-  margin: 15px -1px 30px -1px;
+  margin: 5px -1px 30px -1px;
   .menu-wrapper{
     position: relative;
     &::before,&::after{

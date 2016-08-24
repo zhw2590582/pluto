@@ -228,7 +228,7 @@ a {
 
 .post-related img {
   background-image: url(../images/skin/skin1/featured.png);
-  background-repeat: no-repeat; }
+  background-repeat: repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .post-related img {
       background-image: url(../images/skin/skin1/featured@2x.png);
@@ -517,7 +517,7 @@ blockquote {
     background: #b3ac97; }
   .grids .featured-image {
     background-image: url(../images/skin/skin1/featured.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .grids .featured-image {

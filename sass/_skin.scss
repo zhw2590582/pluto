@@ -219,7 +219,7 @@ a{
 .post-related{
   img{
     @include retina('featured',$skin,100px);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
   }
 }
 
@@ -607,7 +607,7 @@ blockquote {
   }
   .featured-image{
     @include retina('featured',$skin,100px);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
   }
 }
