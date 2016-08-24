@@ -477,17 +477,29 @@ $footer-h:290px;//页脚
 
 #profile{
   .profile-avatar{
-
+    text-align: center;
+    img{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
   }
   .profile-name{
-
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
   }
   .profile-content{
 
   }
   .profile-social{
     li{
-
+      font-size: 14px;
+      width: 20%;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      border-bottom: none;
     }
   }
   .profile-blog{

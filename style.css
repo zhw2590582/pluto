@@ -1005,6 +1005,24 @@ mark {
     border-radius: 3px;
     overflow: hidden; }
 
+#profile .profile-avatar {
+  text-align: center; }
+  #profile .profile-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+#profile .profile-name {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0; }
+#profile .profile-social li {
+  font-size: 14px;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  border-bottom: none; }
+
 .posts {
   margin: 10px; }
   .posts article {
