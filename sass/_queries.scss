@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* queries */
 @media only screen and (max-width:$container-w + 30px) {
-  .m_hide{ 
+  .m_hide{
     display: none !important;
   }
   .m_show{
@@ -29,5 +29,9 @@
   }
   .grids .grid-item{
     width: 100%;
+  }
+  #commentform .comment-form-author, #commentform .comment-form-email, #commentform .comment-form-url{
+    width: 100%;
+    padding-right: 0;
   }
 }

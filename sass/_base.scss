@@ -98,13 +98,32 @@ $footer-h:290px;//页脚
   padding: 8px 0;
 
   .skin{
+    padding-top: 2px;
     a{
+      opacity: .5;
       display: inline-block;
       float: left;
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       margin-right: 10px;
       border-radius: 3px;
+      border: 1px solid #35322a;
+      box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.3);
+      &:hover{
+        opacity: .8;
+      }
+    }
+    .skin-cloth{
+      background: #98917c;
+    }
+    .skin-wood{
+      background: #826349;
+    }
+    .skin-paper{
+      background: #b7af9f;
+    }
+    .skin-steam{
+      background: #9c8b54;
     }
   }
 
@@ -1432,7 +1451,6 @@ blockquote {
       bottom: 0;
       width: 2px;
       height: 100%;
-      background: #4a443d;
       border-radius: 3px;
     }
     li{
@@ -1442,12 +1460,7 @@ blockquote {
       padding: 2px 0;
       font-size: 13px;
       a{
-        color: #bfb7a3;
-        text-shadow: 0px 1px 0px #4a443d;
         width: 100px;
-        &:hover{
-          color: #d6d1c4
-        }
       }
       &::before{
         position: absolute;
@@ -1457,8 +1470,6 @@ blockquote {
         bottom: 0;
         width: 6px;
         height: 6px;
-        background: #bdb6a1;
-        border: 1px solid #4a443d;
         border-radius: 6px;
       }
     }

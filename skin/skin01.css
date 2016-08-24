@@ -71,8 +71,6 @@ a {
     .topbar {
       background-image: url(../images/skin/skin1/topbar@2x.png);
       background-size: 40px; } }
-  .topbar .skin a {
-    background: #3f3c35; }
   .topbar #searchform input {
     color: #867d73;
     background: #3f3c35; }
@@ -521,6 +519,17 @@ blockquote {
       .grids .featured-image {
         background-image: url(../images/skin/skin1/featured@2x.png);
         background-size: 100px; } }
+
+#article-index #index-ul::before {
+  background: #4a443d; }
+#article-index #index-ul li a {
+  color: #bfb7a3;
+  text-shadow: 0px 1px 0px #4a443d; }
+  #article-index #index-ul li a:hover {
+    color: #d6d1c4; }
+#article-index #index-ul li::before {
+  background: #bdb6a1;
+  border: 1px solid #4a443d; }
 
 .readers-list .readers-inner {
   color: #524638;

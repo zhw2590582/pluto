@@ -72,11 +72,6 @@ a{
 .topbar{
   @include retina('topbar',$skin,40px);
   background-repeat: repeat-x;
-  .skin{
-    a{
-      background: #3f3c35;
-    }
-  }
   #searchform input{
    color: #867d73;
    background: #3f3c35;
@@ -614,6 +609,28 @@ blockquote {
     @include retina('featured',$skin,100px);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+//文章索引
+#article-index{
+  #index-ul{
+    &::before{
+      background: #4a443d;
+    }
+    li{
+      a{
+        color: #bfb7a3;
+        text-shadow: 0px 1px 0px #4a443d;
+        &:hover{
+          color: #d6d1c4
+        }
+      }
+      &::before{
+        background: #bdb6a1;
+        border: 1px solid #4a443d;
+      }
+    }
   }
 }
 
