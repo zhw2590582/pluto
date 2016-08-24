@@ -11,6 +11,7 @@ body {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   body {
     background-image: url(../images/skin/skin1/body@2x.png);
+    background-size: 100px;
   }
 }
 
@@ -28,6 +29,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #header {
     background-image: url(../images/skin/skin1/banner@2x.png);
+    background-size: 100px;
   }
 }
 
@@ -41,6 +43,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #m-header {
     background-image: url(../images/skin/skin1/content-inner@2x.png);
+    background-size: 100px;
   }
 }
 #m-header a {
@@ -59,6 +62,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #m-menu {
     background-image: url(../images/skin/skin1/content-inner@2x.png);
+    background-size: 100px;
   }
 }
 #m-menu a {
@@ -194,6 +198,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #content .container {
     background-image: url(../images/skin/skin1/content@2x.png);
+    background-size: 10px;
   }
 }
 #content .content-inner {
@@ -215,6 +220,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .mianmenu {
     background-image: url(../images/skin/skin1/mainMenu@2x.png);
+    background-size: 12px;
   }
 }
 .mianmenu a {
@@ -230,6 +236,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .mianmenu::before {
     background-image: url(../images/skin/skin1/mainMenu-l@2x.png);
+    background-size: 46px;
   }
 }
 .mianmenu::after {
@@ -239,6 +246,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .mianmenu::after {
     background-image: url(../images/skin/skin1/mainMenu-r@2x.png);
+    background-size: 46px;
   }
 }
 .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
@@ -265,16 +273,12 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .post-date {
     background-image: url(../images/skin/skin1/post-time@2x.png);
+    background-size: 65px;
   }
 }
 .post-date::before {
   background-image: url(../images/skin/skin1/post-time-over.png);
   background-repeat: no-repeat;
-}
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  .post-date::before {
-    background-image: url(../images/skin/skin1/post-time-over@2x.png);
-  }
 }
 
 .post-view, .post-edit {
@@ -293,11 +297,12 @@ a:hover, a:focus {
 
 .post-featured a {
   background-image: url(../images/skin/skin1/featured.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .post-featured a {
     background-image: url(../images/skin/skin1/featured@2x.png);
+    background-size: 100px;
   }
 }
 
@@ -308,6 +313,7 @@ a:hover, a:focus {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .post-related img {
     background-image: url(../images/skin/skin1/featured@2x.png);
+    background-size: 100px;
   }
 }
 
@@ -320,11 +326,11 @@ a:hover, a:focus {
 .post-sticky {
   background-image: url(../images/skin/skin1/sticky.png);
   background-repeat: no-repeat;
-  background-size: contain;
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .post-sticky {
     background-image: url(../images/skin/skin1/sticky@2x.png);
+    background-size: 60px;
   }
 }
 
@@ -485,6 +491,7 @@ article::after {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #footer .footer-inner::before {
     background-image: url(../images/skin/skin1/footer-before@2x.png);
+    background-size: 13px;
   }
 }
 #footer .footer-text {
@@ -506,6 +513,7 @@ article::after {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   #footer .footer-end {
     background-image: url(../images/skin/skin1/footer-end@2x.png);
+    background-size: 50px;
   }
 }
 
@@ -699,6 +707,7 @@ blockquote {
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .grids .featured-image {
     background-image: url(../images/skin/skin1/featured@2x.png);
+    background-size: 100px;
   }
 }
 

@@ -8,7 +8,7 @@ body{
   color: #524638;
   background-color: #6e655a;
   background-attachment:fixed;
-  @include retina('body',$skin);
+  @include retina('body',$skin,100px);
 }
 
 //默认链接色
@@ -21,12 +21,12 @@ a{
 
 #header{
   background-color: #403c36;
-  @include retina('banner',$skin);
+  @include retina('banner',$skin,100px);
 }
 
 #m-header{
   background-color: #c3bca6;
-  @include retina('content-inner',$skin);
+  @include retina('content-inner',$skin,100px);
   border-bottom: 1px solid #cec9b7;
   box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.1);
   text-shadow: 0px 1px 0px #d4d0c4;
@@ -40,7 +40,7 @@ a{
 
 #m-menu{
   background-color: #c3bca6;
-  @include retina('content-inner',$skin);
+  @include retina('content-inner',$skin,100px);
   border-left: 1px solid #cec9b7;
   text-shadow: 0px 1px 0px #d4d0c4;
     a{
@@ -148,7 +148,7 @@ a{
 #content{
   .container{
     background-color: #645a4c;
-    @include retina('content',$skin);
+    @include retina('content',$skin,10px);
     border: 1px solid #50483e
   }
   .content-inner{
@@ -160,7 +160,7 @@ a{
 }
 
 .mianmenu{
-  @include retina('mainMenu',$skin);
+  @include retina('mainMenu',$skin,12px);
   background-repeat: repeat-x;
   a{
     color: #fff;
@@ -169,11 +169,11 @@ a{
     }
   }
   &::before{
-    @include retina('mainMenu-l',$skin);
+    @include retina('mainMenu-l',$skin,46px);
     background-repeat: no-repeat;
   }
   &::after{
-    @include retina('mainMenu-r',$skin);
+    @include retina('mainMenu-r',$skin,46px);
     background-repeat: no-repeat;
   }
   .menu-wrapper{
@@ -192,10 +192,10 @@ a{
 .post-date{
   color: #908b6b;
   text-shadow: 0px 1px 1px #fff;
-  @include retina('post-time',$skin);
+  @include retina('post-time',$skin,65px);
   background-repeat: no-repeat;
   &::before{
-    @include retina('post-time-over',$skin);
+    background-image: url(../images/skin/skin1/post-time-over.png);
     background-repeat: no-repeat;
   }
 }
@@ -216,14 +216,14 @@ a{
 
 .post-featured{
   a{
-    @include retina('featured',$skin);
-    background-repeat: no-repeat;
+    @include retina('featured',$skin,100px);
+    background-repeat: repeat;
   }
 }
 
 .post-related{
   img{
-    @include retina('featured',$skin);
+    @include retina('featured',$skin,100px);
     background-repeat: no-repeat;
   }
 }
@@ -235,9 +235,8 @@ a{
 }
 
 .post-sticky{
-  @include retina('sticky',$skin);
+  @include retina('sticky',$skin,60px);
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 
@@ -397,7 +396,7 @@ article{
     background-color: #7a6e5f;
     @include retina('footer',$skin);
     &::before{
-      @include retina('footer-before',$skin);
+      @include retina('footer-before',$skin,13px);
       background-repeat: repeat-x;
     }
   }
@@ -414,7 +413,7 @@ article{
         color: #dedacf;
       }
     }
-    @include retina('footer-end',$skin);
+    @include retina('footer-end',$skin,50px);
     background-repeat: repeat-x;
   }
 }
@@ -612,7 +611,7 @@ blockquote {
     background: #b3ac97;
   }
   .featured-image{
-    @include retina('featured',$skin);
+    @include retina('featured',$skin,100px);
     background-repeat: no-repeat;
     background-size: cover;
   }

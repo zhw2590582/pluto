@@ -22,8 +22,8 @@ $retina-suffix: '@2x';
     background-image: url(#{$image-path}/#{$skin}/#{$name}.#{$fallback-extension});
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       background-image: url(#{$image-path}/#{$skin}/#{$name}#{$retina-suffix}.#{$fallback-extension});
-    }
-    @if($size){
-        background-size: $size;
+      @if($size){
+          background-size: $size;
+      }
     }
 }
