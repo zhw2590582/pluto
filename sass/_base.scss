@@ -272,12 +272,12 @@ $footer-h:290px;//页脚
     }
     &::after{
       position: absolute;
-      bottom:-24px;
+      bottom:-12px;
       left: 0;
       right: 0;
       content: '';
       width: 150px;
-      height: 24px;
+      height: 12px;
     }
   }
   &:hover{
@@ -442,16 +442,10 @@ $footer-h:290px;//页脚
     width: 220px;
     margin: 13px 0 0 13px;
   }
-  .notice-close{
-    position: absolute;
-    cursor: pointer;
-    top:35px;
-    right: 12px;
-    font-size: 14px;
-    color: #fff;
-    opacity: .7;
-    &:hover{
-      opacity: 1;
+  .notice-btn{
+    a{
+      color: #fff;
+      margin-right: 15px;
     }
   }
 }
@@ -464,7 +458,7 @@ $footer-h:290px;//页脚
   }
   .notice-content{
     color: #999;
-    max-height: 50px;
+    max-height: 35px;
     overflow: hidden;
   }
 }

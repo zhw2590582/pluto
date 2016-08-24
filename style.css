@@ -850,12 +850,12 @@ mark {
     height: 24px; }
   .menu-item-has-children .sub-menu::after {
     position: absolute;
-    bottom: -24px;
+    bottom: -12px;
     left: 0;
     right: 0;
     content: '';
     width: 150px;
-    height: 24px; }
+    height: 12px; }
 .menu-item-has-children:hover .sub-menu {
   display: block; }
 
@@ -983,16 +983,9 @@ mark {
   .notice .notice-txt {
     width: 220px;
     margin: 13px 0 0 13px; }
-  .notice .notice-close {
-    position: absolute;
-    cursor: pointer;
-    top: 35px;
-    right: 12px;
-    font-size: 14px;
+  .notice .notice-btn a {
     color: #fff;
-    opacity: .7; }
-    .notice .notice-close:hover {
-      opacity: 1; }
+    margin-right: 15px; }
 
 .notice-txt .notice-title {
   color: #fff;
@@ -1000,7 +993,7 @@ mark {
   margin: 0 0 3px 0; }
 .notice-txt .notice-content {
   color: #999;
-  max-height: 50px;
+  max-height: 35px;
   overflow: hidden; }
 
 .app_slider {
@@ -2439,6 +2432,9 @@ blockquote {
 
   #commentform .comment-form-author, #commentform .comment-form-email, #commentform .comment-form-url {
     width: 100%;
-    padding-right: 0; } }
+    padding-right: 0; }
+
+  .title-inner::before, .title-inner::after {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

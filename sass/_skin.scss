@@ -110,26 +110,26 @@ a{
 }
 
 .sub-menu{
-  @include retina('submenu-bg',$skin);
+  @include retina('submenu-bg',$skin,150px);
   background-repeat: repeat-y;
   li{
     a{
       color: #796e5f;
       text-shadow: none !important;
       border-top: 1px solid #edeee6;
-      border-bottom: 1px solid #cdd1bb;
+      border-bottom: 1px solid #cec7b2;
       &:hover{
         color: #716049;
-        background: #cdd1bb;
+        background: #cec9b8;
       }
     }
   }
   &::before{
-    @include retina('submenu-before',$skin);
+    @include retina('submenu-before',$skin,150px);
     background-repeat: no-repeat;
   }
   &::after{
-    @include retina('submenu-after',$skin);
+    @include retina('submenu-after',$skin,150px);
     background-repeat: no-repeat;
   }
 }

@@ -29,6 +29,7 @@ $notice = cs_get_option( 'i_notice' );
 $notice_img = cs_get_option( 'i_notice_img' );
 $notice_title = cs_get_option( 'i_notice_title' );
 $notice_text = cs_get_option( 'i_notice_text' );
+$notice_link = cs_get_option( 'i_notice_link' );
 ?>
 
 			<a href="#top" class="post-top"></a>
@@ -211,13 +212,16 @@ $notice_text = cs_get_option( 'i_notice_text' );
 				<img src="<?php echo $notice_img; ?>" alt="" class="">
 			</div>
 			<div class="notice-txt fl">
-				<h5 class="ofh notice-title ofh"><?php echo $notice_title; ?></h5>
+				<h5 class="ofh notice-title ofh">
+					<?php echo $notice_title; ?>
+				</h5>
 				<div class="notice-content wb">
 					<?php echo $notice_text; ?>
 				</div>
-			</div>
-			<div class="notice-close">
-				<i class="fa fa-times"></i>
+				<div class="notice-btn">
+					<a href="<?php echo $notice_link; ?>">阅读更多</a>
+					<a href="javascript:void(0)" class="notice-close">关闭</a>
+				</div>
 			</div>
 		</div>
 		<!-- 公告弹窗 结束 -->

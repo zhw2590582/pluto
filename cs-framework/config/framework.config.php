@@ -1492,6 +1492,14 @@ $options[]   = array(
       'dependency' => array( 'i_notice', '==', 'true' ),
     ),
 
+    // 链接
+    array(
+      'id'      => 'i_notice_link',
+      'type'    => 'text',
+      'title'   => '链接',
+      'dependency' => array( 'i_notice', '==', 'true' ),
+    ),
+
   )
 );
 
