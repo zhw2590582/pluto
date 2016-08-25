@@ -105,7 +105,7 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 //关闭Modal
 	var $modal = $('.modal-wrap');
 	$('.modal-wrap').on('click', function(event){
-		if( $(event.target).is($modal) || $(event.target).is('.modal-close .fa') ) {
+		if( $(event.target).is($modal) || $(event.target).is('.modal-close') ) {
 			$modal.removeClass('is-visible');
 			return false;
 		}

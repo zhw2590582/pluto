@@ -2430,17 +2430,21 @@ blockquote {
   width: 420px;
   height: 300px; }
   .modal-container .modal-header {
+    position: relative;
     height: 40px;
     line-height: 40px;
     padding: 0 15px;
-    overflow: hidden;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .modal-container .modal-header .modal-title {
       font-size: 14px; }
     .modal-container .modal-header .modal-close {
-      font-size: 16px;
-      cursor: pointer; }
+      cursor: pointer;
+      position: absolute;
+      top: -5px;
+      right: 10px;
+      width: 40px;
+      height: 52px; }
   .modal-container .modal-bottom {
     position: absolute;
     width: 100%;

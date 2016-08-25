@@ -149,9 +149,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 					<span class="modal-title fl">
 						资源下载
 					</span>
-					<span class="modal-close fr">
-						<i class="fa fa-times"></i>
-					</span>
+					<span class="modal-close"></span>
 				</div>
         <div class="modal-body text-c">
           <div class="dl-btn">
@@ -177,9 +175,7 @@ $notice_link = cs_get_option( 'i_notice_link' );
 					<span class="modal-title fl">
 						登陆
 					</span>
-					<span class="modal-close fr">
-						<i class="fa fa-times"></i>
-					</span>
+					<span class="modal-close"></span>
 				</div>
 				<div class="modal-body">
 					<?php

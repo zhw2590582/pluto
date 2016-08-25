@@ -450,9 +450,12 @@ blockquote {
     border-top: 2px solid #a05508;
     border-bottom: 1px solid #b3ab93; }
     .modal-container .modal-header .modal-close {
-      color: #8a826b; }
-      .modal-container .modal-header .modal-close:hover {
-        color: #67614e; }
+      background-image: url(../images/skin/skin1/modal-close.png);
+      background-repeat: no-repeat; }
+      @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        .modal-container .modal-header .modal-close {
+          background-image: url(../images/skin/skin1/modal-close@2x.png);
+          background-size: 40px; } }
   .modal-container .modal-body {
     height: 220px;
     border-top: 1px solid #dcd5c2;

@@ -502,10 +502,8 @@ blockquote {
     border-top: 2px solid #a05508;
     border-bottom: 1px solid #b3ab93;
     .modal-close {
-      color: #8a826b;
-      &:hover{
-        color: #67614e;
-      }
+      @include retina('modal-close',$skin,40px);
+      background-repeat: no-repeat;
     }
   }
   .modal-body{
