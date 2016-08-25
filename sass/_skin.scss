@@ -159,6 +159,7 @@ a{
   background-repeat: repeat-x;
   a{
     color: #fff;
+    text-shadow: 0px 1px 1px #095254;
     &:hover{
       color: #fff;
     }
@@ -251,9 +252,7 @@ article{
   }
   .post-content{
     color: #524638;
-    p{
-      text-shadow: 0px 1px 0px #d4d0c4;
-    }
+    text-shadow: 0px 1px 0px #cec9bc;
   }
   &::after{
     border-top: 1px dashed #837c72;

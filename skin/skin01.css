@@ -167,7 +167,8 @@ a {
       background-image: url(../images/skin/skin1/mainMenu@2x.png);
       background-size: 12px; } }
   .mianmenu a {
-    color: #fff; }
+    color: #fff;
+    text-shadow: 0px 1px 1px #095254; }
     .mianmenu a:hover {
       color: #fff; }
   .mianmenu::before {
@@ -258,9 +259,8 @@ article .post-title {
   article .post-title::before {
     background: #a50d0f; }
 article .post-content {
-  color: #524638; }
-  article .post-content p {
-    text-shadow: 0px 1px 0px #d4d0c4; }
+  color: #524638;
+  text-shadow: 0px 1px 0px #cec9bc; }
 article::after {
   border-top: 1px dashed #837c72;
   border-bottom: 1px dashed #dad3be; }

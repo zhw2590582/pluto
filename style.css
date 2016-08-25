@@ -791,27 +791,27 @@ mark {
     position: relative;
     z-index: 3;
     padding: 25px 0 0 0; }
-    .topmenu .menu-list li {
+    .topmenu .menu-list > li {
       position: relative;
       display: inline-block;
       width: 95px;
       text-align: center;
       float: left; }
-      .topmenu .menu-list li:nth-child(4), .topmenu .menu-list li.nth4 {
+      .topmenu .menu-list > li:nth-child(4), .topmenu .menu-list > li.nth4 {
         margin-left: 230px; }
-      .topmenu .menu-list li a {
+      .topmenu .menu-list > li a {
         font-size: 13px;
         text-shadow: 0px 1px 1px #000; }
-        .topmenu .menu-list li a .fa {
+        .topmenu .menu-list > li a .fa {
           margin-right: 5px; }
-      .topmenu .menu-list li::before {
+      .topmenu .menu-list > li::before {
         position: absolute;
         content: '';
         width: 15px;
         height: 15px;
         top: 1px;
         right: -8px; }
-      .topmenu .menu-list li:nth-child(3)::before, .topmenu .menu-list li.nth3::before, .topmenu .menu-list li:last-child::before, .topmenu .menu-list li.nth6::before {
+      .topmenu .menu-list > li:nth-child(3)::before, .topmenu .menu-list > li.nth3::before, .topmenu .menu-list > li:last-child::before, .topmenu .menu-list > li.nth6::before {
         display: none; }
 
 .menu-item-has-children .sub-menu {
@@ -910,8 +910,7 @@ mark {
       text-align: center; }
       .mianmenu .menu-list li a {
         display: inline-block;
-        font-size: 13px;
-        text-shadow: 0px 1px 1px #000; }
+        font-size: 13px; }
         .mianmenu .menu-list li a .fa {
           margin-right: 5px; }
   .mianmenu::before, .mianmenu::after {
@@ -1002,7 +1001,7 @@ mark {
   border-radius: 3px;
   padding: 5px; }
   .app_slider .slider_inner {
-    min-height: 286px;
+    min-height: auto;
     border-radius: 3px;
     overflow: hidden; }
 
