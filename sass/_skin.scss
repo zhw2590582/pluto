@@ -135,7 +135,7 @@ a{
 }
 
 .logo a{
-  @include retina('logo',$skin);
+  @include retina('logo',$skin,230px);
   background-position: center center;
   background-repeat: no-repeat;
 }
