@@ -1007,22 +1007,59 @@ mark {
     overflow: hidden; }
 
 #profile .profile-avatar {
-  text-align: center; }
-  #profile .profile-avatar img {
-    width: 80px;
-    height: 80px;
+  text-align: center;
+  margin-bottom: 10px; }
+  #profile .profile-avatar .profile-avatar-inner {
+    display: inline-block;
+    padding: 5px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%; }
+    #profile .profile-avatar .profile-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
 #profile .profile-name {
   text-align: center;
   font-size: 16px;
-  margin: 10px 0; }
+  margin-bottom: 10px; }
+  #profile .profile-name .profile-name-inner {
+    position: relative;
+    display: inline-block; }
+    #profile .profile-name .profile-name-inner::before {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 60px;
+      top: 10px;
+      left: -80px; }
+    #profile .profile-name .profile-name-inner::after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 60px;
+      top: 10px;
+      right: -80px; }
+#profile .profile-content {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 20px; }
 #profile .profile-social li {
   font-size: 14px;
+  height: 40px;
+  line-height: 33px;
   width: 20%;
+  margin-bottom: 0;
+  padding: 5px;
   text-align: center;
   display: inline-block;
   float: left;
   border-bottom: none; }
+  #profile .profile-social li a {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px; }
 
 .posts {
   margin: 10px; }
@@ -1240,8 +1277,8 @@ mark {
 
 .post-sticky {
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 3px;
+  left: 3px;
   width: 60px;
   height: 60px; }
 

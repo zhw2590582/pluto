@@ -4,7 +4,6 @@ $profile = cs_get_option( 'i_profile' );
 $profile_avatar = cs_get_option( 'i_profile_avatar' );
 $profile_name = cs_get_option( 'i_profile_name' );
 $profile_content = cs_get_option( 'i_profile_content' );
-$blog_state = cs_get_option( 'i_blog_state' );
 ?>
 <!-- sidebar 开始-->
 <aside id="sidebar" class="m_hide">
@@ -12,9 +11,19 @@ $blog_state = cs_get_option( 'i_blog_state' );
     <div class="sidebar-content">
       <?php if ($profile == true) {?>
         <aside id="profile" class="widget">
-          <div class="profile-avatar"><img src="<?php echo $profile_avatar; ?>" alt="" /></div>
-          <p class="profile-name"><?php echo $profile_name; ?></p>
-          <p class="profile-content"><?php echo $profile_content; ?></p>
+          <div class="profile-avatar">
+            <div class="profile-avatar-inner">
+              <img src="<?php echo $profile_avatar; ?>" alt="" />
+            </div>
+          </div>
+          <div class="profile-name">
+            <div class="profile-name-inner">
+              <?php echo $profile_name; ?>
+            </div>
+          </div>
+          <div class="profile-content">
+            <?php echo $profile_content; ?>
+          </div>
           <ul class="profile-social clearfix">
              <?php
                  $my_socials = cs_get_option( 'i_social' );
@@ -31,22 +40,6 @@ $blog_state = cs_get_option( 'i_blog_state' );
                  }
              ?>
          </ul>
-         <?php if ($blog_state == true) {?>
-           <ul class="profile-blog clearfix">
-              <li>
-                  <p class="me_num"><?php $count_posts = wp_count_posts(); echo $published_posts =$count_posts->publish;?></p>
-                  <p class="me_title">文章</p>
-              </li>
-              <li>
-                  <p class="me_num"><?php echo $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments");?></p>
-                  <p class="me_title">评论</p>
-              </li>
-              <li>
-                  <p class="me_num"><?php $link = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->links WHERE link_visible = 'Y'"); echo $link; ?></p>
-                  <p class="me_title">邻居</p>
-              </li>
-          </ul>
-         <?php }?>
         </aside>
       <?php }?>
 

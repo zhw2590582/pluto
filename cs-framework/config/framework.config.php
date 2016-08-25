@@ -1091,15 +1091,6 @@ $options[]      = array(
           'default' => '你的简介',
         ),
 
-    // 显示博客状态
-		array(
-        'id'    	  => 'i_blog_state',
-        'type'      => 'switcher',
-        'default'   => true,
-        'title'     => '显示博客状态',
-      ),
-
-
 		// 自定义社交链接
         array(
           'id'              => 'i_social',
