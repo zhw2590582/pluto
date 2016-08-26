@@ -801,10 +801,15 @@ body.page{
 
     .post-right {
       .post-content{
-        font-size: 14px;
         line-height: 1.5;
       }
     }
+  }
+}
+
+.single-post{
+  .post-content{
+    font-size: 15px;
   }
 }
 
@@ -814,6 +819,7 @@ body.page{
     padding-left: 10px;
   }
   .post-content{
+    font-size: 14px;
     max-height: $featured-w;
     overflow: hidden;
   }

@@ -1255,12 +1255,15 @@ body.page .post-tool {
     width: 150px;
     height: 150px; }
   .post-wrap .post-inner .post-right .post-content {
-    font-size: 14px;
     line-height: 1.5; }
+
+.single-post .post-content {
+  font-size: 15px; }
 
 .index-post .post-right {
   padding-left: 10px; }
 .index-post .post-content {
+  font-size: 14px;
   max-height: 150px;
   overflow: hidden; }
 
