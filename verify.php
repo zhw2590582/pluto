@@ -61,7 +61,7 @@ function Island_license_management_page() {
 		<a class="verify_help" href="http://zhw-island.com" target="_blank" title="了解更多"></a>
 		<div class="verify_info"></div>
 		<form action="" method="post" class="verify_form">
-			<input class="regular-text" autocomplete="off" type="password" name="password" id="license_key" name="pluto_license_key"  placeholder="输入密钥信息" value="<?php echo get_option('pluto_license_key'); ?>" >
+			<input class="regular-text" autocomplete="off" type="password" id="license_key" name="pluto_license_key"  placeholder="输入密钥信息" value="<?php echo get_option('pluto_license_key'); ?>" >
 			<ul class="verify_list">
 				<li>开启高级选项+自动更新</li>
 				<li>多套个性皮肤+功能补给</li>
