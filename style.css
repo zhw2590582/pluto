@@ -780,6 +780,18 @@ mark {
       text-align: center;
       padding-left: 5px;
       margin-left: 5px; }
+  .topbar .qr-pay {
+    position: relative; }
+    .topbar .qr-pay .qr-btn {
+      cursor: pointer; }
+    .topbar .qr-pay .qr-img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50px;
+      padding: 5px; }
+    .topbar .qr-pay:hover .qr-img {
+      display: block; }
 
 .topmenu {
   position: absolute;
@@ -1079,6 +1091,9 @@ mark {
   position: absolute;
   top: 0;
   left: -95px; }
+
+body.page .post-tool {
+  display: none; }
 
 .post-date {
   position: relative;
@@ -2496,5 +2511,3 @@ blockquote {
 
   .title-inner::before, .title-inner::after {
     display: none; } }
-
-/*# sourceMappingURL=style.css.map */

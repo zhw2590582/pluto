@@ -183,7 +183,24 @@ $footer-h:290px;//页脚
       margin-left: 5px;
     }
   }
-
+  .qr-pay{
+    position: relative;
+    .qr-btn{
+      cursor: pointer;
+    }
+    .qr-img{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50px;
+      padding: 5px;
+    }
+    &:hover{
+      .qr-img{
+        display: block;
+      }
+    }
+  }
 }
 
 //头菜单
@@ -568,6 +585,12 @@ $footer-h:290px;//页脚
   position: absolute;
   top:0;
   left: -95px;
+}
+
+body.page{
+  .post-tool{
+    display: none;
+  }
 }
 
 .post-date{

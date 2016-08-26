@@ -2,6 +2,7 @@
 /* skin */
 
 $skin:skin1;
+$logo-w:230px;//logo
 
 //body
 body{
@@ -135,7 +136,7 @@ a{
 }
 
 .logo a{
-  @include retina('logo',$skin,230px);
+  @include retina('logo',$skin,$logo-w);
   background-position: center center;
   background-repeat: no-repeat;
 }

@@ -73,6 +73,12 @@ $switcher = cs_get_option( 'i_switcher' );
 										<?php } ?>
 								</div>
 							<?php } ?>
+							<div class="qr-pay fl">
+								<span class="qr-btn">购买</span>
+								<div class="qr-img hide">
+									<img src="http://cdn.zhw-island.com/wp-content/uploads/2015/10/qr.png" class="ajax_gif">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
