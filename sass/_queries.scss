@@ -21,6 +21,7 @@
   .app_slider{
     margin: 10px;
     .slider_inner{
+      height: auto !important;
       min-height: 50px;
     }
   }

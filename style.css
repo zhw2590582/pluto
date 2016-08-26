@@ -2558,6 +2558,7 @@ blockquote {
   .app_slider {
     margin: 10px; }
     .app_slider .slider_inner {
+      height: auto !important;
       min-height: 50px; }
 
   .link_box .blogroll li {
