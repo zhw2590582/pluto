@@ -35,7 +35,7 @@
     if ( module._version === undefined) {
       updateTip('检测出错，请重试！');
       return false;
-    }  else if(parseFloat(module._version) > parseFloat(oldVer)) {
+    }  else if(module._version > oldVer) {
       updateTip('可更新至' + module._version);
     } else {
       updateTip('主题已经是最新版本了');
