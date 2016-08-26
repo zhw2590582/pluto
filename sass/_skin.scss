@@ -167,7 +167,7 @@ a{
   }
   .content-inner{
     background-color: #c3bca6;
-    @include retina('content-inner',$skin);
+    @include retina('content-inner',$skin,100px);
     border: 1px solid #dfdbd0;
     box-shadow: 0px 0px 1px #564c40;
   }
