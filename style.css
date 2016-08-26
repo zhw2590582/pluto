@@ -781,15 +781,40 @@ mark {
       padding-left: 5px;
       margin-left: 5px; }
   .topbar .qr-pay {
-    position: relative; }
+    position: relative;
+    margin-left: 10px; }
     .topbar .qr-pay .qr-btn {
+      display: inline-block;
+      padding: 0 10px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 3px;
       cursor: pointer; }
+      .topbar .qr-pay .qr-btn .fa {
+        margin-right: 5px; }
     .topbar .qr-pay .qr-img {
       position: absolute;
-      width: 100px;
-      height: 100px;
-      top: 50px;
-      padding: 5px; }
+      z-index: 2;
+      width: 130px;
+      height: 130px;
+      top: 40px;
+      left: 50%;
+      margin-left: -65px;
+      padding: 5px;
+      border-radius: 5px; }
+      .topbar .qr-pay .qr-img::before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        margin-left: -8px;
+        vertical-align: middle;
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+        line-height: 0px; }
+      .topbar .qr-pay .qr-img img {
+        border-radius: 3px; }
     .topbar .qr-pay:hover .qr-img {
       display: block; }
 
@@ -2151,9 +2176,11 @@ blockquote {
   padding-left: 13px; }
 
 .nivo-directionNav a {
+  color: #fff;
   opacity: 0; }
 
 .nivoSlider:hover .nivo-directionNav a {
+  color: #fff;
   opacity: 1; }
 
 .ls-slide-outer .ls-pager.ls-pg > li {

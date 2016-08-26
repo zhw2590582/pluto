@@ -93,6 +93,24 @@ a{
  }
 }
 
+.qr-pay{
+  .qr-btn{
+    background: #0B8290;
+    background: -webkit-gradient(linear,left top,left bottom,from(#1AA8B9),to(#0B8290));
+    color: #F6EDE4;
+    border: 1px solid #1396A5;
+  }
+  .qr-img{
+    background: #bbb59f;
+    box-shadow: 0 0 5px 0 rgba(18, 18, 18, 0.35);
+    &::before{
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 7px solid #beb8a2;
+    }
+  }
+}
+
 .topmenu{
   @include retina('topMenu',$skin,70px);
   background-repeat: repeat-x;

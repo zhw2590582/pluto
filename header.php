@@ -6,6 +6,9 @@ $favicon = cs_get_option( 'i_favicon_icon' );
 $topbar = cs_get_option( 'i_topbar' );
 $search = cs_get_option( 'i_search' );
 $login = cs_get_option( 'i_login' );
+$qrPay = cs_get_option( 'i_qrPay' );
+$qrPay_btn = cs_get_option( 'i_qrPay_btn' );
+$qrPay_img = cs_get_option( 'i_qrPay_img' );
 $switcher = cs_get_option( 'i_switcher' );
 ?>
 
@@ -73,12 +76,14 @@ $switcher = cs_get_option( 'i_switcher' );
 										<?php } ?>
 								</div>
 							<?php } ?>
+							<?php if ($qrPay == true) { ?>
 							<div class="qr-pay fl">
-								<span class="qr-btn">购买</span>
+								<span class="qr-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><?php echo $qrPay_btn ?></span>
 								<div class="qr-img hide">
-									<img src="http://cdn.zhw-island.com/wp-content/uploads/2015/10/qr.png" class="ajax_gif">
+									<img src="<?php echo $qrPay_img ?>" class="ajax_gif">
 								</div>
 							</div>
+							<?php } ?>
 						</div>
 					</div>
 				</div>

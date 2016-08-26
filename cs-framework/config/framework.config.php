@@ -191,6 +191,27 @@ $options[]      = array(
           'dependency' => array( 'i_topbar', '==', 'true' ),
         ),
 
+    // 页眉二维码
+		array(
+          'id'    	  => 'i_qrPay',
+          'type'      => 'switcher',
+          'title'     => '页眉二维码',
+          'dependency' => array( 'i_topbar', '==', 'true' ),
+        ),
+
+    array(
+      'id'         => 'i_qrPay_btn',
+      'title'     => '按钮',
+      'type'    => 'text',
+      'dependency' => array( 'i_qrPay', '==', 'true' ),
+    ),
+
+    array(
+      'id'         => 'i_qrPay_img',
+      'title'     => '二维码',
+      'type'    => 'upload',
+      'dependency' => array( 'i_qrPay', '==', 'true' ),
+    ),
 
   ),
 );
