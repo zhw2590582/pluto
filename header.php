@@ -8,6 +8,7 @@ $search = cs_get_option( 'i_search' );
 $login = cs_get_option( 'i_login' );
 $qrPay = cs_get_option( 'i_qrPay' );
 $qrPay_btn = cs_get_option( 'i_qrPay_btn' );
+$qrPay_icon = cs_get_option( 'i_qrPay_icon' );
 $qrPay_img = cs_get_option( 'i_qrPay_img' );
 $switcher = cs_get_option( 'i_switcher' );
 ?>
@@ -78,7 +79,7 @@ $switcher = cs_get_option( 'i_switcher' );
 							<?php } ?>
 							<?php if ($qrPay == true) { ?>
 							<div class="qr-pay fl">
-								<span class="qr-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><?php echo $qrPay_btn ?></span>
+								<span class="qr-btn"><i class="fa <?php echo $qrPay_icon ?>" aria-hidden="true"></i><?php echo $qrPay_btn ?></span>
 								<div class="qr-img hide">
 									<img src="<?php echo $qrPay_img ?>" class="ajax_gif">
 								</div>

@@ -207,6 +207,13 @@ $options[]      = array(
     ),
 
     array(
+      'id'         => 'i_qrPay_icon',
+      'title'     => '图标',
+      'type'    => 'icon',
+      'dependency' => array( 'i_qrPay', '==', 'true' ),
+    ),
+
+    array(
       'id'         => 'i_qrPay_img',
       'title'     => '二维码',
       'type'    => 'upload',
