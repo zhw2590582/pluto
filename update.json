@@ -15,7 +15,8 @@
   "Blacklist": {
     "1": "172",
     "2": "192",
-    "3": "localhost"
+    "3": "localhost",
+    "4": "winrss"
   },
   "Update": {
     "1.0.0": {
