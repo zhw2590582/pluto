@@ -435,7 +435,8 @@ blockquote {
   border-left: 1px solid #d4ccb6; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #sidebar {
-      background-image: url(../images/skin/skin1/content-inner@2x.png); } }
+      background-image: url(../images/skin/skin1/content-inner@2x.png);
+      background-size: 100px; } }
   #sidebar .widget-title {
     background: #b3ac97; }
     #sidebar .widget-title::before {
