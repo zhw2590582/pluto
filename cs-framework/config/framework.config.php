@@ -915,42 +915,6 @@ $options[]      = array(
 		  'dependency'   => array( 'i_qrcode', '==', 'true' ),
         ),
 
-		// 捐赠弹窗
-		 array(
-		  'type'    => 'notice',
-		  'class'   => 'info',
-		  'content' => '捐赠弹窗',
-		),
-
- 		// 开启捐赠弹窗
-		array(
-          'id'    	  => 'i_donate',
-          'type'      => 'switcher',
-          'title'     => '开启捐赠弹窗',
-        ),
-
- 		// 标题
-        array(
-          'id'      => 'i_donate_title',
-          'type'    => 'text',
-          'title'   => '标题',
-          'default' => '购买主题',
-        ),
-
-		// 支付宝二维码
-        array(
-          'id'      => 'i_alipay_img',
-          'type'    => 'upload',
-          'title'   => '支付宝二维码',
-        ),
-
-		// 微信二维码
-        array(
-          'id'      => 'i_wechat_img',
-          'type'    => 'upload',
-          'title'   => '微信二维码',
-        ),
-
 		// 版权信息
 		 array(
 		  'type'    => 'notice',
