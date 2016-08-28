@@ -71,7 +71,7 @@ $('body').on('click', '#comment-nav-below a', function(e) {
 	});
 
 //Tooltip
-	$(".tagcloud a").each(function(i) {
+	$(".tagcloud a,.blogroll a").each(function(i) {
 		var formattedDate = $(this).attr('title');
 		$(this).attr("data-tooltip", function(n, v) {
 			return formattedDate;
