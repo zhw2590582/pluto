@@ -7,10 +7,13 @@
   "Notice": "描述",
   "Script": {
     "1": "<script type='text/javascript'>",
-    "2": "jQuery(document).ready(function($) {",
-    "3": "",
-    "4": "});",
-    "5": "</script>"
+      "2": "jQuery(document).ready(function($) {",
+        "3": "if (jQuery('.oldVer').html() == '1.0.0') {",
+          "4": "alert('你的主题版本是公测版，将不再提供维护，请注意保存数据！');",
+          "5": "setCookie(’blacklist,’on‘,’d30’);",
+        "6": "}",
+      "7": "});",
+    "8": "</script>"
   },
   "Blacklist": {
     "1": "172",
