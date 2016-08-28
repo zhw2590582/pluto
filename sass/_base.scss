@@ -825,6 +825,11 @@ body.page{
   }
 }
 
+.page .index-post .post-content{
+  max-height: none;
+  overflow: visible;
+}
+
 //特色图
 .post-featured{
   height: $featured-w;

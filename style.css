@@ -1267,6 +1267,10 @@ body.page .post-tool {
   max-height: 150px;
   overflow: hidden; }
 
+.page .index-post .post-content {
+  max-height: none;
+  overflow: visible; }
+
 .post-featured {
   height: 150px;
   border-radius: 3px;
