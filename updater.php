@@ -14,7 +14,7 @@ class nokonoko_Theme_Updater{
 
 		/* Updater Config */
 		$this->config = array(
-			'server'  => 'http://zhw-island.com/test/',
+			'server'  => 'http://zhw-island.com/',
 			'type'    => 'theme',
 			'id'      => get_template(),
 			'api'     => '1.0.0',
