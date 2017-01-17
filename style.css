@@ -949,7 +949,7 @@ mark {
       .mianmenu .menu-list li a {
         display: inline-block;
         font-size: 13px;
-        text-shadow: 0 1px 1px #000; }
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
         .mianmenu .menu-list li a .fa {
           margin-right: 5px; }
   .mianmenu::after, .mianmenu::before {
@@ -1040,7 +1040,7 @@ mark {
   border-radius: 3px;
   padding: 5px; }
   .app_slider .slider_inner {
-    min-height: 286px;
+    min-height: auto;
     border-radius: 3px;
     overflow: hidden; }
 
@@ -2543,6 +2543,7 @@ blockquote {
   .app_slider {
     margin: 10px; }
     .app_slider .slider_inner {
+      height: auto !important;
       min-height: 50px; }
 
   .link_box .blogroll li {
