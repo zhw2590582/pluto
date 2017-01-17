@@ -1,7 +1,7 @@
 @charset "UTF-8";
 $container-w: 900px; //宽度
 $logo-w: 230px; //logo
-$slider-h: 286px; //slider
+$slider-h: auto; //slider
 $featured-w: 150px; //特色图
 $sidebar-w: 300px; //侧边栏
 $footer-h: 290px; //页脚
@@ -444,7 +444,7 @@ $footer-h: 290px; //页脚
       a {
         display: inline-block;
         font-size: 13px;
-        text-shadow: 0 1px 1px #000;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 
         .fa {
           margin-right: 5px;
