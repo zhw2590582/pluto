@@ -884,6 +884,14 @@ $footer-h: 290px; //页脚
     }
   }
 }
+
+//内页
+.single{
+  .post-wrap .post-inner .post-right .post-content{
+    font-size: 15px;
+  }
+}
+
 //主页文章
 .index-post {
   .post-right {
