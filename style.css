@@ -1258,6 +1258,9 @@ mark {
     font-size: 14px;
     line-height: 1.5; }
 
+.single .post-wrap .post-inner .post-right .post-content {
+  font-size: 15px; }
+
 .index-post .post-right {
   padding-left: 10px; }
 .index-post .post-content {
