@@ -5,7 +5,7 @@ Theme URI: http://zhw-island.com/
 Description: pluto.
 Author: 老赵
 Author URI: http://zhw-island.com/
-Version: 2.0.1
+Version: 2.0.2
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -2059,6 +2059,12 @@ blockquote {
         .grids .grid-item .work-mate li .fa {
           margin-right: 5px; }
 
+.page-template-default .post-tool {
+  display: none; }
+.page-template-default .index-post .post-content {
+  overflow: visible;
+  max-height: none; }
+
 #footer {
   position: relative;
   z-index: 2;
@@ -2200,9 +2206,11 @@ blockquote {
   padding-left: 13px; }
 
 .nivo-directionNav a {
+  color: #fff;
   opacity: 0; }
 
 .nivoSlider:hover .nivo-directionNav a {
+  color: #fff;
   opacity: 1; }
 
 .ls-slide-outer .ls-pager.ls-pg > li {
@@ -2518,6 +2526,37 @@ blockquote {
     padding: 0 15px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px; }
+
+.ed-download {
+  width: 250px;
+  margin: 20px auto; }
+  .ed-download p {
+    position: relative;
+    margin-bottom: 20px; }
+    .ed-download p .ed_css_txt {
+      display: block; }
+    .ed-download p .ed_validation {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      font-size: 12px; }
+    .ed-download p input {
+      display: block;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 30px;
+      border-radius: 3px;
+      color: #000;
+      background: #d6d3cb;
+      border: 1px solid #665f53; }
+    .ed-download p .fa {
+      position: absolute;
+      left: 10px;
+      top: 8px; }
+  .ed-download #ed_btn {
+    cursor: pointer;
+    padding: 0; }
 
 #pixie {
   z-index: -10;

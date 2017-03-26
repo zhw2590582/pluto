@@ -2028,6 +2028,15 @@ blockquote {
   }
 }
 //关于
+.page-template-default{
+  .post-tool{
+    display: none;
+  }
+  .index-post .post-content{
+    overflow: visible;
+    max-height: none;
+  }
+}
 //页脚
 #footer {
   position: relative;
