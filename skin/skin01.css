@@ -6,10 +6,10 @@ body {
   color: #524638;
   background-color: #6e655a;
   background-attachment: fixed;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/body.png); }
+  background-image: url(../images/skin/skin1/body.png); }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     body {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/body@2x.png);
+      background-image: url(../images/skin/skin1/body@2x.png);
       background-size: 100px; } }
 
 a {
@@ -19,21 +19,21 @@ a {
 
 #header {
   background-color: #403c36;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/banner.png); }
+  background-image: url(../images/skin/skin1/banner.png); }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #header {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/banner@2x.png);
+      background-image: url(../images/skin/skin1/banner@2x.png);
       background-size: 100px; } }
 
 #m-header {
   background-color: #c3bca6;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner.png);
+  background-image: url(../images/skin/skin1/content-inner.png);
   border-bottom: 1px solid #cec9b7;
   box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.1);
   text-shadow: 0px 1px 0px #d4d0c4; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #m-header {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner@2x.png);
+      background-image: url(../images/skin/skin1/content-inner@2x.png);
       background-size: 100px; } }
   #m-header a {
     color: #5d5448; }
@@ -42,12 +42,12 @@ a {
 
 #m-menu {
   background-color: #c3bca6;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner.png);
+  background-image: url(../images/skin/skin1/content-inner.png);
   border-left: 1px solid #cec9b7;
   text-shadow: 0px 1px 0px #d4d0c4; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #m-menu {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner@2x.png);
+      background-image: url(../images/skin/skin1/content-inner@2x.png);
       background-size: 100px; } }
   #m-menu a {
     color: #5d5448; }
@@ -65,11 +65,11 @@ a {
   border-bottom: 1px solid #b5a794; }
 
 .topbar {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/topbar.png);
+  background-image: url(../images/skin/skin1/topbar.png);
   background-repeat: repeat-x; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .topbar {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/topbar@2x.png);
+      background-image: url(../images/skin/skin1/topbar@2x.png);
       background-size: 40px; } }
   .topbar #searchform input {
     color: #867d73;
@@ -98,18 +98,18 @@ a {
     border-bottom: 7px solid #beb8a2; }
 
 .topmenu {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/topMenu.png);
+  background-image: url(../images/skin/skin1/topMenu.png);
   background-repeat: repeat-x; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .topmenu {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/topMenu@2x.png);
+      background-image: url(../images/skin/skin1/topMenu@2x.png);
       background-size: 70px; } }
   .topmenu li::before {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/menu-after.png);
+    background-image: url(../images/skin/skin1/menu-after.png);
     background-repeat: no-repeat; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .topmenu li::before {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/menu-after@2x.png);
+        background-image: url(../images/skin/skin1/menu-after@2x.png);
         background-size: 15px; } }
   .topmenu a {
     color: #e6e2d4; }
@@ -117,11 +117,11 @@ a {
       color: #fff; }
 
 .sub-menu {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/submenu-bg.png);
+  background-image: url(../images/skin/skin1/submenu-bg.png);
   background-repeat: repeat-y; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .sub-menu {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/submenu-bg@2x.png);
+      background-image: url(../images/skin/skin1/submenu-bg@2x.png);
       background-size: 150px; } }
   .sub-menu li a {
     color: #796e5f;
@@ -132,53 +132,53 @@ a {
       color: #716049;
       background: #cec9b8; }
   .sub-menu::before {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/submenu-before.png);
+    background-image: url(../images/skin/skin1/submenu-before.png);
     background-repeat: no-repeat; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .sub-menu::before {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/submenu-before@2x.png);
+        background-image: url(../images/skin/skin1/submenu-before@2x.png);
         background-size: 150px; } }
   .sub-menu::after {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/submenu-after.png);
+    background-image: url(../images/skin/skin1/submenu-after.png);
     background-repeat: no-repeat; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .sub-menu::after {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/submenu-after@2x.png);
+        background-image: url(../images/skin/skin1/submenu-after@2x.png);
         background-size: 150px; } }
 
 .logo a {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/logo.png);
+  background-image: url(../images/skin/skin1/logo.png);
   background-position: center center;
   background-repeat: no-repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .logo a {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/logo@2x.png);
+      background-image: url(../images/skin/skin1/logo@2x.png);
       background-size: 230px; } }
 
 #content .container {
   background-color: #645a4c;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content.png);
+  background-image: url(../images/skin/skin1/content.png);
   border: 1px solid #50483e; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #content .container {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content@2x.png);
+      background-image: url(../images/skin/skin1/content@2x.png);
       background-size: 10px; } }
 #content .content-inner {
   background-color: #c3bca6;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner.png);
+  background-image: url(../images/skin/skin1/content-inner.png);
   border: 1px solid #dfdbd0;
   box-shadow: 0px 0px 1px #564c40; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #content .content-inner {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner@2x.png);
+      background-image: url(../images/skin/skin1/content-inner@2x.png);
       background-size: 100px; } }
 
 .mianmenu {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu.png);
+  background-image: url(../images/skin/skin1/mainMenu.png);
   background-repeat: repeat-x; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .mianmenu {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu@2x.png);
+      background-image: url(../images/skin/skin1/mainMenu@2x.png);
       background-size: 12px; } }
   .mianmenu a {
     color: #fff;
@@ -186,25 +186,25 @@ a {
     .mianmenu a:hover {
       color: #fff; }
   .mianmenu::before {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu-l.png);
+    background-image: url(../images/skin/skin1/mainMenu-l.png);
     background-repeat: no-repeat; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .mianmenu::before {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu-l@2x.png);
+        background-image: url(../images/skin/skin1/mainMenu-l@2x.png);
         background-size: 46px; } }
   .mianmenu::after {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu-r.png);
+    background-image: url(../images/skin/skin1/mainMenu-r.png);
     background-repeat: no-repeat; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .mianmenu::after {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu-r@2x.png);
+        background-image: url(../images/skin/skin1/mainMenu-r@2x.png);
         background-size: 46px; } }
   .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu-dot.png);
+    background-image: url(../images/skin/skin1/mainMenu-dot.png);
     background-repeat: no-repeat; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .mianmenu .menu-wrapper::before, .mianmenu .menu-wrapper::after {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/mainMenu-dot@2x.png);
+        background-image: url(../images/skin/skin1/mainMenu-dot@2x.png);
         background-size: 6px; } }
 
 .app_slider, .post-featured, .r_pic, .cs_widget_slider, .profile-avatar-inner {
@@ -214,11 +214,11 @@ a {
 .post-date {
   color: #908b6b;
   text-shadow: 0px 1px 1px #fff;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/post-time.png);
+  background-image: url(../images/skin/skin1/post-time.png);
   background-repeat: no-repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .post-date {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/post-time@2x.png);
+      background-image: url(../images/skin/skin1/post-time@2x.png);
       background-size: 65px; } }
   .post-date::before {
     background-image: url(../images/skin/skin1/post-time-over.png);
@@ -235,19 +235,19 @@ a {
       color: #b7aa98; }
 
 .post-featured a {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/featured.png);
+  background-image: url(../images/skin/skin1/featured.png);
   background-repeat: repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .post-featured a {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/featured@2x.png);
+      background-image: url(../images/skin/skin1/featured@2x.png);
       background-size: 100px; } }
 
 .post-related img {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/featured.png);
+  background-image: url(../images/skin/skin1/featured.png);
   background-repeat: repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .post-related img {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/featured@2x.png);
+      background-image: url(../images/skin/skin1/featured@2x.png);
       background-size: 100px; } }
 
 .avatar {
@@ -256,11 +256,11 @@ a {
   background-size: cover; }
 
 .post-sticky {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/sticky.png);
+  background-image: url(../images/skin/skin1/sticky.png);
   background-repeat: no-repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .post-sticky {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/sticky@2x.png);
+      background-image: url(../images/skin/skin1/sticky@2x.png);
       background-size: 60px; } }
 
 article .post-title {
@@ -280,11 +280,11 @@ article::after {
   border-bottom: 1px dashed #dad3be; }
 
 .post-top {
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/post-top.png);
+  background-image: url(../images/skin/skin1/post-top.png);
   background-repeat: no-repeat; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     .post-top {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/post-top@2x.png);
+      background-image: url(../images/skin/skin1/post-top@2x.png);
       background-size: 80px; } }
 
 .state {
@@ -373,16 +373,16 @@ article::after {
 
 #footer .footer-inner {
   background-color: #7a6e5f;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/footer.png); }
+  background-image: url(../images/skin/skin1/footer.png); }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #footer .footer-inner {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/footer@2x.png); } }
+      background-image: url(../images/skin/skin1/footer@2x.png); } }
   #footer .footer-inner::before {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/footer-before.png);
+    background-image: url(../images/skin/skin1/footer-before.png);
     background-repeat: repeat-x; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       #footer .footer-inner::before {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/footer-before@2x.png);
+        background-image: url(../images/skin/skin1/footer-before@2x.png);
         background-size: 13px; } }
 #footer .footer-text {
   color: #dedacf;
@@ -390,7 +390,7 @@ article::after {
 #footer .footer-end {
   color: #aba58f;
   text-shadow: 0px 1px 0px #4e463e;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/footer-end.png);
+  background-image: url(../images/skin/skin1/footer-end.png);
   background-repeat: repeat-x; }
   #footer .footer-end a {
     color: #aba58f; }
@@ -398,12 +398,12 @@ article::after {
       color: #dedacf; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #footer .footer-end {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/footer-end@2x.png);
+      background-image: url(../images/skin/skin1/footer-end@2x.png);
       background-size: 50px; } }
 
 blockquote {
   border: 2px solid #9e9280;
-  background: #cec7b4; }
+  background: #b3ac97; }
 
 .post-download {
   border: 1px solid #837c72; }
@@ -431,11 +431,11 @@ blockquote {
   color: #524638;
   text-shadow: 0px 1px 0px #d4d0c4;
   background-color: #c3bca6;
-  background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner.png);
+  background-image: url(../images/skin/skin1/content-inner.png);
   border-left: 1px solid #d4ccb6; }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     #sidebar {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/content-inner@2x.png);
+      background-image: url(../images/skin/skin1/content-inner@2x.png);
       background-size: 100px; } }
   #sidebar .widget-title {
     background: #b3ac97; }
@@ -466,11 +466,11 @@ blockquote {
     border-top: 2px solid #a05508;
     border-bottom: 1px solid #b3ab93; }
     .modal-container .modal-header .modal-close {
-      background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/modal-close.png);
+      background-image: url(../images/skin/skin1/modal-close.png);
       background-repeat: no-repeat; }
       @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
         .modal-container .modal-header .modal-close {
-          background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/modal-close@2x.png);
+          background-image: url(../images/skin/skin1/modal-close@2x.png);
           background-size: 40px; } }
   .modal-container .modal-body {
     height: 220px;
@@ -538,12 +538,12 @@ blockquote {
   .grids .grid-inner {
     background: #b3ac97; }
   .grids .featured-image {
-    background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/featured.png);
+    background-image: url(../images/skin/skin1/featured.png);
     background-repeat: repeat;
     background-size: cover; }
     @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       .grids .featured-image {
-        background-image: url(http://cdn.zhw-island.com/wp-content/themes/pluto-master/images/skin/skin1/featured@2x.png);
+        background-image: url(../images/skin/skin1/featured@2x.png);
         background-size: 100px; } }
 
 #article-index #index-ul::before {
