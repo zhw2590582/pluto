@@ -888,7 +888,8 @@ $footer-h: 290px; //页脚
 //内页
 .single{
   .post-wrap .post-inner .post-right .post-content{
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 2;
   }
 }
 
@@ -1068,7 +1069,12 @@ $footer-h: 290px; //页脚
 //引用
 blockquote {
   margin-left: 0;
+  margin-right: 0;
   padding: 1rem 2rem;
+  border-radius: 5px;
+  p{
+    margin: 0
+  }
 }
 //评论
 #comment-nav-below {
@@ -1862,7 +1868,7 @@ blockquote {
 
       img {
         float: left;
-        margin: 2px 5px 0 0;
+        margin: 9px 5px 0 0;
         width: 15px;
         height: 15px;
       }
@@ -1956,7 +1962,7 @@ blockquote {
     .tl-content {}
 
     .tl-date {
-      width: 110px;
+      width: 125px;
       margin-right: 10px;
     }
   }
@@ -2035,8 +2041,18 @@ blockquote {
   .index-post .post-content{
     overflow: visible;
     max-height: none;
+    font-size: 16px !important;
+    line-height: 2 !important;;
   }
 }
+
+.page-template{
+  .post-content{
+    font-size: 16px !important;
+    line-height: 2 !important;;
+  }
+}
+
 //页脚
 #footer {
   position: relative;

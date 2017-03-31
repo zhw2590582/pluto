@@ -1259,7 +1259,8 @@ mark {
     line-height: 1.5; }
 
 .single .post-wrap .post-inner .post-right .post-content {
-  font-size: 15px; }
+  font-size: 16px;
+  line-height: 2; }
 
 .index-post .post-right {
   padding-left: 10px; }
@@ -1398,7 +1399,11 @@ mark {
 
 blockquote {
   margin-left: 0;
-  padding: 1rem 2rem; }
+  margin-right: 0;
+  padding: 1rem 2rem;
+  border-radius: 5px; }
+  blockquote p {
+    margin: 0; }
 
 #comment-nav-below {
   text-align: center;
@@ -1948,7 +1953,7 @@ blockquote {
   white-space: nowrap; }
   .link_box .blogroll li img {
     float: left;
-    margin: 2px 5px 0 0;
+    margin: 9px 5px 0 0;
     width: 15px;
     height: 15px; }
 
@@ -2013,7 +2018,7 @@ blockquote {
       height: 5px;
       border-radius: 5px; }
   .timeline .tl-wrap .tl-date {
-    width: 110px;
+    width: 125px;
     margin-right: 10px; }
 
 .grids {
@@ -2063,7 +2068,13 @@ blockquote {
   display: none; }
 .page-template-default .index-post .post-content {
   overflow: visible;
-  max-height: none; }
+  max-height: none;
+  font-size: 16px !important;
+  line-height: 2 !important; }
+
+.page-template .post-content {
+  font-size: 16px !important;
+  line-height: 2 !important; }
 
 #footer {
   position: relative;
