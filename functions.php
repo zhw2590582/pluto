@@ -883,7 +883,7 @@ function article_index($content) {
 		foreach($matches[1] as $key => $value) {
 			$title = trim(strip_tags($matches[2][$key]));
 			$content = str_replace($matches[0][$key], '<h' . $value . ' id="title-' . $key . '">'.$title.'</h2>', $content);
-			$ul_li .= '<li><a class="ofh" href="#title-'.$key.'" title="'.$title.'">'.$title."</a></li>\n";
+			$ul_li .= '<li><a class="with-tooltip ofh" data-tooltip="'.$title.'" href="#title-'.$key.'">'.$title."</a></li>\n";
 		}
 		$content = "\n<div id=\"article-index\">
 		<ol id=\"index-ul\">\n" . $ul_li . "</ol>
