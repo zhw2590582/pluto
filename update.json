@@ -1,6 +1,6 @@
 {
   "Name": "pluto",
-  "Version": "2.0.2",
+  "Version": "2.0.1",
   "Author": "老赵",
   "Url": "http://zhw-island.com",
   "Switch":"on",
@@ -22,9 +22,6 @@
     "4": "winrss"
   },
   "Update": {
-    "2.0.2": {
-      "1": "更新样式bug"
-    },
     "2.0.1": {
       "1": "更新字体样式"
     },

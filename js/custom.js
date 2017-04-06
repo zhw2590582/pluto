@@ -59,6 +59,15 @@ $('body').on('click', '#comment-nav-below a', function(e) {
     });
 });
 
+//验证是否已评论
+if (!!localStorage.getItem("postDownload")) {
+  var postDownload = JSON.parse(localStorage.getItem("postDownload"));
+  var id = $("#comment_post_ID").attr("value");
+  if (postDownload.indexOf(id) != -1) {
+    $(".post-download").removeClass("dlview");
+  }
+}
+
 //滚动显示
 	$(window).scroll(function (){
 		if ($(window).scrollTop() > 400){

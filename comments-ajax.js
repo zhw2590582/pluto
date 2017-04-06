@@ -81,6 +81,16 @@ $('#commentform').submit(function() {
 
 		$body.animate( { scrollTop: $('#new_comm_' + num).offset().top - 200}, 900);
 		$(".post-download").removeClass("dlview");
+		var id = $("#comment_post_ID").attr("value");
+		if (!!localStorage.getItem("postDownload")) {
+		  var postDownload = JSON.parse(localStorage.getItem("postDownload"));
+			if (postDownload.indexOf(id) == -1) {
+				postDownload.push(id)
+				localStorage.setItem("postDownload",JSON.stringify(postDownload))
+			}
+		} else {
+		  localStorage.setItem("postDownload",JSON.stringify([id]))
+		}
 		countdown(); num++ ; edit = ''; $('*').remove('#edit_id');
 		cancel.style.display = 'none';
 		cancel.onclick = null;
@@ -117,7 +127,7 @@ addComment = {
 			respond.parentNode.insertBefore(div, respond)
 		}
 
-		!comm ? ( 
+		!comm ? (
 			temp = t.I('wp-temp-form-div'),
 			t.I('comment_parent').value = '0',
 			temp.parentNode.insertBefore(respond, temp),

@@ -12,9 +12,10 @@ function island_scripts_styles() {
 
   /* 自定义皮肤 */
     wp_register_style('switcher', get_template_directory_uri() . "/skin/switcher.php", array() , '0.3', 'screen');
-    wp_register_style('skin01', get_template_directory_uri() . "/skin/skin01.css", array() , '0.3', 'screen');
-    wp_register_style('skin02', get_template_directory_uri() . "/skin/skin02.css", array() , '0.3', 'screen');
-    wp_register_style('skin03', get_template_directory_uri() . "/skin/skin03.css", array() , '0.3', 'screen');
+    wp_register_style('skin01_cloth', get_template_directory_uri() . "/skin/skin01_cloth.css", array() , '0.3', 'screen');
+    wp_register_style('skin02_black', get_template_directory_uri() . "/skin/skin02_black.css", array() , '0.3', 'screen');
+    wp_register_style('skin03_paper', get_template_directory_uri() . "/skin/skin03_paper.css", array() , '0.3', 'screen');
+    wp_register_style('skin04_steam', get_template_directory_uri() . "/skin/skin04_steam.css", array() , '0.3', 'screen');
     $skin = cs_get_option('i_skin');
     $switcher = cs_get_option('i_switcher');
 
