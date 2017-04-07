@@ -21,18 +21,22 @@ function island_scripts_styles() {
 
     if ($switcher == true) {
         wp_enqueue_style('switcher');
-    }else {
+    } else {
 		switch ($skin) {
-			case "i_skin01":
-				wp_enqueue_style('skin01');
+			case "skin01_cloth":
+				wp_enqueue_style('skin01_cloth');
 				break;
 
-			case "i_skin02":
-				wp_enqueue_style('skin02');
+			case "skin02_black":
+				wp_enqueue_style('skin02_black');
 				break;
 
-			case "i_skin03":
-				wp_enqueue_style('skin03');
+			case "skin03_paper":
+				wp_enqueue_style('skin03_paper');
+				break;
+
+      case "skin04_steam":
+				wp_enqueue_style('skin04_steam');
 				break;
 		}
 	}
