@@ -95,6 +95,9 @@ add_filter( 'start_post_rel_link', 'disable_stuff' );
 add_filter( 'previous_post_rel_link', 'disable_stuff' );
 add_filter( 'next_post_rel_link', 'disable_stuff' );
 
+//禁止主题更新提醒
+add_filter('pre_site_transient_update_themes',  create_function('$a', "return null;"));
+remove_action('admin_init', '_maybe_update_themes');
 
 /* 加载类名 */
 function load_css($classes) {
