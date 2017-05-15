@@ -7,7 +7,7 @@ $logo-w: 230px;
 body {
     color: #a0a0a0;
     background-color: #212121;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     @include retina('body', $skin, 145px);
 }
 
@@ -94,9 +94,9 @@ a {
 
 .qr-pay {
     .qr-btn {
-        background: #ee562e;
-        background: -webkit-gradient(linear, left top, left bottom, from(#f6ae53), to(#ee562e));
-        color: #fff;
+        background: #d51e2b;
+        background: -webkit-gradient(linear, left top, left bottom, from(#d51e2b), to(#87161d));
+        color: #fff6e0;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
         border: 1px solid #310b00;
     }
@@ -109,4 +109,96 @@ a {
             border-bottom: 7px solid #3c3c3c;
         }
     }
+}
+
+.topmenu {
+    @include retina( 'topMenu',$skin,72px);
+    background-repeat: repeat-x;
+
+    li {
+        &::before {
+            @include retina( 'menu-after',$skin,15px);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.sub-menu {
+    @include retina( 'submenu-bg',$skin,150px);
+    background-repeat: repeat-y;
+
+    li {
+        a {
+            text-shadow: none !important;
+            border-top: 1px solid #585858;
+            border-bottom: 1px solid #21211f;
+
+            &:hover {
+                background: #3e3e3e;
+            }
+        }
+    }
+
+    &::before {
+        @include retina( 'submenu-before',$skin,150px);
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        @include retina( 'submenu-after',$skin,150px);
+        background-repeat: no-repeat;
+    }
+}
+
+.logo a {
+    @include retina( 'logo',$skin,$logo-w);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#content {
+    .container {
+        background-color: #232323;
+        @include retina( 'content',$skin,10px);
+        border: 1px solid #131313;
+    }
+
+    .content-inner {
+        background-color: #363636;
+        @include retina( 'content-inner',$skin,100px);
+        border: 1px solid #484848;
+        box-shadow: 0 0 1px #000000;
+    }
+}
+
+.mianmenu {
+    @include retina( 'mainMenu',$skin,12px);
+    background-repeat: repeat-x;
+
+    &::before {
+        @include retina( 'mainMenu-l',$skin,46px);
+        background-repeat: no-repeat;
+    }
+
+    &::after {
+        @include retina( 'mainMenu-r',$skin,46px);
+        background-repeat: no-repeat;
+    }
+
+    .menu-wrapper {
+        &::after,
+        &::before {
+            @include retina( 'mainMenu-dot',$skin,6px);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.app_slider,
+.cs_widget_slider,
+.post-featured,
+.profile-avatar-inner,
+.r_pic {
+    background: #2d2d2d;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
 }

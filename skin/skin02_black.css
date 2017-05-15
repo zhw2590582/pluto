@@ -4,7 +4,6 @@
 body {
   color: #a0a0a0;
   background-color: #212121;
-  background-attachment: fixed;
   background-image: url(../images/skin/black/body.png); }
   @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
     body {
@@ -85,9 +84,9 @@ a {
         color: #dcdcdc; }
 
 .qr-pay .qr-btn {
-  background: #ee562e;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f6ae53), to(#ee562e));
-  color: #fff;
+  background: #d51e2b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d51e2b), to(#87161d));
+  color: #fff6e0;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   border: 1px solid #310b00; }
 .qr-pay .qr-img {
@@ -97,5 +96,112 @@ a {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 7px solid #3c3c3c; }
+
+.topmenu {
+  background-image: url(../images/skin/black/topMenu.png);
+  background-repeat: repeat-x; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .topmenu {
+      background-image: url(../images/skin/black/topMenu@2x.png);
+      background-size: 72px; } }
+  .topmenu li::before {
+    background-image: url(../images/skin/black/menu-after.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .topmenu li::before {
+        background-image: url(../images/skin/black/menu-after@2x.png);
+        background-size: 15px; } }
+
+.sub-menu {
+  background-image: url(../images/skin/black/submenu-bg.png);
+  background-repeat: repeat-y; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .sub-menu {
+      background-image: url(../images/skin/black/submenu-bg@2x.png);
+      background-size: 150px; } }
+  .sub-menu li a {
+    text-shadow: none !important;
+    border-top: 1px solid #585858;
+    border-bottom: 1px solid #21211f; }
+    .sub-menu li a:hover {
+      background: #3e3e3e; }
+  .sub-menu::before {
+    background-image: url(../images/skin/black/submenu-before.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .sub-menu::before {
+        background-image: url(../images/skin/black/submenu-before@2x.png);
+        background-size: 150px; } }
+  .sub-menu::after {
+    background-image: url(../images/skin/black/submenu-after.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .sub-menu::after {
+        background-image: url(../images/skin/black/submenu-after@2x.png);
+        background-size: 150px; } }
+
+.logo a {
+  background-image: url(../images/skin/black/logo.png);
+  background-position: center center;
+  background-repeat: no-repeat; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .logo a {
+      background-image: url(../images/skin/black/logo@2x.png);
+      background-size: 230px; } }
+
+#content .container {
+  background-color: #232323;
+  background-image: url(../images/skin/black/content.png);
+  border: 1px solid #131313; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #content .container {
+      background-image: url(../images/skin/black/content@2x.png);
+      background-size: 10px; } }
+#content .content-inner {
+  background-color: #363636;
+  background-image: url(../images/skin/black/content-inner.png);
+  border: 1px solid #484848;
+  box-shadow: 0 0 1px #000000; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    #content .content-inner {
+      background-image: url(../images/skin/black/content-inner@2x.png);
+      background-size: 100px; } }
+
+.mianmenu {
+  background-image: url(../images/skin/black/mainMenu.png);
+  background-repeat: repeat-x; }
+  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .mianmenu {
+      background-image: url(../images/skin/black/mainMenu@2x.png);
+      background-size: 12px; } }
+  .mianmenu::before {
+    background-image: url(../images/skin/black/mainMenu-l.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .mianmenu::before {
+        background-image: url(../images/skin/black/mainMenu-l@2x.png);
+        background-size: 46px; } }
+  .mianmenu::after {
+    background-image: url(../images/skin/black/mainMenu-r.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .mianmenu::after {
+        background-image: url(../images/skin/black/mainMenu-r@2x.png);
+        background-size: 46px; } }
+  .mianmenu .menu-wrapper::after, .mianmenu .menu-wrapper::before {
+    background-image: url(../images/skin/black/mainMenu-dot.png);
+    background-repeat: no-repeat; }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .mianmenu .menu-wrapper::after, .mianmenu .menu-wrapper::before {
+        background-image: url(../images/skin/black/mainMenu-dot@2x.png);
+        background-size: 6px; } }
+
+.app_slider,
+.cs_widget_slider,
+.post-featured,
+.profile-avatar-inner,
+.r_pic {
+  background: #2d2d2d;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25); }
 
 /*# sourceMappingURL=skin02_black.css.map */
