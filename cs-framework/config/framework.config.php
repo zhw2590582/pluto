@@ -7,7 +7,7 @@
 
 global $verify;
 $pluto_key = cs_get_customize_option( 'pluto_key' );
-$verify = get_option('pluto_license_key');
+$verify = get_option(THEME_KEY_NAME);
 if (!empty($verify) || $pluto_key == 'zhw2590582' ) {
    $settings           = array(
       'menu_title'      => '主题选项',

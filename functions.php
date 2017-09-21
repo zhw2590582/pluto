@@ -300,7 +300,7 @@ function Init_theme($oldthemename) {
 	if ('themes.php' == $pagenow && isset($_GET['activated'])) {
 		global $verify;
 		$pluto_key = cs_get_customize_option( 'pluto_key' );
-		$verify = get_option('pluto_license_key');
+		$verify = get_option(THEME_KEY_NAME);
 		if (!empty($verify) || $pluto_key == 'zhw2590582' ) {
 			wp_redirect(admin_url('admin.php?page=cs-framework'));
 			exit;
@@ -400,7 +400,7 @@ function tie_admin_bar() {
     global $wp_admin_bar;
     global $verify;
 	  $pluto_key = cs_get_customize_option( 'pluto_key' );
-    $verify = get_option('pluto_license_key');
+    $verify = get_option(THEME_KEY_NAME);
     if (!empty($verify) || $pluto_key == 'zhw2590582') {
         if (current_user_can('switch_themes')) {
             $wp_admin_bar->add_menu(array(
