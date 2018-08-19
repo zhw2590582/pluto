@@ -67,8 +67,9 @@ add_action('wp_enqueue_scripts', 'island_scripts_styles');
 
 //后台加载脚本和样式
 function admin_scripts_styles() {
-  wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin.js', false, '0.1', true);
-  wp_enqueue_script('update-js', get_template_directory_uri() . '/js/update.js', false, '0.1', true);
+    wp_enqueue_script('auth-js', get_template_directory_uri() . '/js/auth.js', false, '0.1', true);
+    wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin.js', false, '0.1', true);
+    wp_enqueue_script('update-js', get_template_directory_uri() . '/js/update.js', false, '0.1', true);
   wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/css/admin.css', array() );
 }
 add_action('admin_enqueue_scripts', 'admin_scripts_styles');
@@ -115,8 +116,6 @@ function load_css($classes) {
 }
 add_filter('body_class','load_css');
 
-/* 引入密钥验证 */
-include ('verify.php');
 
 /* 引入CDN */
 $qiniu = cs_get_option('i_qiniu');
@@ -293,24 +292,6 @@ if ($like == true) {
  	include_once ('post-like.php');
 }
 
-/* 激活后跳转到密钥或设置页 */
-add_action('after_switch_theme', 'Init_theme');
-function Init_theme($oldthemename) {
-	global $pagenow;
-	if ('themes.php' == $pagenow && isset($_GET['activated'])) {
-		global $verify;
-		$pluto_key = cs_get_customize_option( 'pluto_key' );
-		$verify = get_option(THEME_KEY_NAME);
-		if (!empty($verify) || $pluto_key == 'zhw2590582' ) {
-			wp_redirect(admin_url('admin.php?page=cs-framework'));
-			exit;
-		} else {
-			wp_redirect(admin_url('options-general.php?page=' . get_stylesheet_directory() . '/verify.php'));
-			exit;
-		}
-	}
-}
-
 /* 统一标签尺寸 */
 function custom_tag_cloud_widget($args) {
   $args['largest'] = 12;
@@ -355,73 +336,6 @@ $wp_url = home_url('/');
 if ($theme_url == $wp_url) {
   add_filter( 'admin_body_class', 'add_admin_body_class' );
 }
-
-/* 启用后台引导 */
-add_action('admin_enqueue_scripts', 'my_admin_enqueue_scripts');
-function my_admin_enqueue_scripts() {
-    wp_enqueue_style('wp-pointer');
-    wp_enqueue_script('wp-pointer');
-    add_action('admin_print_footer_scripts', 'my_admin_print_footer_scripts');
-}
-function my_admin_print_footer_scripts() {
-    $dismissed = explode(',', (string)get_user_meta(get_current_user_id() , 'dismissed_wp_pointers', true));
-    if (!in_array('my_pointer', $dismissed)):
-        $pointer_content = '<h3>你好！验证 pluto 主题成功</h3>';
-        $pointer_content.= '<p>主题设置从这里进入，使用中若有疑问，可以联系老赵</p>';
-?>
-        <script type="text/javascript">
-        //<![CDATA[
-        jQuery(document).ready( function($) {
-            $('#toplevel_page_cs-framework').pointer({
-                content: '<?php
-        echo $pointer_content; ?>',
-				position:		{
-									edge:	'left',
-									align:	'center'
-								},
-				pointerWidth:	350,
-                close  : function() {
-                    jQuery.post( '<?php
-        bloginfo('wpurl'); ?>/wp-admin/admin-ajax.php', {
-                        pointer: 'my_pointer',
-                        action: 'dismiss-wp-pointer'
-                    });
-                }
-            }).pointer('open');
-        });
-        //]]>
-        </script>
-        <?php
-    endif;
-}
-
-/* 添加选项按钮到工具栏 */
-function tie_admin_bar() {
-    global $wp_admin_bar;
-    global $verify;
-	  $pluto_key = cs_get_customize_option( 'pluto_key' );
-    $verify = get_option(THEME_KEY_NAME);
-    if (!empty($verify) || $pluto_key == 'zhw2590582') {
-        if (current_user_can('switch_themes')) {
-            $wp_admin_bar->add_menu(array(
-                'parent' => 0,
-                'id' => 'mpanel_page',
-                'title' => 'pluto 主题选项',
-                'href' => admin_url('admin.php?page=cs-framework')
-            ));
-        }
-    } else {
-        if (current_user_can('switch_themes')) {
-            $wp_admin_bar->add_menu(array(
-                'parent' => 0,
-                'id' => 'mpanel_verify',
-                'title' => '主题未验证',
-                'href' => admin_url('options-general.php?page=' . get_stylesheet_directory() . '/verify.php')
-            ));
-        }
-    }
-}
-add_action('wp_before_admin_bar_render', 'tie_admin_bar');
 
 /* 默认配置 */
 if (!isset($content_width)) $content_width = 690;
