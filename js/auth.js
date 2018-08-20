@@ -21,9 +21,8 @@
       httpGet(api, resule => {
         const data = JSON.parse(resule);
         const hostname = window.location.hostname;
-        let pass = false;
-        data.forEach(item => {
-          pass = item.website.some(url => {
+        let pass = data.some(item => {
+          return item.website.some(url => {
             return hostname.includes(url);
           });
         });
