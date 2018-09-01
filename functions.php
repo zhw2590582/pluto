@@ -67,7 +67,7 @@ add_action('wp_enqueue_scripts', 'island_scripts_styles');
 
 //后台加载脚本和样式
 function admin_scripts_styles() {
-    wp_enqueue_script('auth-js', get_template_directory_uri() . '/js/auth.js', false, '0.1', true);
+    // wp_enqueue_script('auth-js', get_template_directory_uri() . '/js/auth.js', false, '0.1', true);
     wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/admin.js', false, '0.1', true);
     wp_enqueue_script('update-js', get_template_directory_uri() . '/js/update.js', false, '0.1', true);
   wp_enqueue_style( 'dashboard-style', get_template_directory_uri() . '/css/admin.css', array() );
